@@ -12,7 +12,12 @@ function App() {
   return (
     <div className="width:100% ">
       <NavigationBar></NavigationBar>
-      <div className="py-2"><h1>Personal Projects</h1></div>
+      <div className="py-2">
+        {" "}
+        <h2 className="jusimt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 px-5">
+          Personal Projects
+        </h2>
+      </div>
       <Cards></Cards>
     </div>
   );
