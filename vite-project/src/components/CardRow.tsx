@@ -30,9 +30,9 @@ export function Cards() {
   ];
 
   return (
-    <div className="w-full flex flex-row space-x-10 items-center justify-center">
+    <div className="w-full flex flex-row items-center justify-center gap-6 px-4">
       {cardData.map((card, index) => (
-        <Card key={index} className="w-150">
+        <Card key={index} className="flex-1">
           <CardHeader>
             <img
               src={card.image}
