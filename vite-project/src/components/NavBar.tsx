@@ -16,7 +16,7 @@ import { ThemeToggle } from "./ThemeToggle";
 export function NavigationBar() {
   return (
     // Full-width navbar wrapper
-    <div className="padding-10 w-full border-b border-gray-200 dark:border-gray-700 bg-primary-foreground">
+    <div className="padding-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background">
       {/* Centered, max-width content container */}
       <div className="mx-auto flex justify-between items-center px-4 py-5">
         {/* Left side navigation */}
@@ -50,7 +50,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-5 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline  dark:text-white"
+                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline  dark:text-white"
                 >
                   Projects
                 </a>
@@ -58,7 +58,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-5 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline dark:text-white"
+                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline dark:text-white"
                 >
                   Resume
                 </a>
@@ -66,7 +66,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-5 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline dark:text-white"
+                  className="text-black hover:bg-slate-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 no-underline hover:no-underline focus:no-underline visited:no-underline dark:text-white"
                 >
                   About me
                 </a>
