@@ -21,7 +21,7 @@ export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-black padding-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background">
+    <div className="sticky top-0 z-50 bg-white dark:bg-black padding-10 w-full border-b border-gray-200 dark:border-neutral-900  bg-background">
       <div className="mx-auto flex justify-between items-center px-4 py-5">
         {/* Left side navigation */}
         <div className="flex-1">
