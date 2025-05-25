@@ -28,15 +28,7 @@ export function NavigationBar() {
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
-                <Home className="w-6 h-6 text-gray-700 dark:text-white" />
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <div className="h-6 border-l border-gray-300" />
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <h2 className="scroll-m-20 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h2>
+                <h2 className="scroll-m-20 text-2xl font-semi-bold tracking-tight text-gray-900 dark:text-white"></h2>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -61,8 +53,8 @@ export function NavigationBar() {
                   className={({ isActive }) =>
                     `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
                       isActive
-                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
-                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                        ? "bg-gray-100 dark:bg-neutral-800 text-black dark:text-white"
+                        : "text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800"
                     }`
                   }
                 >
@@ -75,8 +67,8 @@ export function NavigationBar() {
                   className={({ isActive }) =>
                     `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
                       isActive
-                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
-                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                        ? "bg-gray-100 dark:bg-neutral-800 text-black dark:text-white"
+                        : "text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800"
                     }`
                   }
                 >
@@ -89,8 +81,8 @@ export function NavigationBar() {
                   className={({ isActive }) =>
                     `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
                       isActive
-                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
-                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                        ? "bg-gray-100 dark:bg-neutral-800 text-black dark:text-white whitespace-nowrap"
+                        : "text-black dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800 whitespace-nowrap"
                     }`
                   }
                 >

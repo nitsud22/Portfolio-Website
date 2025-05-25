@@ -1,10 +1,13 @@
 import { useState } from "react";
 
 import { Cards } from "@/components/CardRow";
+import { Introduction } from "@/components/Introduction";
 
 function Projects() {
   return (
     <div className="width:100% ">
+      <Introduction></Introduction>
+      <div className="width:100% border-b py-3"></div>
       <div className="py-2">
         {" "}
         <h2 className="jusimt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 px-5">
