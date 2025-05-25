@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="width:100% ">
-      <NavigationBar></NavigationBar>
+      <NavigationBar className="sticky top-0 z-50 bg-white dark:bg-black"></NavigationBar>
       <div className="py-2">
         {" "}
         <h2 className="jusimt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 px-5">

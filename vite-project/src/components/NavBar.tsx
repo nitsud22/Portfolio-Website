@@ -19,7 +19,7 @@ export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="padding-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background">
+    <div className="sticky top-0 z-50 bg-white dark:bg-black padding-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background">
       <div className="mx-auto flex justify-between items-center px-4 py-5">
         {/* Left side navigation */}
         <div className="flex-1">
@@ -58,7 +58,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5"
+                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out"
                 >
                   Projects
                 </a>
@@ -66,7 +66,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5"
+                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out"
                 >
                   Resume
                 </a>
@@ -74,7 +74,7 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <a
                   href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 whitespace-nowrap "
+                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out whitespace-nowrap "
                 >
                   About me
                 </a>
