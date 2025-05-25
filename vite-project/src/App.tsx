@@ -5,30 +5,25 @@ import { Button } from "@/components/ui/button";
 import { NavigationBar } from "./components/NavBar";
 import { Cards } from "./components/CardRow";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Projects from "./pages/Projects";
+import AboutMe from "./pages/AboutMe";
+import Resume from "./pages/Resume";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="width:100% ">
-      <NavigationBar className="sticky top-0 z-50 bg-white dark:bg-black"></NavigationBar>
-      <div className="py-2">
-        {" "}
-        <h2 className="jusimt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 px-5">
-          Personal Projects
-        </h2>
+    <Router>
+      <div className="w-full">
+        <NavigationBar />
+        <Routes>
+          <Route path="/" element={<Projects />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
       </div>
-      <Cards></Cards>
-      <div className="py-10"></div>
-      <div className="py-2">
-        <h2 className="jusimt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 px-5 ">
-          Team Projects
-        </h2>
-      </div>
-      <Cards></Cards>
-      <div className="py-10"></div>
-      <div className="py-10 padding-10 w-full border-t border-gray-200 dark:border-gray-700 bg-background"></div>
-    </div>
+    </Router>
   );
 }
 

@@ -9,6 +9,8 @@ import {
   NavigationMenuViewport,
 } from "./ui/navigationmenu";
 
+import { NavLink } from "react-router-dom";
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react"; // optional icons
 
@@ -34,9 +36,7 @@ export function NavigationBar() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <h2 className="scroll-m-20 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Projects
-                </h2>
+                <h2 className="scroll-m-20 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></h2>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -56,28 +56,46 @@ export function NavigationBar() {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-4">
               <NavigationMenuItem>
-                <a
-                  href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out"
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
+                      isActive
+                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
+                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                    }`
+                  }
                 >
                   Projects
-                </a>
+                </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <a
-                  href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out"
+                <NavLink
+                  to="/resume"
+                  className={({ isActive }) =>
+                    `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
+                      isActive
+                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
+                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                    }`
+                  }
                 >
                   Resume
-                </a>
+                </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <a
-                  href="#"
-                  className="text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800 rounded-full px-4 py-1.5 transition duration-300 ease-in-out whitespace-nowrap "
+                <NavLink
+                  to="/aboutme"
+                  className={({ isActive }) =>
+                    `rounded-full px-4 py-1 transition duration-300 ease-in-out ${
+                      isActive
+                        ? "bg-gray-300 dark:bg-neutral-800 text-black dark:text-white"
+                        : "text-black dark:text-white hover:bg-gray-300 dark:hover:bg-neutral-800"
+                    }`
+                  }
                 >
-                  About me
-                </a>
+                  About Me
+                </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <ThemeToggle />
