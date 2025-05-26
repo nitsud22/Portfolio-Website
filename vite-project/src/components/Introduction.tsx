@@ -1,12 +1,12 @@
-import night from "../assets/night.jpg";
+import background from "../assets/background.jpg";
 import hanni from "../assets/hanni.jpg";
 export function Introduction() {
   return (
     <div className="relative w-full pb-20 sm:justify-center">
       {/* Background Image */}
-      <div className="lg:h-[60vh] w-full overflow-hidden">
+      <div className="lg:h-[65vh] w-full overflow-hidden">
         <img
-          src={night}
+          src={background}
           alt="rancho night"
           className="w-full h-full object-cover"
         />
@@ -25,7 +25,6 @@ export function Introduction() {
         />
 
         {/* Intro Text */}
-       
       </div>
     </div>
   );

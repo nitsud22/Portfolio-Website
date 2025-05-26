@@ -30,18 +30,17 @@ export function Cards() {
   ];
 
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-6 px-4">
+    <div className="w-full flex flex-col items-center justify-center gap-6 ">
       {cardData.map((card, index) => (
         <div
           key={index}
-          className="group flex flex-col md:flex-row lg:flex-col bg-white dark:bg-neutral-900 rounded-lg overflow-hidden shadow-md dark:hover:ring- dark:hover:ring-white dark:hover:ring-offset-2 dark:hover:ring-offset-neutral-300
-hover:shadow-xl transition-shadow duration-300 w-full max-w-4xl"
+          className="group flex flex-col md:flex-row  bg-white dark:bg-neutral-900 overflow-hidden transition-shadow duration-300 w-full "
         >
           {/* Image */}
           <img
             src={card.image}
             alt={card.title}
-            className="w-full md:aspect-[4/3] h-64 object-cover"
+            className="md:w-1/3 md:aspect-square h-64 lg:h-100 object-cover"
           />
 
           {/* Text Content */}
