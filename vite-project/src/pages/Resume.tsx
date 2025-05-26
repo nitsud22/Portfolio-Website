@@ -1,33 +1,29 @@
 function Resume() {
   return (
-    <div className="min-h-screen flex justify-center bg-background px-4">
-      <div className="max-w-4xl w-full bg-white dark:bg-zinc-900 rounded-2xl shadow-xl p-8 space-y-6">
-        <header>
-          <h1 className="text-3xl font-bold">Dustin Santoso</h1>
-          <p className="text-muted-foreground">
-            Yucaipa, CA ·{" "}
-            <a
-              href="mailto:dustin.santoso025@gmail.com"
-              className="underline hover:text-primary"
-            >
+    <div className="w-full min-h-screen flex justify-center bg-background px-30">
+      <div className="w-full bg-white dark:bg-zinc-900 rounded-2xl p-8 space-y-6">
+        <header className="grid grid-cols-3 items-center text-sm text-muted-foreground gap-2 py-4">
+          {/* Left Stack: Location + LinkedIn */}
+          <div className="flex flex-col justify-center items-start">
+            <span>Yucaipa, CA</span>
+            <a href="https://www.linkedin.com/in/dustinsantoso/">
+              linkedin.com/dustinsantoso
+            </a>
+          </div>
+
+          {/* Centered Name */}
+          <div className="justify-self-center">
+            <h1 className="text-3xl font-bold text-center text-black">
+              Dustin Santoso
+            </h1>
+          </div>
+
+          {/* Right Stack: Email + GitHub */}
+          <div className="flex flex-col justify-center items-end text-right">
+            <a href="mailto:dustin.santoso025@gmail.com">
               dustin.santoso025@gmail.com
             </a>
-          </p>
-          <div className="flex justify-center gap-4 mt-2 text-sm text-blue-500">
-            <a
-              href="https://www.linkedin.com/in/dustinsantoso/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/nitsud22"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
+            <a href="https://github.com/nitsud22">github.com/nitsud22</a>
           </div>
         </header>
 

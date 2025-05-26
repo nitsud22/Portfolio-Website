@@ -28,7 +28,9 @@ export function NavigationBar() {
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
-                <h2 className="scroll-m-20 text-2xl font-semi-bold tracking-tight text-gray-900 dark:text-white"></h2>
+                <h2 className="text-3xl font-semi-bold tracking-tight text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                  dusdus
+                </h2>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -58,7 +60,7 @@ export function NavigationBar() {
                     }`
                   }
                 >
-                  Projects
+                  Home
                 </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -88,9 +90,6 @@ export function NavigationBar() {
                 >
                   About Me
                 </NavLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <ThemeToggle />
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

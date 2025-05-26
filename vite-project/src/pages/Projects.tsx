@@ -15,7 +15,7 @@ function Projects() {
 
         <div className="flex justify-center md:justify-between items-center mt-1 flex-wrap">
           <p className="lg:text-lg md:text-m text-s">
-            Aspiring ETL Developer | Building connections through tech
+            Aspiring ETL Developer | Recent CS Graduate | Sharing Kindness
           </p>
 
           <div className="flex space-x-4 text-xl mt-2 md:mt-0 ">
@@ -23,7 +23,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="px-4 sm:px-6 lg:px-10">
+      <div className="px-2 md:px-8 lg:px-30">
         {" "}
         {/* Responsive horizontal padding */}
         <div className="py-2">
@@ -32,14 +32,20 @@ function Projects() {
           </h2>
         </div>
         <Cards />
-        <div className="py-10"></div>
-        <div className="py-2">
+        <div className="py-10 "></div>
+        <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black px-5">
           <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5">
             Team Projects
           </h2>
         </div>
         <Cards />
-        <div className="py-10 w-full border-t border-gray-200 dark:border-gray-700 bg-background"></div>
+        <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
+        <div className="flex justify-center md:justify-between items-center mt-1 flex-wrap py-8">
+          <div className="flex space-x-4 text-xl mt-2 md:mt-0 text-neutral-500 ">
+            <SocialLinks></SocialLinks>
+          </div>
+          <p className="lg:text-lg md:text-m text-s">designed by dustin</p>
+        </div>
       </div>
     </div>
   );

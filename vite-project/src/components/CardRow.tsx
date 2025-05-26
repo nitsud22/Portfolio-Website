@@ -14,8 +14,9 @@ export function Cards() {
   const cardData = [
     {
       image: asa,
-      title: "Title",
-      description: "description.",
+      title: "Lorem Ipsum Dolor Sit Amet",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       image: haerin,
@@ -30,7 +31,7 @@ export function Cards() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-6 ">
+    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
       {cardData.map((card, index) => (
         <div
           key={index}
@@ -44,8 +45,8 @@ export function Cards() {
           />
 
           {/* Text Content */}
-          <div className="flex flex-col justify-center p-6 w-full ">
-            <h3 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">
+          <div className="flex flex-col md:text-left md:pl-3 p-4 md:p-0 w-full ">
+            <h3 className="text-3xl font-semibold mb-2 text-gray-900 dark:text-white">
               {card.title}
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
