@@ -7,7 +7,7 @@ function Projects() {
   return (
     <div className="width:100% ">
       <Introduction></Introduction>
-      <div className="width:100% border-b md:py-3 py-4 dark:bg-black md:text-left md:pl-5">
+      <div className="width:100% border-b md:py-3 py-4 dark:bg-black md:text-left md:pl-12">
           <h1 className="lg:text-3xl font-bold md:text-2xl text-xl">Dustin Santoso</h1>
           <p className="lg:text-lg md:text-m text-s text-center md:text-left px-5 md:px-0">
             Aspiring ETL Developer

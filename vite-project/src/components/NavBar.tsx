@@ -22,7 +22,7 @@ export function NavigationBar() {
 
   return (
     <div className="sticky top-0 z-50 bg-white dark:bg-black padding-10 w-full border-b border-gray-200 dark:border-neutral-900  bg-background">
-      <div className="mx-auto flex justify-between items-center px-4 py-5">
+      <div className="mx-auto flex justify-between items-center px-4 py-2">
         {/* Left side navigation */}
         <div className="flex-1">
           <NavigationMenu>
