@@ -28,7 +28,7 @@ export function NavigationBar() {
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
-                <h2 className="text-3xl font-semi-bold tracking-tight text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer">
+                <h2 className="text-3xl font-semi-bold tracking-tight text-gray-900 dark:text-white transition-colors whitespace-nowrap">
                   dustin santoso
                 </h2>
               </NavigationMenuItem>
