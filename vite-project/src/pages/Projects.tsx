@@ -3,12 +3,13 @@ import { useState } from "react";
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
 import { SocialLinks } from "@/components/Socials";
+import { Footer } from "@/components/Footer";
 
 function Projects() {
   return (
     <div className="width:100% ">
       <Introduction></Introduction>
-      <div className="w-full border-b md:py-3 py-4 dark:bg-black px-5">
+      <div className="w-full border-b md:py-3 py-4 dark:bg-black md:px-8 lg:px-30">
         <h1 className="lg:text-3xl font-bold md:text-2xl text-xl md:text-left">
           Dustin Santoso
         </h1>
@@ -40,12 +41,7 @@ function Projects() {
         </div>
         <Cards />
         <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
-        <div className="flex justify-center md:justify-between items-center mt-1 flex-wrap py-8">
-          <div className="flex space-x-4 text-xl mt-2 md:mt-0 text-neutral-500 ">
-            <SocialLinks></SocialLinks>
-          </div>
-          <p className="lg:text-lg md:text-m text-s">designed by dustin</p>
-        </div>
+        <Footer></Footer>
       </div>
     </div>
   );

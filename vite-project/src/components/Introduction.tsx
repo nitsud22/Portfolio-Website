@@ -1,10 +1,11 @@
 import background from "../assets/background.jpg";
 import hanni from "../assets/hanni.jpg";
+
 export function Introduction() {
   return (
     <div className="relative w-full pb-20 sm:justify-center">
       {/* Background Image */}
-      <div className="lg:h-[65vh] w-full overflow-hidden">
+      <div className="lg:h-[50vh] h-full overflow-hidden">
         <img
           src={background}
           alt="rancho night"
@@ -14,7 +15,7 @@ export function Introduction() {
 
       {/* Profile + Intro - grouped and positioned at the bottom */}
       <div
-        className="absolute lg:bottom-3 md:bottom-1 -bottom-4 lg:left-5 md:left-5 md:flex flex-col md:flex-row items-center md:items-end space-y-4 md:space-y-0 md:space-x-6 z-10
+        className="absolute lg:bottom-3 md:bottom-1 -bottom-4 lg:left-30 md:left-5 md:flex flex-col md:flex-row items-center md:items-end space-y-4 md:space-y-0 md:space-x-6 z-10
       absolute left-1/2 transform -translate-x-1/2 md:transform md:-translate-x-0"
       >
         {/* Profile Picture */}
