@@ -1,4 +1,11 @@
 import * as React from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
+import asa from "../assets/asa.jpeg";
+import haerin from "../assets/haerin.jpg";
+import bae from "../assets/bae.jpg";
+import winter from "../assets/winter.jpg";
+import hanni from "../assets/hanni.jpg";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -10,22 +17,33 @@ import {
 } from "@/components/ui/carousel";
 
 export function CarouselSize() {
+  const autoplay = useRef(
+    Autoplay({
+      delay: 2000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    })
+  );
+
+  const images = [hanni, asa, haerin, bae, winter];
+
   return (
     <Carousel
-      opts={{
-        align: "start",
-      }}
+      plugins={[autoplay.current]}
       className="w-full"
+      opts={{ loop: true }}
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+        {images.map((src, index) => (
+          <CarouselItem key={index} className="basis-1/3">
             <div className="p-1">
-              <Card>
-                <CardContent className="flex items-center justify-center p-6 h-60">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
+              <CardContent className="flex aspect-[16/9] w-full h-full items-center justify-center p-0 b">
+                <img
+                  src={src}
+                  alt={`Carousel item ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </CardContent>
             </div>
           </CarouselItem>
         ))}

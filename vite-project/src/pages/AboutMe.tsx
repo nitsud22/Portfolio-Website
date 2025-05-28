@@ -1,5 +1,6 @@
 import { CarouselSize } from "@/components/Carousel";
 import winter from "../assets/winter.jpg";
+import { Footer } from "@/components/Footer";
 import { Carousel } from "@/components/ui/carousel";
 function AboutMe() {
   return (
@@ -13,9 +14,9 @@ function AboutMe() {
             Hi, I'm Dustin a recent Computer Science graduate with a passion for
             data engineering, systems design, and creating intuitive user
             experiences. My career trajectory has always been evolving with each
-            new experience. Initially a med-school prospect turned to a computer
-            science student turned to an aspiring data engineer. I am excited to
-            see where this path may lead me.
+            new experience. Initially a med-school prospect turned to a comp-sci
+            student turned to aspiring data engineer. I am excited to see where
+            this path may lead me.
           </p>
           <p className="text-lg text-gray-700 mt-4">
             Outside of work, I love obsessing over hobbies whether it be
@@ -35,9 +36,14 @@ function AboutMe() {
       </div>
 
       <div className="py-10 "></div>
-      <div className="w-full px-30 py-10 border-t h-[50vh]">
+      <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 border-t w-full">
+        Hobby Highlights
+      </h2>
+      <div className="w-full pb-20">
         <CarouselSize></CarouselSize>
       </div>
+
+      <Footer></Footer>
     </div>
   );
 }

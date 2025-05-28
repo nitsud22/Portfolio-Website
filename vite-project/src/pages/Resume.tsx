@@ -11,7 +11,7 @@ function Resume() {
           <iframe
             src="/Santoso_Dustin_Resume.pdf"
             title="Resume PDF"
-            className="w-full h-[calc(100vh-10rem)] rounded-2xl"
+            className="w-full h-[calc(100vh-10rem)]"
           ></iframe>
         </div>
 
