@@ -35,7 +35,7 @@ function AboutMe() {
         </div>
       </div>
 
-      <div className="py-10 "></div>
+      <div className="py-5"></div>
       <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 border-t w-full">
         Hobby Highlights
       </h2>

@@ -16,7 +16,7 @@ function Projects() {
 
         <div className="flex justify-center md:justify-between items-center mt-1 flex-wrap">
           <p className="lg:text-lg md:text-m text-s">
-            Aspiring ETL Developer | Recent CS Graduate | Sharing Kindness
+            Aspiring Data Engineer | Recent CS Graduate | Sharing Kindness
           </p>
 
           <div className="flex space-x-4 text-xl mt-2 md:mt-0 ">

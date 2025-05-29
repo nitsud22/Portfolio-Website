@@ -128,15 +128,16 @@ export function NavigationBar() {
           </button>
 
           {/* Nav links */}
-          <a href="#" className="text-black dark:text-white text-lg">
-            Projects
-          </a>
-          <a href="#" className="text-black dark:text-white text-lg">
+          <NavLink to="/" className="text-black dark:text-white text-lg">
+            Home
+          </NavLink>
+
+          <NavLink to="/resume" className="text-black dark:text-white text-lg">
             Resume
-          </a>
-          <a href="#" className="text-black dark:text-white text-lg">
-            About me
-          </a>
+          </NavLink>
+          <NavLink to="/aboutme" className="text-black dark:text-white text-lg">
+            About Me
+          </NavLink>
         </div>
       </div>
     </div>
