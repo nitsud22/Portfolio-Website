@@ -9,16 +9,27 @@ import {
   NavigationMenuViewport,
 } from "./ui/navigationmenu";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-import { useState } from "react";
-import { Menu, X } from "lucide-react"; // optional icons
+import { Menu, X } from "lucide-react";
 
 import { Home } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <div className="sticky top-0 z-50 bg-white dark:bg-black padding-10 w-full border-b border-gray-200 dark:border-neutral-900  bg-background">
@@ -43,7 +54,7 @@ export function NavigationBar() {
             className="block md:hidden text-black dark:text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Menu className="w-6 h-6" />
           </button>
 
           {/* Menu (hidden on small screens unless toggled open) */}
@@ -111,12 +122,11 @@ export function NavigationBar() {
         {/* Dropdown menu panel */}
         <div
           className={`
-            absolute top-0 left-0 w-full h-1/2 bg-background shadow-lg p-6 flex flex-col items-start gap-4
-            transform transition-transform duration-300 ease-in-out
-            ${
-              isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"
-            }
-          `}
+    absolute top-0 left-0 w-full h-full bg-white dark:bg-background 
+    p-6 flex flex-col items-start gap-4 z-40
+    transition-opacity duration-300 ease-in-out
+    ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+  `}
         >
           {/* Close button */}
           <button
@@ -128,14 +138,29 @@ export function NavigationBar() {
           </button>
 
           {/* Nav links */}
-          <NavLink to="/" className="text-black dark:text-white text-lg">
+          <NavLink
+            to="/"
+            className="text-black dark:text-white text-lg"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </NavLink>
 
-          <NavLink to="/resume" className="text-black dark:text-white text-lg">
+          <a
+            href="/Santoso_Dustin_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-black dark:text-white text-lg"
+            onClick={() => setIsOpen(false)}
+          >
             Resume
-          </NavLink>
-          <NavLink to="/aboutme" className="text-black dark:text-white text-lg">
+          </a>
+
+          <NavLink
+            to="/aboutme"
+            className="text-black dark:text-white text-lg"
+            onClick={() => setIsOpen(false)}
+          >
             About Me
           </NavLink>
         </div>
