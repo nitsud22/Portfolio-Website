@@ -19,7 +19,7 @@ import {
 export function CarouselSize() {
   const autoplay = useRef(
     Autoplay({
-      delay: 2000,
+      delay: 4000,
       stopOnInteraction: false,
       stopOnMouseEnter: true,
     })
@@ -35,7 +35,7 @@ export function CarouselSize() {
     >
       <CarouselContent>
         {images.map((src, index) => (
-          <CarouselItem key={index} className="basis-1/3">
+          <CarouselItem key={index} className="lg:basis-1/3">
             <div className="p-1">
               <CardContent className="flex aspect-[16/9] w-full h-full items-center justify-center p-0 b">
                 <img
@@ -48,8 +48,8 @@ export function CarouselSize() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden lg:flex" />
+      <CarouselNext className="hidden lg:flex" />
     </Carousel>
   );
 }
