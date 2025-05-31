@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPressed, setIsPressed] = useState(false);
+  const [pressed, setPressed] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -108,72 +108,78 @@ export function NavigationBar() {
         </div>
       </div>
 
-      {/* Mobile dropdown menu overlay */}
+      {/* Dropdown menu panel */}
       <div
         className={`
-          fixed inset-0 z-50 bg-stone-800/50
-          transition-opacity duration-300
-          ${
-            isOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }
-        `}
+      absolute top-0 left-0 w-full h-[50vh] bg-white dark:bg-background 
+      p-4 flex flex-col items-start gap-2 z-40
+      transition-opacity duration-300 ease-in-out
+      ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+    `}
       >
-        {/* Dropdown menu panel */}
-        <div
-          className={`
-    absolute top-0 left-0 w-full h-full bg-white dark:bg-background 
-    p-6 flex flex-col items-start gap-4 z-40
-    transition-opacity duration-300 ease-in-out
-    ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}
-  `}
+        {/* Close button */}
+        <button
+          onClick={() => setIsOpen(false)}
+          className="text-black dark:text-white self-end"
+          aria-label="Close menu"
         >
-          {/* Close button */}
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-black dark:text-white self-end"
-            aria-label="Close menu"
-          >
-            <X className="w-6 h-6" />
-          </button>
+          <X className="w-6 h-6" />
+        </button>
 
-          {/* Nav links */}
-          <NavLink
-            to="/"
-            className={`text-lg px-3 py-2 rounded transition-colors ${
-              isPressed
-                ? "bg-gray-300 dark:bg-gray-700"
-                : "text-black dark:text-white"
-            }`}
-            onTouchStart={() => setIsPressed(true)}
-            onTouchEnd={() => {
-              setIsPressed(false);
-              setIsOpen(false); // closes navbar
-            }}
-            onClick={() => setIsOpen(false)} // fallback for click on non-touch devices
-          >
-            Home
-          </NavLink>
+        {/* Navigation Menu from shadcn */}
+        <NavigationMenu>
+          <NavigationMenuList className="flex flex-col gap-2 h-full w-full">
+            <NavigationMenuItem>
+              <NavigationMenuLink>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `text-lg text-left w-full rounded transition-colors ${
+                      isActive
+                        ? "bg-gray-300 dark:bg-gray-700"
+                        : "bg-black-100 text-black dark:text-white"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </NavLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
 
-          <a
-            href="/Santoso_Dustin_Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black dark:text-white text-lg"
-            onClick={() => setIsOpen(false)}
-          >
-            Resume
-          </a>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <a
+                  href="/Santoso_Dustin_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg text-left py-2 w-full rounded bg-black-100 text-black dark:text-white transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Resume
+                </a>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
 
-          <NavLink
-            to="/aboutme"
-            className="text-black dark:text-white text-lg"
-            onClick={() => setIsOpen(false)}
-          >
-            About Me
-          </NavLink>
-        </div>
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <NavLink
+                  to="/aboutme"
+                  className={({ isActive }) =>
+                    `text-lg text-left py-2 w-full rounded transition-colors ${
+                      isActive
+                        ? "bg-gray-300 dark:bg-gray-700"
+                        : "bg-black-100 text-black dark:text-white"
+                    }`
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  About Me
+                </NavLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
     </div>
   );
