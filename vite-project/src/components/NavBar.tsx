@@ -19,6 +19,7 @@ import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -140,8 +141,17 @@ export function NavigationBar() {
           {/* Nav links */}
           <NavLink
             to="/"
-            className="text-black dark:text-white text-lg"
-            onClick={() => setIsOpen(false)}
+            className={`text-lg px-3 py-2 rounded transition-colors ${
+              isPressed
+                ? "bg-gray-300 dark:bg-gray-700"
+                : "text-black dark:text-white"
+            }`}
+            onTouchStart={() => setIsPressed(true)}
+            onTouchEnd={() => {
+              setIsPressed(false);
+              setIsOpen(false); // closes navbar
+            }}
+            onClick={() => setIsOpen(false)} // fallback for click on non-touch devices
           >
             Home
           </NavLink>

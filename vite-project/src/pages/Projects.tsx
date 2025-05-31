@@ -14,13 +14,13 @@ function Projects() {
           Dustin Santoso
         </h1>
 
-        <div className="flex md:justify-between items-center mt-1 flex-wrap">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0">
           <p className="lg:text-lg md:text-m text-s text-left">
-            Aspiring Data Engineer | Recent CS Graduate | Sharing Kindness
+            Aspiring Data Engineer | Recent CS Graduate
           </p>
 
-          <div className="flex space-x-4 text-xl mt-2 md:mt-0 ">
-            <SocialLinks></SocialLinks>
+          <div className="flex space-x-4 text-xl">
+            <SocialLinks />
           </div>
         </div>
       </div>

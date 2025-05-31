@@ -1,11 +1,10 @@
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
-import asa from "../assets/asa.jpeg";
-import haerin from "../assets/haerin.jpg";
-import bae from "../assets/bae.jpg";
-import winter from "../assets/winter.jpg";
-import hanni from "../assets/hanni.jpg";
+import { useRef, useState } from "react";
+import keeb from "../assets/keeb.jpg";
+import newjeans from "../assets/newjeans.png";
+import pixelart from "../assets/pixelart.jpg";
+import radiant from "../assets/radiant.png";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -25,7 +24,7 @@ export function CarouselSize() {
     })
   );
 
-  const images = [hanni, asa, haerin, bae, winter];
+  const images = [keeb, newjeans, pixelart, radiant];
 
   return (
     <Carousel

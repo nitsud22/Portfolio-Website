@@ -8,7 +8,7 @@ function AboutMe() {
       {/* Main Content Section */}
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 lg:pt-8 md:gap-x-12 gap-4">
         {/* Image Section */}
-        <div className="order-1 lg:order-2 overflow-hidden rounded-2xl lg:w-1/3 w-full">
+        <div className="order-1 lg:order-2 overflow-hidden lg:w-1/3 w-full">
           <img
             src={winter}
             alt="Dustin Santoso"
@@ -23,7 +23,7 @@ function AboutMe() {
             Hi, I'm Dustin a recent Computer Science graduate with a passion for
             data engineering, systems design, and creating intuitive user
             experiences. My career trajectory has always been evolving with each
-            new experience. Initially a med-school prospect turned to a comp-sci
+            new experience. Initially a med-school dreamer turned to a comp-sci
             student turned to aspiring data engineer. I am excited to see where
             this path may lead me.
           </p>
@@ -40,7 +40,7 @@ function AboutMe() {
         <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 border-t w-full">
           Hobby Highlights
         </h2>
-        <div className="w-full lg:w-full pb-10 md:pb-20">
+        <div className="w-full lg:w-full pb-2">
           <CarouselSize></CarouselSize>
         </div>
       </div>
