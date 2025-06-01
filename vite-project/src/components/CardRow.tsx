@@ -41,7 +41,7 @@ export function Cards() {
           <img
             src={card.image}
             alt={card.title}
-            className="md:w-1/3 md:aspect-square h-64 lg:h-100 object-cover"
+            className="md:w-1/3 md:aspect-square h-64 lg:h-80 object-cover"
           />
 
           {/* Text Content */}

@@ -5,6 +5,7 @@ import keeb from "../assets/keeb.jpg";
 import newjeans from "../assets/newjeans.png";
 import pixelart from "../assets/pixelart.jpg";
 import radiant from "../assets/radiant.png";
+import asa from "../assets/asa.jpeg";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -24,7 +25,7 @@ export function CarouselSize() {
     })
   );
 
-  const images = [keeb, newjeans, pixelart, radiant];
+  const images = [keeb, newjeans, pixelart, radiant, asa];
 
   return (
     <Carousel
