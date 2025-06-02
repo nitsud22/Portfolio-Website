@@ -62,7 +62,7 @@ export function Cards() {
               <h3 className="text-3xl font-semibold mb-2 text-gray-900 dark:text-white">
                 {card.title}
               </h3>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-gray-700 dark:text-gray-300 hidden md:block">
                 {card.description}
               </p>
             </div>
