@@ -20,17 +20,17 @@ function AboutMe() {
         <div className="order-2 lg:order-1 lg:w-2/3 text-left">
           <h2 className="text-3xl font-semibold">About Me</h2>
           <p className=" text-gray-700 mt-2">
-            Hi, I'm Dustin a recent Computer Science graduate with a passion for
+            Hi I'm Dustin, a recent Computer Science graduate with a passion for
             data engineering, systems design, and creating intuitive user
             experiences. My career trajectory has always been evolving with each
-            new experience. Initially a med-school dreamer turned to a comp-sci
-            student turned to aspiring data engineer. I am excited to see where
-            this path may lead me.
+            new experience: from someone once set on med school, to a computer
+            science student, to an aspiring data engineer. I’m excited to see
+            where this path will lead me.
           </p>
           <p className=" text-gray-700 mt-4">
             Outside of work, I love obsessing over hobbies whether it be
-            competitive video games, skincare, or designing my room. If it is
-            something that peaks my interest, then I am diving head first.
+            competitive video games, skincare, or designing my room. If
+            something piques my interest, I dive in headfirst.
           </p>
         </div>
       </div>

@@ -1,16 +1,18 @@
 import background from "../assets/background.jpg";
+import city from "../assets/city2.jpg";
 import hanni from "../assets/hanni.jpg";
 
 export function Introduction() {
   return (
     <div className="relative w-full pb-20">
       {/* Background Image */}
-      <div className="lg:h-[30vh] h-[12vh] overflow-hidden">
+      <div className="relative lg:h-[30vh] h-[12vh] overflow-hidden">
         <img
-          src={background}
+          src={city}
           alt="rancho night"
           className="w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/20 " />
       </div>
 
       {/* Profile + Intro - grouped and positioned at the bottom */}
