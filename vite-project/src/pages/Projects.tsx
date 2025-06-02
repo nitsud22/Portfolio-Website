@@ -29,7 +29,7 @@ function Projects() {
         {/* Responsive horizontal padding */}
         <div className="py-2">
           <h2 className="mt-10 scroll-m-20  text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5">
-            Personal Projects
+            Projects
           </h2>
         </div>
         <Cards />
