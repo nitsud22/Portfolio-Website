@@ -43,7 +43,7 @@ export function NavigationBar() {
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
                 <NavLink to="/">
-                  <h2 className="text-3xl font-semi-bold tracking-tight text-gray-900 dark:text-white transition-colors whitespace-nowrap">
+                  <h2 className="text-2xl font-semi-bold tracking-tight text-gray-900 dark:text-white transition-colors whitespace-nowrap">
                     dustin santoso
                   </h2>
                 </NavLink>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMapPin, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
-
+import { ResearchCards } from "@/components/ResearchCards";
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
 import { SocialLinks } from "@/components/Socials";
@@ -25,7 +25,7 @@ function Projects() {
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
-          <div className="lg:w-3/4 w-full">
+          <div className="lg:w-4/5 w-full">
             {/* Header */}
             <div className="py-2">
               <h2
@@ -51,12 +51,12 @@ function Projects() {
                 Research
               </h2>
             </div>
-
+            <ResearchCards></ResearchCards>
             <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
           </div>
 
           {/* Right column: On this page sidebar */}
-          <div className="lg:w-1/4 w-full items-start">
+          <div className="lg:w-1/5 w-full items-start">
             <div className=" pl-5 ">
               <h2
                 id="projects"

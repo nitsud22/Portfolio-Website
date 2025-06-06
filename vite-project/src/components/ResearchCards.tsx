@@ -1,8 +1,5 @@
-import asa from "../assets/asa.jpeg";
-import haerin from "../assets/haerin.jpg";
-import bae from "../assets/bae.jpg";
-import logreg from "../assets/logreg.png";
-import dash from "../assets/crawl-dash.png";
+import cspan from "../assets/CCSE.png";
+
 import { Link } from "react-router-dom";
 
 import {
@@ -13,11 +10,11 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 
-export function Cards() {
+export function ResearchCards() {
   const cardData = [
     {
-      image: logreg,
-      title: "Predicting College Student Outcomes with Logistic Regression",
+      image: cspan,
+      title: "A multi-modal approach to rhetorical polarization detection",
       description: (
         <>
           As part of my Machine Learning course at CSUSB we were tasked with a
@@ -32,12 +29,6 @@ export function Cards() {
       ),
       path: "/page-one",
     },
-    {
-      image: dash,
-      title: "Real-time Crawl Monitoring Dashboard for CrawlBee ",
-      description: "...",
-      path: "/page-two",
-    },
   ];
 
   return (
@@ -49,7 +40,7 @@ export function Cards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square h-64 2xl:h-80 object-cover"
+              className="md:w-1/3 md:aspect-square h-64 2xl:h-80  object-cover"
             />
 
             {/* Text Content */}
