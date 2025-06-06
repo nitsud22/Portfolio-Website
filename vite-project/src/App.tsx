@@ -15,7 +15,7 @@ function App() {
 
   return (
     <Router>
-      <div className="w-full">
+      <div className="w-full ">
         <NavigationBar />
         <Routes>
           <Route path="/" element={<Projects />} />

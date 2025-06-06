@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiMapPin, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
@@ -9,7 +10,7 @@ function Projects() {
   return (
     <div className="width:100% ">
       <Introduction></Introduction>
-      <div className="w-full border-b md:py-3 py-4 dark:bg-black px-4 md:px-8 lg:px-30">
+      <div className="w-full border-b md:py-3 py-4 dark:bg-black px-4 md:px-8 lg:px-30 ">
         <h1 className="lg:text-3xl font-bold md:text-2xl text-xl text-left">
           Dustin Santoso
         </h1>
@@ -18,30 +19,100 @@ function Projects() {
           <p className="lg:text-lg md:text-m text-s text-left">
             Aspiring Data Engineer | Recent CS Graduate
           </p>
-
-          <div className="flex space-x-4 text-xl">
-            <SocialLinks />
-          </div>
         </div>
       </div>
       <div className="px-4 md:px-8 lg:px-30">
-        {" "}
-        {/* Responsive horizontal padding */}
-        <div className="py-2">
-          <h2 className="mt-10 scroll-m-20  text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5">
-            Projects
-          </h2>
+        {/* Main layout: Left = Content, Right = Sidebar */}
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Left column: Header, Cards, Research */}
+          <div className="lg:w-3/4 w-full">
+            {/* Header */}
+            <div className="py-2">
+              <h2
+                id="projects"
+                className="mt-10 scroll-m-20 text-3xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+              >
+                Projects
+              </h2>
+            </div>
+
+            {/* Cards */}
+            <Cards />
+
+            {/* Spacer */}
+            <div className="py-10"></div>
+
+            {/* Research section */}
+            <div
+              className="py-2 w-full border-t md:py-3 py-4 dark:bg-black px-5"
+              id="research"
+            >
+              <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-wide transition-colors first:mt-0 text-left py-5">
+                Research
+              </h2>
+            </div>
+
+            <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
+          </div>
+
+          {/* Right column: On this page sidebar */}
+          <div className="lg:w-1/4 w-full items-start">
+            <div className=" pl-5 ">
+              <h2
+                id="projects"
+                className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5"
+              >
+                On this page
+              </h2>
+              <ul className="space-y-2 text-left">
+                <li>
+                  <a
+                    href="#projects"
+                    className="text-gray-500 hover:text-black"
+                  >
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#research"
+                    className="text-gray-500 hover:text-black"
+                  >
+                    Research
+                  </a>
+                </li>
+              </ul>
+              <div className="pt-10">
+                <h2 className="mb-4 border-t py-5 pb-1 mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left">
+                  Contact Me
+                </h2>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="flex items-center gap-2">
+                    <FiMail />
+                    <a href="mailto:dustin.santoso025@gmail.com">
+                      dustin.santoso025@gmail.com
+                    </a>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <FiLinkedin />
+                    <a href="https://www.linkedin.com/in/dustinsantoso/">
+                      linkedin.com/dustinsantoso
+                    </a>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <FiGithub />
+                    <a href="https://github.com/nitsud22">
+                      github.com/nitsud22
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <Cards />
-        <div className="py-10 "></div>
-        <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black px-5">
-          <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5">
-            Team Projects
-          </h2>
-        </div>
-        <Cards />
-        <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
-        <Footer></Footer>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

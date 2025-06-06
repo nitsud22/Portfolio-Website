@@ -16,7 +16,7 @@ export function Cards() {
   const cardData = [
     {
       image: logreg,
-      title: "C++ Implementation of Logistic Regression",
+      title: "Predicting College Student Outcomes with Logistic Regression",
       description: (
         <>
           As part of my Machine Learning course at CSUSB we were tasked with a
