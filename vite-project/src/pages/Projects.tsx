@@ -25,9 +25,9 @@ function Projects() {
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
-          <div className="lg:w-4/5 w-full">
+          <div className="lg:w-3/4 w-full">
             {/* Header */}
-            <div className="py-2">
+            <div className="">
               <h2
                 id="projects"
                 className="mt-10 scroll-m-20 text-3xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
@@ -56,15 +56,15 @@ function Projects() {
           </div>
 
           {/* Right column: On this page sidebar */}
-          <div className="lg:w-1/5 w-full items-start">
-            <div className=" pl-5 ">
+          <div className="hidden lg:block lg:w-1/4 w-full items-start">
+            <div className="  ">
               <h2
                 id="projects"
-                className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 text-2xl font-semibold  transition-colors first:mt-0 text-left py-5"
               >
                 On this page
               </h2>
-              <ul className="space-y-2 text-left">
+              <ul className="space-y-2 px-2 text-left">
                 <li>
                   <a
                     href="#projects"
@@ -83,10 +83,10 @@ function Projects() {
                 </li>
               </ul>
               <div className="pt-10">
-                <h2 className="mb-4 border-t py-5 pb-1 mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left">
+                <h2 className="mb-4 py-5 pb-1 mt-10 scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 text-left">
                   Contact Me
                 </h2>
-                <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="space-y-3 px-2  text-sm text-muted-foreground">
                   <p className="flex items-center gap-2">
                     <FiMail />
                     <a href="mailto:dustin.santoso025@gmail.com">
