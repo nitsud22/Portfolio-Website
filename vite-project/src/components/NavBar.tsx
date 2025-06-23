@@ -65,9 +65,11 @@ export function NavigationBar() {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-black"
-                      : "text-neutral-400 hover:text-black"
+                    `${
+                      isActive
+                        ? "text-black"
+                        : "text-neutral-400 hover:text-black"
+                    } transition-colors duration-200`
                   }
                 >
                   Projects
@@ -77,9 +79,11 @@ export function NavigationBar() {
                 <NavLink
                   to="/resume"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-black"
-                      : "text-neutral-400 hover:text-black"
+                    `${
+                      isActive
+                        ? "text-black"
+                        : "text-neutral-400 hover:text-black"
+                    } transition-colors duration-200`
                   }
                 >
                   Resume
@@ -89,9 +93,11 @@ export function NavigationBar() {
                 <NavLink
                   to="/aboutme"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-black"
-                      : "text-neutral-400 hover:text-black whitespace-nowrap"
+                    `${
+                      isActive
+                        ? "text-black"
+                        : "text-neutral-400 hover:text-black"
+                    } transition-colors duration-200`
                   }
                 >
                   About Me
