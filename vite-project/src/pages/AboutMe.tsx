@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Carousel } from "@/components/ui/carousel";
 function AboutMe() {
   return (
-    <div className="flex flex-col items-center lg:px-30">
+    <div className="flex flex-col items-center  max-w-7xl mx-auto">
       {/* Main Content Section */}
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 lg:pt-8 md:gap-x-12 gap-4">
         {/* Image Section */}

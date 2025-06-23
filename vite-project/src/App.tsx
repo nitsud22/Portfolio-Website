@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
 import Resume from "./pages/Resume";
+import CollegeOutcome from "./pages/collegeoutcomes";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Projects />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/collegeoutcomes" element={<CollegeOutcome />} />
         </Routes>
       </div>
     </Router>

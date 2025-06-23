@@ -3,6 +3,8 @@ import haerin from "../assets/haerin.jpg";
 import bae from "../assets/bae.jpg";
 import logreg from "../assets/logreg.png";
 import dash from "../assets/crawl-dash.png";
+import { NavLink, useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 import {
@@ -16,7 +18,7 @@ import {
 export function Cards() {
   const cardData = [
     {
-      image: logreg,
+      image: asa,
       title: "Predicting College Student Outcomes with Logistic Regression",
       description: (
         <>
@@ -30,7 +32,7 @@ export function Cards() {
           whether a student would graduate or dropout witha 91% accuracy.
         </>
       ),
-      path: "/page-one",
+      path: "/collegeoutcomes",
     },
     {
       image: dash,
@@ -43,7 +45,7 @@ export function Cards() {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
       {cardData.map((card, index) => (
-        <Link to={card.path} key={index} className="w-full">
+        <NavLink to={card.path} key={index} className="w-full">
           <div className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden">
             {/* Image */}
             <img
@@ -62,7 +64,7 @@ export function Cards() {
               </p>
             </div>
           </div>
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

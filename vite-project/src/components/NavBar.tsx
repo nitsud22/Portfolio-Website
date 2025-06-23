@@ -62,10 +62,38 @@ export function NavigationBar() {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
-                <NavLink to="/resume">Resume</NavLink>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-black"
+                      : "text-neutral-400 hover:text-black"
+                  }
+                >
+                  Projects
+                </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavLink to="/aboutme" className="whitespace-nowrap ">
+                <NavLink
+                  to="/resume"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-black"
+                      : "text-neutral-400 hover:text-black"
+                  }
+                >
+                  Resume
+                </NavLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavLink
+                  to="/aboutme"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-black"
+                      : "text-neutral-400 hover:text-black whitespace-nowrap"
+                  }
+                >
                   About Me
                 </NavLink>
               </NavigationMenuItem>
