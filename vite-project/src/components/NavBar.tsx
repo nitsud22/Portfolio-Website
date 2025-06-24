@@ -72,7 +72,7 @@ export function NavigationBar() {
                     } transition-colors duration-200`
                   }
                 >
-                  Projects
+                  Portfolio
                 </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>

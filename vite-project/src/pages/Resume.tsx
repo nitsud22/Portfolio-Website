@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 function Resume() {
   return (
-    <div className=" min-h-screen flex flex-col justify-betwee bg-background max-w-7xl mx-auto">
+    <div className=" min-h-screen flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-7xl mx-auto">
       {/* Main container that holds resume and contact box */}
       <div className="w-full flex-grow flex flex-col md:flex-row gap-4 lg:p-6">
         {/* PDF Viewer Section (75%) */}
@@ -25,8 +25,8 @@ function Resume() {
 
         {/* Contact Section (25%) */}
         <div className="md:w-1/4 w-full bg-white dark:bg-zinc-900 pt-4 h-fit space-y-6 text-left self-start rounded-2xl">
-          <h2 className="mb-4 border-b pb-1 mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left">
-            Contact Me
+          <h2 className="mb-4 pb-1 mt-10 scroll-m-20 text-2xl font-semibold tracking-tight transition-colors first:mt-0 text-left">
+            Contacts
           </h2>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">

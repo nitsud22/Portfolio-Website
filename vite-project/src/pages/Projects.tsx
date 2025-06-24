@@ -56,7 +56,7 @@ function Projects() {
               </h2>
             </div>
             <ResearchCards></ResearchCards>
-            <div className="py-10 w-full border-b border-gray-200 dark:border-gray-700 bg-background"></div>
+            <div className="py-10 w-full border-gray-200 dark:border-gray-700 bg-background"></div>
           </div>
 
           {/* Right column: On this page sidebar */}

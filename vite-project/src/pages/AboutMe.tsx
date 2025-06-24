@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Carousel } from "@/components/ui/carousel";
 function AboutMe() {
   return (
-    <div className="flex flex-col items-center  max-w-7xl mx-auto">
+    <div className="flex flex-col items-center px-4 md:px-8 max-w-7xl mx-auto">
       {/* Main Content Section */}
       <div className="flex flex-col lg:flex-row items-center justify-center p-4 lg:pt-8 md:gap-x-12 gap-4">
         {/* Image Section */}
@@ -40,7 +40,7 @@ function AboutMe() {
         <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 border-t w-full">
           Hobby Highlights
         </h2>
-        <div className="w-full lg:w-full pb-2">
+        <div className="w-full lg:w-full pb-2 px-10">
           <CarouselSize></CarouselSize>
         </div>
       </div>

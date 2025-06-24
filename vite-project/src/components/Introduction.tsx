@@ -6,7 +6,7 @@ export function Introduction() {
   return (
     <div className="relative w-full lg:pb-20 md:pb-10 pb-5">
       {/* Background Image */}
-      <div className="relative lg:h-[30vh] h-[15vh] overflow-hidden">
+      <div className="relative lg:h-[30vh] md:h-[25vh] h-[15vh] overflow-hidden">
         <img
           src={city}
           alt="rancho night"
