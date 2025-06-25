@@ -17,7 +17,7 @@ export function Introduction() {
 
       {/* Wrapper for max-width content */}
       <div className="absolute lg:-bottom-1 md:-botton-2 -bottom-3 left-0 right-0 z-10">
-        <div className="max-w-7xl mx-auto md:flex flex-col md:flex-row md:items-end space-y-4 md:space-y-0 md:space-x-6 px-4">
+        <div className="max-w-7xl mx-auto md:flex flex-col md:flex-row md:items-end space-y-4 md:space-y-0 md:space-x-6 px-4 md:px-8 ">
           {/* Profile Picture */}
           <img
             src={hanni}
