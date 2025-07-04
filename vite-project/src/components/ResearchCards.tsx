@@ -40,12 +40,12 @@ export function ResearchCards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square h-64 2xl:h-80  object-cover"
+              className="md:w-1/3 md:aspect-square h-64  object-cover"
             />
 
             {/* Text Content */}
             <div className="flex flex-col md:text-left md:pl-3 p-4 md:p-0 w-full">
-              <h3 className="text-3xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="lg:text-3xl md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-whitee">
                 {card.title}
               </h3>
               <p className="text-gray-700 dark:text-gray-300 hidden md:block">
