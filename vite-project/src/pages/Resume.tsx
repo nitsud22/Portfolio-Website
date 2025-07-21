@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 function Resume() {
   return (
-    <div className=" min-h-screen flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-7xl mx-auto">
+    <div className=" max-h-7xl flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-7xl mx-auto">
       {/* Main container that holds resume and contact box */}
       <div className="w-full flex-grow flex flex-col md:flex-row gap-4 lg:p-6">
         {/* PDF Viewer Section (75%) */}

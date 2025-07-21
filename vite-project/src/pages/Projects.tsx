@@ -20,7 +20,7 @@ function Projects() {
 
           <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0 ">
             <p className="lg:text-lg md:text-m text-s text-left">
-              Aspiring Data Engineer | Recent CS Graduate
+              Supporting Health Through Technology
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ function Projects() {
               </ul>
               <div className="pt-10 ">
                 <h2 className="mb-4 py-5 pb-1 mt-10 scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 text-left border-t">
-                  Contact Me
+                  Contacts
                 </h2>
                 <div className="space-y-3 px-2  text-sm text-muted-foreground">
                   <p className="flex items-center gap-2">
