@@ -22,10 +22,10 @@ export function Cards() {
       title: "Predicting College Student Outcomes with Logistic Regression",
       description: (
         <>
-          A C++ implementation of Logistice Regression. I used the algorithm on
-          a dataset of college students for binary classification. The model was
-          able to predict whether a student would graduate or dropout witha 91%
-          accuracy.
+          A C++ implementation of Logistic Regression. The algorithm was given
+          data pertaining to college students to predict each student's outcome,
+          Graduate or Dropout. The model was able to predict whether a student
+          would graduate or dropout with a accuracy of 91%
         </>
       ),
       path: "/collegeoutcomes",
