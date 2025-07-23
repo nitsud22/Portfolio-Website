@@ -24,14 +24,10 @@ function AboutMe() {
             data engineering, systems design, and creating intuitive user
             experiences. My career trajectory has always been evolving with each
             new experience: from someone once set on med school, to a computer
-            science student, to an aspiring data engineer. I’m excited to see
-            where this path will lead me.
+            science student, to an aspiring healthcare data engineer. I’m
+            excited to see where this path will lead me.
           </p>
-          <p className=" text-gray-700 mt-4">
-            Outside of work, I love obsessing over hobbies whether it be
-            competitive video games, skincare, or designing my room. If
-            something piques my interest, I dive in headfirst.
-          </p>
+          <p className=" text-gray-700 mt-4"></p>
         </div>
       </div>
 

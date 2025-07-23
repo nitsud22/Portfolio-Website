@@ -6,9 +6,9 @@ function Resume() {
   return (
     <div className=" max-h-7xl flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-7xl mx-auto">
       {/* Main container that holds resume and contact box */}
-      <div className="w-full flex-grow flex flex-col md:flex-row gap-4 lg:p-6">
+      <div className="w-full flex-grow flex flex-col md:flex-row gap-4 pt-8">
         {/* PDF Viewer Section (75%) */}
-        <div className="w-full bg-white dark:bg-zinc-900 p-4 space-y-6">
+        <div className="w-full bg-white dark:bg-zinc-900 space-y-6">
           <iframe
             className="hidden md:block w-full h-[100vh] "
             src="/Santoso_Dustin_Resume.pdf"
@@ -24,7 +24,7 @@ function Resume() {
         </div>
 
         {/* Contact Section (25%) */}
-        <div className="md:w-1/4 w-full bg-white dark:bg-zinc-900 pt-4 h-fit space-y-6 text-left self-start rounded-2xl">
+        <div className="md:w-1/4 w-full bg-white dark:bg-zinc-900 h-fit space-y-6 text-left self-start rounded-2xl">
           <h2 className="mb-4 pb-1 mt-10 scroll-m-20 text-2xl font-semibold tracking-tight transition-colors first:mt-0 text-left">
             Contacts
           </h2>

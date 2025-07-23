@@ -25,7 +25,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="mpx-4 md:px-8 ax-w-7xl mx-auto">
+      <div className="mpx-4 md:px-8 max-w-7xl mx-auto">
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
@@ -34,7 +34,7 @@ function Projects() {
             <div className="">
               <h2
                 id="projects"
-                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl  tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
               >
                 Projects
               </h2>
