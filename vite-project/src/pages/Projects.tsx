@@ -32,31 +32,28 @@ function Projects() {
           <div className="lg:w-3/4 w-full">
             {/* Header */}
             <div className="">
-              <h2
-                id="projects"
-                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
-              >
+              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
                 Projects
               </h2>
             </div>
-
-            {/* Cards */}
             <Cards />
 
             {/* Spacer */}
             <div className="py-10"></div>
 
             {/* Research section */}
-            <div
-              className="py-2 w-full border-t md:py-3 py-4 dark:bg-black px-5"
-              id="research"
-            >
-              <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-wide transition-colors first:mt-0 text-left py-5">
+            <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
+              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
                 Research
               </h2>
             </div>
             <ResearchCards></ResearchCards>
             <div className="py-10 w-full border-gray-200 dark:border-gray-700 bg-background"></div>
+            <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
+              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
+                Training
+              </h2>
+            </div>
           </div>
 
           {/* Right column: On this page sidebar */}

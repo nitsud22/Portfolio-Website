@@ -28,13 +28,13 @@ export function Cards() {
           would graduate or dropout with a accuracy of 91%
         </>
       ),
-      path: "/collegeoutcomes",
+      path: "/college-outcomes",
     },
     {
       image: dash,
       title: "Real-time Crawl Monitoring Dashboard for CrawlBee ",
       description: "...",
-      path: "/page-two",
+      path: "/crawl-dashboard",
     },
   ];
 
