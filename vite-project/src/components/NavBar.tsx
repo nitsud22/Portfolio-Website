@@ -1,28 +1,31 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "./ui/navigationmenu";
 
 import { DropdownMenuDemo } from "./MobileMenu";
-
-import { NavLink, useNavigate } from "react-router-dom";
-
-import { Menu, X } from "lucide-react";
-
-import { Home } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [pressed, setPressed] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
+  // Scroll effect only on portfolio page
+  useEffect(() => {
+    if (location.pathname !== "/") return; // disable scroll effect if not portfolio
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
+
+  // Body lock for mobile menu
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -34,17 +37,36 @@ export function NavigationBar() {
     };
   }, [isOpen]);
 
+  // Determine if we’re on portfolio page
+  const isPortfolioPage = location.pathname === "/";
+
   return (
-    <div className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-neutral-900 bg-white">
-      <div className="mx-auto flex justify-between items-center px-4 py-2">
+    <div
+      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
+        isPortfolioPage
+          ? scrolled
+            ? "bg-white"
+            : "bg-transparent"
+          : "bg-white sticky"
+      }`}
+    >
+      <div className="mx-auto flex justify-between items-center px-4 md:px-8 py-2">
         {/* Left side navigation */}
         <div className="flex-1">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
                 <NavLink to="/">
-                  <h2 className="text-2xl font-semi-bold tracking-tight text-gray-900 dark:text-white transition-colors whitespace-nowrap">
-                    dustin santoso
+                  <h2
+                    className={`text-2xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
+                      isPortfolioPage
+                        ? scrolled
+                          ? "text-gray-900"
+                          : "text-white"
+                        : "text-gray-900"
+                    }`}
+                  >
+                    DUSTIN SANTOSO
                   </h2>
                 </NavLink>
               </NavigationMenuItem>
@@ -54,39 +76,33 @@ export function NavigationBar() {
 
         {/* Right side navigation */}
         <div className="flex-1 flex justify-end items-center ">
-          {/* Hamburger toggle (only visible on small screens) */}
+          {/* Hamburger toggle */}
           <div className="block md:hidden text-black dark:text-white">
-            <DropdownMenuDemo></DropdownMenuDemo>
+            <DropdownMenuDemo />
           </div>
 
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
                 <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    `${
-                      isActive
-                        ? "text-black"
-                        : "text-neutral-400 hover:text-black"
-                    } transition-colors duration-200`
-                  }
-                >
-                  Portfolio
-                </NavLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavLink
                   to="/resume"
                   className={({ isActive }) =>
                     `${
-                      isActive
-                        ? "text-black"
-                        : "text-neutral-400 hover:text-black"
-                    } transition-colors duration-200`
+                      isPortfolioPage
+                        ? scrolled
+                          ? isActive
+                            ? "text-black" // active + scrolled
+                            : "text-gray-500 hover:text-black" // inactive + scrolled
+                          : isActive
+                          ? "text-white" // active + transparent
+                          : "text-gray-200 hover:text-white" // inactive + transparent
+                        : isActive
+                        ? "text-black" // active on non-portfolio
+                        : "text-gray-500 hover:text-black" // inactive on non-portfolio
+                    } transition-colors duration-300`
                   }
                 >
-                  Resume
+                  RESUME
                 </NavLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -94,13 +110,21 @@ export function NavigationBar() {
                   to="/aboutme"
                   className={({ isActive }) =>
                     `${
-                      isActive
-                        ? "text-black"
-                        : "text-neutral-400 hover:text-black"
-                    } transition-colors duration-200`
+                      isPortfolioPage
+                        ? scrolled
+                          ? isActive
+                            ? "text-black" // active + scrolled
+                            : "text-gray-500 hover:text-black" // inactive + scrolled
+                          : isActive
+                          ? "text-white" // active + transparent
+                          : "text-gray-200 hover:text-white" // inactive + transparent
+                        : isActive
+                        ? "text-black" // active on non-portfolio
+                        : "text-gray-500 hover:text-black" // inactive on non-portfolio
+                    } transition-colors duration-300`
                   }
                 >
-                  About Me
+                  ABOUT ME
                 </NavLink>
               </NavigationMenuItem>
             </NavigationMenuList>

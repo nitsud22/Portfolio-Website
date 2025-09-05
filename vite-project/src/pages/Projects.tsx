@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiMapPin, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import { ResearchCards } from "@/components/ResearchCards";
+import { TrainingCards } from "@/components/TrainingCards";
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
 import hanni from "../assets/hanni.jpg";
@@ -12,27 +13,20 @@ function Projects() {
     <div className="width:100% ">
       <Introduction></Introduction>
 
-      <div className="w-full border-b md:py-3 py-4 dark:bg-black  ">
-        <div className="px-4 md:px-8 max-w-7xl mx-auto ">
-          <h1 className="lg:text-3xl font-bold md:text-2xl text-xl text-left ">
-            Dustin Santoso
-          </h1>
-
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center space-y-2 md:space-y-0 ">
-            <p className="lg:text-lg md:text-m text-s text-left">
-              Supporting Health Through Technology
-            </p>
-          </div>
-        </div>
+      <div className="w-full border-b md:py-3 py-6 px-5 dark:bg-black  ">
+        <div className="px-4 md:px-8 max-w-7xl mx-auto "></div>
       </div>
-      <div className="mpx-4 md:px-8 max-w-7xl mx-auto">
+      <div className="px-4 md:px-8 max-w-7xl mx-auto">
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
           <div className="lg:w-3/4 w-full">
             {/* Header */}
             <div className="">
-              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
+              <h2
+                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                id="projects"
+              >
                 Projects
               </h2>
             </div>
@@ -43,17 +37,24 @@ function Projects() {
 
             {/* Research section */}
             <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
-              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
+              <h2
+                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                id="research"
+              >
                 Research
               </h2>
             </div>
             <ResearchCards></ResearchCards>
             <div className="py-10 w-full border-gray-200 dark:border-gray-700 bg-background"></div>
             <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
-              <h2 className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5">
+              <h2
+                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                id="training"
+              >
                 Training
               </h2>
             </div>
+            <TrainingCards></TrainingCards>
           </div>
 
           {/* Right column: On this page sidebar */}
@@ -80,6 +81,14 @@ function Projects() {
                     className="text-gray-500 hover:text-black"
                   >
                     Research
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#training"
+                    className="text-gray-500 hover:text-black"
+                  >
+                    Training
                   </a>
                 </li>
               </ul>
