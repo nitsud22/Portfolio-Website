@@ -50,7 +50,7 @@ export function NavigationBar() {
           : "bg-white sticky"
       }`}
     >
-      <div className="mx-auto flex justify-between items-center px-4 md:px-8 py-2">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 py-2">
         {/* Left side navigation */}
         <div className="flex-1">
           <NavigationMenu>

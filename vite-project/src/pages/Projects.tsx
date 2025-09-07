@@ -13,7 +13,7 @@ function Projects() {
     <div className="width:100% ">
       <Introduction></Introduction>
 
-      <div className="w-full border-b md:py-3 py-6 px-5 dark:bg-black  ">
+      <div className="w-full border-b md:py-4 py-6 px-5 dark:bg-black  ">
         <div className="px-4 md:px-8 max-w-7xl mx-auto "></div>
       </div>
       <div className="px-4 md:px-8 max-w-7xl mx-auto">
