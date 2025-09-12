@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 
 function Resume() {
   return (
-    <div className=" max-h-7xl flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-7xl mx-auto">
+    <div className=" max-h-7xl flex flex-col justify-betwee bg-background px-4 md:px-8 max-w-5xl mx-auto">
       {/* Main container that holds resume and contact box */}
       <div className="w-full flex-grow flex flex-col md:flex-row gap-4 pt-8">
         {/* PDF Viewer Section (75%) */}
@@ -30,7 +30,7 @@ function Resume() {
           </h2>
           <div className="space-y-3 text-sm text-muted-foreground">
             <p className="flex items-center gap-2">
-              <FiMapPin /> Yucaipa, CA
+              <FiMapPin /> Yucaipa, California
             </p>
             <p className="flex items-center gap-2">
               <FiMail />

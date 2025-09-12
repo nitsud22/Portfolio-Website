@@ -13,14 +13,14 @@ function Projects() {
     <div className="width:100% ">
       <Introduction></Introduction>
 
-      <div className="w-full border-b md:py-4 py-6 px-5 dark:bg-black  ">
+      <div className="w-full  md:py-6 py-6 px-5 dark:bg-black  ">
         <div className="px-4 md:px-8 max-w-7xl mx-auto "></div>
       </div>
-      <div className="px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="px-4 md:px-8 max-w-5xl mx-auto">
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
-          <div className="lg:w-3/4 w-full">
+          <div className="w-full">
             {/* Header */}
             <div className="">
               <h2
@@ -58,11 +58,11 @@ function Projects() {
           </div>
 
           {/* Right column: On this page sidebar */}
-          <div className="hidden lg:block lg:w-1/4 w-full items-start text-left">
+          <div className="hidden lg:block whitespace-nowrap mx-auto text-right">
             <div className="">
               <h2
                 id="projects"
-                className="mt-10 scroll-m-20 text-2xl font-semibold  transition-colors first:mt-0 py-5"
+                className=" scroll-m-20 text-2xl font-semibold  transition-colors first:mt-0 py-4"
               >
                 On this page
               </h2>
@@ -92,31 +92,6 @@ function Projects() {
                   </a>
                 </li>
               </ul>
-              <div className="pt-10 ">
-                <h2 className="mb-4 py-5 pb-1 mt-10 scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 text-left border-t">
-                  Contacts
-                </h2>
-                <div className="space-y-3 px-2  text-sm text-muted-foreground">
-                  <p className="flex items-center gap-2">
-                    <FiMail />
-                    <a href="mailto:dustin.santoso025@gmail.com">
-                      dustin.santoso025@gmail.com
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <FiLinkedin />
-                    <a href="https://www.linkedin.com/in/dustinsantoso/">
-                      linkedin.com/dustinsantoso
-                    </a>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <FiGithub />
-                    <a href="https://github.com/nitsud22">
-                      github.com/nitsud22
-                    </a>
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

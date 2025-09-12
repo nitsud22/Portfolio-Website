@@ -15,18 +15,7 @@ export function ResearchCards() {
     {
       image: cspan,
       title: "A multi-modal approach to rhetorical polarization detection",
-      description: (
-        <>
-          As part of my Machine Learning course at CSUSB we were tasked with a
-          final project. Either you could use sci-kit learn to test the
-          differences of several Machine Learning models or you could implement
-          a machine learning algorithm from scratch using a language of your
-          choice. I chose the second option. I implemented the supervised
-          learning alogrithm : Logistic Regression on a dataset of college
-          students for binary classification. The model was able to predict
-          whether a student would graduate or dropout witha 91% accuracy.
-        </>
-      ),
+      description: <></>,
       path: "/page-one",
     },
   ];

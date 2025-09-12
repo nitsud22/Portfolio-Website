@@ -4,9 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Carousel } from "@/components/ui/carousel";
 function AboutMe() {
   return (
-    <div className="flex flex-col items-center px-4 md:px-8 max-w-7xl mx-auto">
+    <div className="flex flex-col items-center px-4 md:px-8 max-w-5xl mx-auto">
       {/* Main Content Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-center p-4 lg:pt-8 md:gap-x-12 gap-4">
+      <div className="flex flex-col w-full lg:flex-row items-center  lg:pt-8 md:gap-x-12 gap-4">
         {/* Image Section */}
         <div className="order-1 lg:order-2 overflow-hidden lg:w-1/3 w-full">
           <img
@@ -20,27 +20,17 @@ function AboutMe() {
         <div className="order-2 lg:order-1 lg:w-2/3 text-left">
           <h2 className="text-3xl font-semibold">About Me</h2>
           <p className=" text-gray-700 mt-2">
-            Hi I'm Dustin, a recent Computer Science graduate with a passion for
-            data engineering, systems design, and creating intuitive user
-            experiences. My career trajectory has always been evolving with each
-            new experience: from someone once set on med school, to a computer
-            science student, to an aspiring healthcare data engineer. I’m
-            excited to see where this path will lead me.
+            Hi I'm Dustin! Currently I am a HCAI Health Information & Electronic
+            Records Learner for OCHIN. I love bridging the gap between
+            technology and people, which I took one step further landing me in
+            healthcare. I hope to modernize healthcare not only through
+            innovation but by meeting the healthcare industry where it's at.
           </p>
-          <p className=" text-gray-700 mt-4"></p>
         </div>
       </div>
-
-      <div className="md:py-5"></div>
-      <div className="w-full p-4 items-center">
-        <h2 className="mt-10 scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-left py-5 border-t w-full">
-          Hobby Highlights
-        </h2>
-        <div className="w-full lg:w-full pb-2 px-10">
-          <CarouselSize></CarouselSize>
-        </div>
+      <div className="pt-5 w-full">
+        <Footer />
       </div>
-      <Footer></Footer>
     </div>
   );
 }

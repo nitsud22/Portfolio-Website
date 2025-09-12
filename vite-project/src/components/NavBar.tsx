@@ -1,3 +1,5 @@
+import { FaFileAlt, FaUser } from "react-icons/fa";
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -10,20 +12,20 @@ import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
-  // Scroll effect only on portfolio page
   useEffect(() => {
-    if (location.pathname !== "/") return; // disable scroll effect if not portfolio
-
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener when the component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
+  }, []);
 
   // Body lock for mobile menu
   useEffect(() => {
@@ -45,20 +47,21 @@ export function NavigationBar() {
       className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
         isPortfolioPage
           ? scrolled
-            ? "bg-white"
-            : "bg-transparent"
-          : "bg-white sticky"
+            ? "bg-white" // Scrolled state
+            : "bg-transparent" // Top of the page (0,0) state
+          : "bg-white sticky" // Other pages
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 py-2">
+      <div className="max-w-5xl mx-auto flex justify-between items-center px-4 md:px-8 py-2">
         {/* Left side navigation */}
         <div className="flex-1">
           <NavigationMenu>
             <NavigationMenuList className="flex items-center gap-4">
               <NavigationMenuItem>
-                <NavLink to="/">
+                {/* Add the onClick handler here */}
+                <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
                   <h2
-                    className={`text-2xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
+                    className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
                       isPortfolioPage
                         ? scrolled
                           ? "text-gray-900"
@@ -75,12 +78,8 @@ export function NavigationBar() {
         </div>
 
         {/* Right side navigation */}
-        <div className="flex-1 flex justify-end items-center ">
-          {/* Hamburger toggle */}
-          <div className="block md:hidden text-black dark:text-white">
-            <DropdownMenuDemo />
-          </div>
-
+        <div className="flex-1 flex justify-end items-center">
+          {/* Desktop Navigation (Text Links) */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
@@ -129,6 +128,46 @@ export function NavigationBar() {
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+          {/* Mobile Navigation (Icons) */}
+          <div className="flex items-center gap-5 md:hidden">
+            {/* Use a standard <a> tag for linking to a file */}
+            <a
+              href="/Santoso_Dustin_Resume.pdf" // Assumes resume.pdf is in your /public folder
+              target="_blank" // Opens the link in a new tab
+              rel="noopener noreferrer" // Security best practice for new tabs
+              className={`${
+                isPortfolioPage
+                  ? scrolled
+                    ? "text-gray-500 hover:text-black" // inactive + scrolled
+                    : "text-gray-200 hover:text-white" // inactive + transparent
+                  : "text-gray-500 hover:text-black" // inactive on non-portfolio
+              } transition-colors duration-300`}
+            >
+              <FaFileAlt className="text-lg" />
+            </a>
+
+            <NavLink
+              to="/aboutme"
+              className={({ isActive }) =>
+                `${
+                  isPortfolioPage
+                    ? scrolled
+                      ? isActive
+                        ? "text-black"
+                        : "text-gray-500 hover:text-black"
+                      : isActive
+                      ? "text-white"
+                      : "text-gray-200 hover:text-white"
+                    : isActive
+                    ? "text-black"
+                    : "text-gray-500 hover:text-black"
+                } transition-colors duration-300`
+              }
+            >
+              <FaUser className="text-lg" />
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>
