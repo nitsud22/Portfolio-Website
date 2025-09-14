@@ -24,7 +24,7 @@ function Projects() {
             {/* Header */}
             <div className="">
               <h2
-                className="mt-10 scroll-m-20 md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 md:text-3xl text-xl font-semibold transition-colors first:mt-0 text-left py-5"
                 id="projects"
               >
                 Projects
@@ -62,11 +62,11 @@ function Projects() {
             <div className="">
               <h2
                 id="projects"
-                className=" scroll-m-20 text-2xl font-semibold  transition-colors first:mt-0 py-4"
+                className=" scroll-m-20 text-3xl font-semibold  transition-colors first:mt-0 py-5"
               >
                 On this page
               </h2>
-              <ul className="space-y-2 px-2 text-left">
+              <ul className="text-xl space-y-2 px-2 text-left">
                 <li>
                   <a
                     href="#projects"
