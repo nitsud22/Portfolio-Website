@@ -10,7 +10,7 @@ function Resume() {
         {/* PDF Viewer Section (75%) */}
         <div className="w-full bg-white dark:bg-zinc-900 space-y-6">
           <iframe
-            className="hidden md:block w-full h-[100vh] "
+            className="hidden md:block w-full h-[75vh] "
             src="/Santoso_Dustin_Resume.pdf"
           ></iframe>
 

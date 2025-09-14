@@ -52,11 +52,11 @@ export function NavigationBar() {
           : "bg-white sticky" // Other pages
       }`}
     >
-      <div className="max-w-5xl mx-auto flex justify-between items-center px-4 md:px-8 py-2">
+      <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between py-3 ">
         {/* Left side navigation */}
         <div className="flex-1">
           <NavigationMenu>
-            <NavigationMenuList className="flex items-center gap-4">
+            <NavigationMenuList className="flex  ">
               <NavigationMenuItem>
                 {/* Add the onClick handler here */}
                 <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
@@ -64,9 +64,9 @@ export function NavigationBar() {
                     className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
                       isPortfolioPage
                         ? scrolled
-                          ? "text-gray-900"
+                          ? "text-black"
                           : "text-white"
-                        : "text-gray-900"
+                        : "text-black"
                     }`}
                   >
                     DUSTIN SANTOSO
@@ -83,26 +83,23 @@ export function NavigationBar() {
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
-                <NavLink
-                  to="/resume"
-                  className={({ isActive }) =>
-                    `${
-                      isPortfolioPage
-                        ? scrolled
-                          ? isActive
-                            ? "text-black" // active + scrolled
-                            : "text-gray-500 hover:text-black" // inactive + scrolled
-                          : isActive
-                          ? "text-white" // active + transparent
-                          : "text-gray-200 hover:text-white" // inactive + transparent
-                        : isActive
-                        ? "text-black" // active on non-portfolio
-                        : "text-gray-500 hover:text-black" // inactive on non-portfolio
-                    } transition-colors duration-300`
-                  }
+                <a
+                  href="/Santoso_Dustin_Resume.pdf" // Assumes resume.pdf is in your /public folder
+                  target="_blank" // Opens the link in a new tab
+                  rel="noopener noreferrer" // Security best practice for new tabs
+                  className={`text-lg font-semibold tracking-tight
+      transition-colors duration-300
+      ${
+        isPortfolioPage
+          ? scrolled
+            ? "text-gray-500 hover:text-black" // scrolled on portfolio
+            : "text-gray-200 hover:text-white" // transparent on portfolio
+          : "text-gray-500 hover:text-black" // any other page
+      }
+    `}
                 >
                   RESUME
-                </NavLink>
+                </a>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavLink
@@ -112,7 +109,7 @@ export function NavigationBar() {
                       isPortfolioPage
                         ? scrolled
                           ? isActive
-                            ? "text-black" // active + scrolled
+                            ? "text-black " // active + scrolled
                             : "text-gray-500 hover:text-black" // inactive + scrolled
                           : isActive
                           ? "text-white" // active + transparent
@@ -120,7 +117,7 @@ export function NavigationBar() {
                         : isActive
                         ? "text-black" // active on non-portfolio
                         : "text-gray-500 hover:text-black" // inactive on non-portfolio
-                    } transition-colors duration-300`
+                    } text-lg font-semibold tracking-tight transition-colors duration-300`
                   }
                 >
                   ABOUT ME

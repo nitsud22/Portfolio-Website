@@ -4,9 +4,9 @@ import { Footer } from "@/components/Footer";
 import { Carousel } from "@/components/ui/carousel";
 function AboutMe() {
   return (
-    <div className="flex flex-col items-center px-4 md:px-8 max-w-5xl mx-auto">
+    <div className="flex flex-col px-4 lg:px-0 max-w-5xl mx-auto">
       {/* Main Content Section */}
-      <div className="flex flex-col w-full lg:flex-row items-center  lg:pt-8 md:gap-x-12 gap-4">
+      <div className="flex flex-col w-full lg:flex-row items-center  md:gap-x-12 gap-4">
         {/* Image Section */}
         <div className="order-1 lg:order-2 overflow-hidden lg:w-1/3 w-full">
           <img

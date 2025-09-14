@@ -15,7 +15,7 @@ export function TrainingCards() {
     {
       image: ochin,
       title:
-        "HCAI - HEALTH INFORMATION AND ELECTRONIC RECORDS ANALYST TRAINING PROGRAM",
+        "HCAI - Health Information And Electronic Records Analyst Training Program",
       description: <></>,
       path: "/page-one",
     },
@@ -35,7 +35,7 @@ export function TrainingCards() {
 
             {/* Text Content */}
             <div className="flex flex-col md:text-left md:pl-3 p-4 md:p-0 w-full">
-              <h3 className="lg:text-3xl md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-whitee">
+              <h3 className="md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white">
                 {card.title}
               </h3>
               <p className="text-gray-700 dark:text-gray-300 hidden md:block">

@@ -10,13 +10,13 @@ import { Footer } from "@/components/Footer";
 
 function Projects() {
   return (
-    <div className="width:100% ">
+    <div className="w-full ">
       <Introduction></Introduction>
 
-      <div className="w-full  md:py-6 py-6 px-5 dark:bg-black  ">
-        <div className="px-4 md:px-8 max-w-7xl mx-auto "></div>
+      <div className="w-full md:py-6 py-6 px-5 dark:bg-black  ">
+        <div className="max-w-5xl mx-auto "></div>
       </div>
-      <div className="px-4 md:px-8 max-w-5xl mx-auto">
+      <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left column: Header, Cards, Research */}
@@ -24,7 +24,7 @@ function Projects() {
             {/* Header */}
             <div className="">
               <h2
-                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5"
                 id="projects"
               >
                 Projects
@@ -36,19 +36,19 @@ function Projects() {
             <div className="py-10"></div>
 
             {/* Research section */}
-            <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
+            <div className="py-2 w-full md:py-3 py-4 dark:bg-black ">
               <h2
-                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5"
                 id="research"
               >
                 Research
               </h2>
             </div>
             <ResearchCards></ResearchCards>
-            <div className="py-10 w-full border-gray-200 dark:border-gray-700 bg-background"></div>
-            <div className="py-2 w-full border-t md:py-3 py-4 dark:bg-black ">
+            <div className="py-10 "></div>
+            <div className="py-2 md:py-3 py-4 dark:bg-black ">
               <h2
-                className="mt-10 scroll-m-20 lg:text-3xl md:text-2xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-20 lg:text-3xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
                 id="training"
               >
                 Training

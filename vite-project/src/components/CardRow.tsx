@@ -52,7 +52,7 @@ export function Cards() {
 
             {/* Text Content */}
             <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              <h3 className="lg:text-3xl md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white">
                 {card.title}
               </h3>
               <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">
