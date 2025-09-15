@@ -58,37 +58,71 @@ function Projects() {
           </div>
 
           {/* Right column: On this page sidebar */}
-          <div className="hidden lg:block whitespace-nowrap mx-auto text-right">
-            <div className="">
-              <h2
-                id="projects"
-                className=" scroll-m-20 text-3xl font-semibold  transition-colors first:mt-0 py-5"
-              >
-                On this page
-              </h2>
-              <ul className="text-xl space-y-2 px-2 text-left">
+          <div className="hidden lg:block whitespace-nowrap list-outside text-left pr-4 py-5">
+            <h2
+              id="projects"
+              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 pl-2"
+            >
+              On This Page
+            </h2>
+            {/* The list-inside class is on the parent ul */}
+            <div className=" pl-2">
+              <ul className="text-lg space-y-2 list-inside pl-2  ">
+                {/* Each link is wrapped in its own li */}
                 <li>
                   <a
                     href="#projects"
-                    className="text-gray-500 hover:text-black"
+                    className="text-gray-500 transition-colors duration-300 hover:text-black text-base"
                   >
                     Projects
                   </a>
                 </li>
                 <li>
                   <a
+                    href="#college-outcomes-prediction"
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base pl-2"
+                  >
+                    Logistic Regression
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-gray-500 text-gray-500 transition-colors  hover:text-black text-base pl-2"
+                    href="#crawl-monitoring-dashboard"
+                  >
+                    Grafana Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#research"
-                    className="text-gray-500 hover:text-black"
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base "
                   >
                     Research
                   </a>
                 </li>
                 <li>
                   <a
+                    href="#rhetoric-detection"
+                    className="text-gray-500 text-gray-500 transition-colors  hover:text-black text-base pl-2"
+                  >
+                    Rhetoric Detection
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="#training"
-                    className="text-gray-500 hover:text-black"
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base "
                   >
                     Training
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#logistic-regression"
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base pl-2"
+                  >
+                    HCAI EHR Training
                   </a>
                 </li>
               </ul>
