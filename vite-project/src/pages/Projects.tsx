@@ -67,12 +67,12 @@ function Projects() {
             </h2>
             {/* The list-inside class is on the parent ul */}
             <div className=" pl-2">
-              <ul className="text-lg space-y-2 list-inside pl-2  ">
+              <ul className="text-lg space-y-2 p  ">
                 {/* Each link is wrapped in its own li */}
                 <li>
                   <a
                     href="#projects"
-                    className="text-gray-500 transition-colors duration-300 hover:text-black text-base"
+                    className="text-gray-500 transition-colors duration-300 hover:text-black text-lg"
                   >
                     Projects
                   </a>
@@ -96,7 +96,7 @@ function Projects() {
                 <li>
                   <a
                     href="#research"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base "
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-lg"
                   >
                     Research
                   </a>
@@ -112,7 +112,7 @@ function Projects() {
                 <li>
                   <a
                     href="#training"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base "
+                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-lg"
                   >
                     Training
                   </a>
