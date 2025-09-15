@@ -40,7 +40,7 @@ export function Cards() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
+    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10 ">
       {cardData.map((card, index) => (
         <NavLink to={card.path} key={index} className="w-full">
           {/* The scroll-mt class is removed from this div */}
@@ -52,12 +52,12 @@ export function Cards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square h-64 object-cover "
+              className="md:w-1/3 md:aspect-square h-64 object-cover transition-all duration-300 "
             />
 
             {/* Text Content */}
             <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              <a className=" md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white">
+              <a className=" md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-gray-500 ransition-colors duration-300 ">
                 {card.title}
               </a>
               <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">

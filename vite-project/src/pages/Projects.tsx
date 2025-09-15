@@ -18,7 +18,7 @@ function Projects() {
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         {/* Main layout: Left = Content, Right = Sidebar */}
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row gap-5">
           {/* Left column: Header, Cards, Research */}
           <div className="w-full">
             {/* Header */}
@@ -58,16 +58,16 @@ function Projects() {
           </div>
 
           {/* Right column: On this page sidebar */}
-          <div className="hidden lg:block whitespace-nowrap list-outside text-left pr-4 py-5">
+          <div className="hidden lg:block whitespace-nowrap list-outside text-left  py-8">
             <h2
               id="projects"
-              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 pl-2"
+              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2"
             >
               On This Page
             </h2>
             {/* The list-inside class is on the parent ul */}
-            <div className=" pl-2">
-              <ul className="text-lg space-y-2 p  ">
+            <div className=" ">
+              <ul className="text-lg space-y-2 pl-1 ">
                 {/* Each link is wrapped in its own li */}
                 <li>
                   <a

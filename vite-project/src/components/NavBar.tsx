@@ -52,7 +52,7 @@ export function NavigationBar() {
           : "bg-white sticky" // Other pages
       }`}
     >
-      <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between h-12 m:h-14 ">
+      <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between sm:h-12 h-14 ">
         {/* Left side navigation */}
         <div className="flex flex-1 items-center">
           <NavigationMenu>
