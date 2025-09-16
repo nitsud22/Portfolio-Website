@@ -1,5 +1,5 @@
 import { FiMapPin, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
-import { SiGmail } from "react-icons/si";
+
 import { Footer } from "@/components/Footer";
 
 function Resume() {

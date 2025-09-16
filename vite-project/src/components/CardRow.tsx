@@ -1,19 +1,8 @@
 import asa from "../assets/asa.jpeg";
-import haerin from "../assets/haerin.jpg";
-import bae from "../assets/bae.jpg";
-import logreg from "../assets/logreg.png";
+
 import dash from "../assets/Crawlbee.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { Link } from "react-router-dom";
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
 export function Cards() {
   const cardData = [
     {

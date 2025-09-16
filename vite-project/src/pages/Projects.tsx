@@ -1,11 +1,8 @@
-import { useState } from "react";
-import { FiMapPin, FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 import { ResearchCards } from "@/components/ResearchCards";
 import { TrainingCards } from "@/components/TrainingCards";
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
-import hanni from "../assets/hanni.jpg";
-import { SocialLinks } from "@/components/Socials";
+
 import { Footer } from "@/components/Footer";
 
 function Projects() {
