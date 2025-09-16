@@ -1,7 +1,6 @@
-import { CarouselSize } from "@/components/Carousel";
 import winter from "../assets/winter.jpg";
 import { Footer } from "@/components/Footer";
-import { Carousel } from "@/components/ui/carousel";
+
 function AboutMe() {
   return (
     <div className="flex flex-col px-4 lg:px-0 max-w-5xl mx-auto">

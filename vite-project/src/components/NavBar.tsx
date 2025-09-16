@@ -6,12 +6,11 @@ import {
   NavigationMenuList,
 } from "./ui/navigationmenu";
 
-import { DropdownMenuDemo } from "./MobileMenu";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export function NavigationBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
 
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);

@@ -1,3 +1,5 @@
+import datasample from "../assets/dataframe_sample.png";
+
 function CollegeOutcome() {
   return (
     <div className="px-4 md:px-0  max-w-5xl mx-auto pt-4">
@@ -27,13 +29,10 @@ function CollegeOutcome() {
             education institutionin Portugal, containing 4426 records, 36
             attribrutes, and 3 outputs. Information was collected from students
             enrolled in undergraduate degrees ranging from Education to
-            Technology. Some examples of the attributes linked to each records
-            includes: Units Taken, Admission Grade, Parental Occupation, and
-            more. For my use case, I only chose 2 out of the 3 outputs,
-            'Graduate' and 'Dropout'. Finally I split the data into a 70/30
-            training-test split leaving roughly 2541 records for training and
-            the reaminig 1089 for testing.
+            Technology.
           </p>
+          <div className="py-2"></div>
+          <img src={datasample} alt="datasample" />
         </div>
         {/* Right column: On this page sidebar */}
 

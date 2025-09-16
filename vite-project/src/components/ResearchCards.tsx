@@ -2,14 +2,6 @@ import cspan from "../assets/CCSE.png";
 
 import { Link } from "react-router-dom";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-
 export function ResearchCards() {
   const cardData = [
     {

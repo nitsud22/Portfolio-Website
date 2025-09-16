@@ -1,7 +1,5 @@
-import background from "../assets/background.jpg";
-import city from "../assets/city2.jpg";
 import jungeun from "../assets/jungeun.jpeg";
-import hanni from "../assets/hanni.jpg";
+
 import { SocialLinks } from "./Socials";
 
 export function Introduction() {

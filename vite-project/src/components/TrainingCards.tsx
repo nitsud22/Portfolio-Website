@@ -2,14 +2,6 @@ import ochin from "../assets/Ochin.webp";
 
 import { Link } from "react-router-dom";
 
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-
 export function TrainingCards() {
   const cardData = [
     {
