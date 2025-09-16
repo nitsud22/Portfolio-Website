@@ -2,10 +2,14 @@ import { ResearchCards } from "@/components/ResearchCards";
 import { TrainingCards } from "@/components/TrainingCards";
 import { Cards } from "@/components/CardRow";
 import { Introduction } from "@/components/Introduction";
-
+import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 
 function Projects() {
+  useEffect(() => {
+    document.title = "Dustin Santoso";
+  }, []);
+
   return (
     <div className="w-full ">
       <Introduction></Introduction>

@@ -1,6 +1,10 @@
 import datasample from "../assets/dataframe_sample.png";
+import { useEffect } from "react";
 
 function CollegeOutcome() {
+  useEffect(() => {
+    document.title = "Predicting College Outcomes";
+  }, []);
   return (
     <div className="px-4 md:px-0  max-w-5xl mx-auto pt-4">
       <div className="flex flex-col lg:flex-row gap-10">

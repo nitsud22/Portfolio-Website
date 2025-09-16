@@ -1,7 +1,11 @@
 import winter from "../assets/winter.jpg";
 import { Footer } from "@/components/Footer";
+import { useEffect } from "react";
 
 function AboutMe() {
+  useEffect(() => {
+    document.title = "About Me";
+  }, []);
   return (
     <div className="flex flex-col px-4 lg:px-0 max-w-5xl mx-auto">
       {/* Main Content Section */}
