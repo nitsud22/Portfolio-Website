@@ -14,12 +14,13 @@ export function ResearchCards() {
   ];
 
   return (
-    <div className="w-full scroll-mt-[35vh] flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
+    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
       {cardData.map((card, index) => (
         <Link to={card.path} key={index} className="w-full">
           <div
-            className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
+            className="group scroll-mt-[35vh] flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
             id={card.id}
+            data-observe-section
           >
             <img
               src={card.image}

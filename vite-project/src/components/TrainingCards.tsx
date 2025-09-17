@@ -6,6 +6,7 @@ export function TrainingCards() {
   const cardData = [
     {
       image: ochin,
+      id: "ochin-training",
       title:
         "HCAI - Health Information And Electronic Records Analyst Training Program",
       description: <></>,
@@ -17,7 +18,11 @@ export function TrainingCards() {
     <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
       {cardData.map((card, index) => (
         <Link to={card.path} key={index} className="w-full">
-          <div className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden">
+          <div
+            className="group scroll-mt-[35vh] flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
+            data-observe-section
+            id={card.id}
+          >
             {/* Image */}
             <img
               src={card.image}

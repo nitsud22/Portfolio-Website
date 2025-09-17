@@ -36,6 +36,7 @@ export function Cards() {
           <div
             className="scroll-mt-[35vh] group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
             id={card.id}
+            data-observe-section
           >
             {/* Image */}
             <img

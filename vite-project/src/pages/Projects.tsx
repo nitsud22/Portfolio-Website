@@ -8,72 +8,107 @@ import { Footer } from "@/components/Footer";
 function Projects() {
   useEffect(() => {
     document.title = "Dustin Santoso";
+
+    const sections = Array.from(
+      document.querySelectorAll("[data-observe-section]")
+    );
+    const navLinks = document.querySelectorAll("div.lg\\:block ul a");
+
+    if (!sections.length || !navLinks.length) return;
+
+    const updateActiveLink = () => {
+      let currentSectionId = "";
+      // This trigger line perfectly matches the 35vh scroll margin
+      const triggerLinePixels = window.innerHeight * 0.35;
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerLinePixels) {
+          currentSectionId = section.getAttribute("id");
+        }
+      });
+
+      if (!currentSectionId && sections.length > 0) {
+        currentSectionId = sections[0].getAttribute("id");
+      }
+
+      navLinks.forEach((link) => {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === `#${currentSectionId}`) {
+          link.setAttribute("data-active", "true");
+        } else {
+          link.removeAttribute("data-active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", updateActiveLink);
+    updateActiveLink(); // Run once on load
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveLink);
+    };
   }, []);
 
   return (
     <div className="w-full ">
-      <Introduction></Introduction>
+      <Introduction />
 
       <div className="w-full md:py-6 py-6 px-5 dark:bg-black  ">
         <div className="max-w-5xl mx-auto "></div>
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
-        {/* Main layout: Left = Content, Right = Sidebar */}
         <div className="flex flex-col lg:flex-row gap-5">
-          {/* Left column: Header, Cards, Research */}
           <div className="w-full">
-            {/* Header */}
-            <div className="">
+            <div>
               <h2
-                className="mt-10 scroll-m-20 md:text-3xl text-xl font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-[35vh] md:text-3xl text-xl font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
                 id="projects"
+                data-observe-section
               >
                 Projects
               </h2>
             </div>
             <Cards />
 
-            {/* Spacer */}
             <div className="py-10"></div>
 
-            {/* Research section */}
-            <div className="py-2 w-full md:py-3 py-4 dark:bg-black ">
+            <div>
               <h2
-                className="mt-10 scroll-m-20 md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-[35vh] md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
                 id="research"
+                data-observe-section
               >
                 Research
               </h2>
             </div>
-            <ResearchCards></ResearchCards>
+            <ResearchCards />
             <div className="py-10 "></div>
-            <div className="py-2 md:py-3 py-4 dark:bg-black ">
+            <div>
               <h2
-                className="mt-10 scroll-m-20 lg:text-3xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
+                className="mt-10 scroll-m-[35vh] lg:text-3xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
                 id="training"
+                data-observe-section
               >
                 Training
               </h2>
             </div>
-            <TrainingCards></TrainingCards>
+            <TrainingCards />
           </div>
 
-          {/* Right column: On this page sidebar */}
-          <div className="hidden lg:block whitespace-nowrap list-outside text-left  py-8">
+          <div className="hidden lg:block self-start sticky top-8 whitespace-nowrap list-outside text-left py-8 ">
             <h2
-              id="projects"
-              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2"
+              id="on-this-page"
+              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 "
             >
               On This Page
             </h2>
-            {/* The list-inside class is on the parent ul */}
-            <div className=" ">
+            <div>
               <ul className="text-lg space-y-2 pl-1 ">
-                {/* Each link is wrapped in its own li */}
                 <li>
                   <a
                     href="#projects"
-                    className="text-gray-500 transition-colors duration-300 hover:text-black text-lg"
+                    className="block text-lg text-gray-500 transition-colors hover:text-black data-[active=true]:text-green-900"
                   >
                     Projects
                   </a>
@@ -81,15 +116,15 @@ function Projects() {
                 <li>
                   <a
                     href="#college-outcomes-prediction"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base pl-2"
+                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900"
                   >
                     Logistic Regression
                   </a>
                 </li>
                 <li>
                   <a
-                    className="text-gray-500 text-gray-500 transition-colors  hover:text-black text-base pl-2"
                     href="#crawl-monitoring-dashboard"
+                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900"
                   >
                     Grafana Dashboard
                   </a>
@@ -97,7 +132,7 @@ function Projects() {
                 <li>
                   <a
                     href="#research"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-lg"
+                    className="block text-lg text-gray-500 transition-colors hover:text-black data-[active=true]:text-green-900"
                   >
                     Research
                   </a>
@@ -105,7 +140,7 @@ function Projects() {
                 <li>
                   <a
                     href="#rhetoric-detection"
-                    className="text-gray-500 text-gray-500 transition-colors  hover:text-black text-base pl-2"
+                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900"
                   >
                     Rhetoric Detection
                   </a>
@@ -113,7 +148,7 @@ function Projects() {
                 <li>
                   <a
                     href="#training"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-lg"
+                    className="block text-lg text-gray-500 transition-colors hover:text-black data-[active=true]:text-green-900"
                   >
                     Training
                   </a>
@@ -121,7 +156,7 @@ function Projects() {
                 <li>
                   <a
                     href="#logistic-regression"
-                    className="text-gray-500 text-gray-500 transition-colors hover:text-black text-base pl-2"
+                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900"
                   >
                     HCAI EHR Training
                   </a>
@@ -130,8 +165,6 @@ function Projects() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
         <Footer />
       </div>
     </div>
