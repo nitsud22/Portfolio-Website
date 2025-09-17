@@ -16,25 +16,47 @@ function Projects() {
 
     if (!sections.length || !navLinks.length) return;
 
+    const parentMap: { [key: string]: string } = {
+      "college-outcomes-prediction": "projects",
+      "crawl-monitoring-dashboard": "projects",
+      "rhetoric-detection": "research",
+      "ochin-training": "training",
+    };
+
     const updateActiveLink = () => {
       let currentSectionId = "";
-      // This trigger line perfectly matches the 35vh scroll margin
       const triggerLinePixels = window.innerHeight * 0.35;
 
       sections.forEach((section) => {
         const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < triggerLinePixels) {
-          currentSectionId = section.getAttribute("id");
+        const id = section.getAttribute("id");
+        if (sectionTop < triggerLinePixels && id) {
+          currentSectionId = id;
         }
       });
 
+      // --- NEW LOGIC TO HANDLE THE BOTTOM OF THE PAGE ---
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 10; // -10px buffer
+
+      if (isAtBottom && sections.length > 0) {
+        // If at the bottom, force the last section to be active
+        currentSectionId =
+          sections[sections.length - 1].getAttribute("id") ?? "";
+      }
+      // --- END OF NEW LOGIC ---
+
       if (!currentSectionId && sections.length > 0) {
-        currentSectionId = sections[0].getAttribute("id");
+        currentSectionId = sections[0].getAttribute("id") ?? "";
       }
 
+      const parentId = parentMap[currentSectionId];
+
       navLinks.forEach((link) => {
-        const linkHref = link.getAttribute("href");
-        if (linkHref === `#${currentSectionId}`) {
+        const linkId = link.getAttribute("href")?.substring(1);
+
+        if (linkId === currentSectionId || linkId === parentId) {
           link.setAttribute("data-active", "true");
         } else {
           link.removeAttribute("data-active");
@@ -43,7 +65,7 @@ function Projects() {
     };
 
     window.addEventListener("scroll", updateActiveLink);
-    updateActiveLink(); // Run once on load
+    updateActiveLink();
 
     return () => {
       window.removeEventListener("scroll", updateActiveLink);
@@ -62,7 +84,7 @@ function Projects() {
           <div className="w-full">
             <div>
               <h2
-                className="mt-10 scroll-m-[35vh] md:text-3xl text-xl font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
+                className="mt-10 scroll-m-[10vh] md:text-3xl text-xl font-semibold transition-colors first:mt-0 text-left py-5"
                 id="projects"
                 data-observe-section
               >
@@ -75,7 +97,7 @@ function Projects() {
 
             <div>
               <h2
-                className="mt-10 scroll-m-[35vh] md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
+                className="mt-10 scroll-m-[10vh] md:text-3xl text-xl  font-semibold transition-colors first:mt-0 text-left py-5"
                 id="research"
                 data-observe-section
               >
@@ -86,7 +108,7 @@ function Projects() {
             <div className="py-10 "></div>
             <div>
               <h2
-                className="mt-10 scroll-m-[35vh] lg:text-3xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5" // UPDATED
+                className="mt-10 scroll-m-[10vh] lg:text-3xl text-xl tracking-wide font-semibold transition-colors first:mt-0 text-left py-5"
                 id="training"
                 data-observe-section
               >
@@ -99,7 +121,7 @@ function Projects() {
           <div className="hidden lg:block self-start sticky top-8 whitespace-nowrap list-outside text-left py-8 ">
             <h2
               id="on-this-page"
-              className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 "
+              className="scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 pb-2 "
             >
               On This Page
             </h2>
@@ -155,7 +177,7 @@ function Projects() {
                 </li>
                 <li>
                   <a
-                    href="#logistic-regression"
+                    href="#ochin-training"
                     className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900"
                   >
                     HCAI EHR Training

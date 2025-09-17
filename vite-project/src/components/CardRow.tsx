@@ -34,7 +34,7 @@ export function Cards() {
         <NavLink to={card.path} key={index} className="w-full">
           {/* The scroll-mt class is removed from this div */}
           <div
-            className="scroll-mt-[35vh] group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
+            className="scroll-mt-[30vh] group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
             id={card.id}
             data-observe-section
           >
