@@ -19,7 +19,7 @@ export function TrainingCards() {
       {cardData.map((card, index) => (
         <Link to={card.path} key={index} className="w-full">
           <div
-            className="group scroll-mt-[35vh] flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
+            className="group scroll-mt-[30vh] flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
             data-observe-section
             id={card.id}
           >
