@@ -118,7 +118,7 @@ function Projects() {
             <TrainingCards />
           </div>
 
-          <div className="hidden lg:block self-start sticky top-8 whitespace-nowrap list-outside text-left py-8 ">
+          <div className="hidden lg:block self-start sticky top-8 whitespace-nowrap list-outside text-left py-8 w-[35vh] ">
             <h2
               id="on-this-page"
               className="scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 pb-2 "
