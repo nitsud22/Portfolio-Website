@@ -1,9 +1,10 @@
 import datasample from "../assets/dataframe_sample.png";
-import newj from "../assets/newjeans.png";
+import logreg from "../assets/linvslog.jpg";
+import stochasc from "../assets/StochAsc.png";
+import results from "../assets/LogregOutput.png";
 import { useEffect, useRef } from "react";
 import katex from "katex";
 import "katex/dist/katex.min.css";
-import { Hop } from "lucide-react";
 
 function CollegeOutcome() {
   // 2. Create a ref to hold the container element
@@ -109,7 +110,7 @@ function CollegeOutcome() {
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Left column: Main Content */}
         <div className="w-full text-left">
-          <img src={newj} alt="datasample" className="py-2" />
+          <img src={logreg} alt="datasample" className="py-2" />
           <h2
             id="overview"
             data-observe-section
@@ -119,7 +120,7 @@ function CollegeOutcome() {
           </h2>
 
           <div id="context" data-observe-section className="mt-8 scroll-m-20">
-            <h3 className="text-xl font-semibold">Context</h3>
+            <h3 className="md:text-2xl text-xl font-semibold">Context</h3>
             <p>
               As part of my Machine Learning course at California State
               University, San Bernardino, for our final project we had the
@@ -128,22 +129,43 @@ function CollegeOutcome() {
               C++ implementation of Logistic Regression.
             </p>
           </div>
+
+          <div id="goal" data-observe-section className="mt-8 scroll-m-20">
+            <h3 className="md:text-2xl text-xl font-semibold">Goal</h3>
+            <p>
+              Use Logsitic Regression to predict whether a student would Dropout
+              or Graduate. This could be especially useful for providing
+              students who are predicted to Dropout with the tools and support
+              necessary to succeed.
+            </p>
+          </div>
           <div className=" py-4"></div>
           <div>
-            <h3 className="text-xl font-semibold"> Logistic Regression</h3>
-            <p>
-              Logistic Regression is a machine learning model most commonly used
-              for binary classification. This model uses either continuous or
-              discrete predictors to produce a prob- ability of a given binary
-              outcome. To create the Logistic Regression model, the hypothesis
-              function is altered with the Sigmoid (activation) Function , in
-              turn creating equation (1). Given this Hypothesis function, the
-              weights θT must then be properly fitted to a given data set. These
-              weights are fitted by maximizing the Log-Likelihood Function (2)
-              using Stochastic Gradient Ascent. Once the weights are
-              parameterized , the hypoth- esis function is capable of producing
-              the probability of an output based on given inputs.
+            <h3 className="md:text-2xl text-xl font-semibold">
+              Logistic Regression
+            </h3>
+            <p className="pb-4">
+              Logistic Regression is a machine learning model used for binary
+              classification. The model uses a set of predictors (either
+              continuous or discrete) to estimate the probability of a given
+              outcome. This is accomplished by modifying the Hypothesis Function
+              <sub>1</sub> with the Sigmoid Function<sub>2</sub>, which maps any
+              real-valued number to a value between 0 and 1, making it ideal for
+              predicting probabilities of binary outcomes.
             </p>
+            <p className="pb-4">
+              To ensure the model's predictions are accurate, the weights
+              (parameters) of this linear combination must be fitted to the
+              training data. This is done by maximizing the log-likelihood
+              function, which measures how well the model's predictions align
+              with the actual outcomes. The maximization process is done through
+              Stochastic Gradient Ascent.
+            </p>
+            <p className="pb-4">
+              Once the weights are optimized, the model is capable of outputting
+              the probability of a specific outcome given a new set of inputs.
+            </p>
+
             <div className="py-4"></div>
             <div className="flex items-center justify-start  text-center">
               {/* Hypothesis Function Block */}
@@ -184,25 +206,23 @@ function CollegeOutcome() {
               <h3 className="text-xl font-semibold">
                 Log-Likelihood Function<sub> 4</sub>
               </h3>
-              <div className="py-10" ref={loglikeref}></div>
+              <div className="py-10 text-2xl" ref={loglikeref}></div>
+            </div>
+            <div className="">
+              <h3 className="text-xl font-semibold">
+                Stochastic Gradient Ascent<sub> 5</sub>
+              </h3>
+              <img src={stochasc} className="w-2/3 py-10 "></img>
             </div>
           </div>
 
-          <div id="goal" data-observe-section className="mt-8 scroll-m-20">
-            <h3 className="text-xl font-semibold">Goal</h3>
-            <p>
-              Use Logsitic Regression, a supervised learning model, to predict
-              outcomes of College students.
-            </p>
-          </div>
-
           <div id="dataset" data-observe-section className="mt-8 scroll-m-20">
-            <h2 className="text-2xl font-semibold">Dataset</h2>
-            <img src={datasample} alt="datasample" className="py-2" />
+            <h2 className="md:text-3xl text-xl font-semibold">Dataset</h2>
+            <img src={datasample} alt="datasample" className="py-2 w-full" />
           </div>
 
           <div id="about" data-observe-section className="mt-4 scroll-m-20">
-            <h3 className="font-semibold text-lg">About</h3>
+            <h3 className="font-semibold md:text-2xl text-xl ">About</h3>
             <p>
               The dataset used to train the model was obtained from the UCI
               Machine Learning Repository. The data was sourced from a higher
@@ -226,6 +246,33 @@ function CollegeOutcome() {
             </p>
           </div>
           <div className="py-2"></div>
+
+          <div>
+            <h3 className="font-semibold md:text-3xl text-2xl">
+              {" "}
+              Implementation
+            </h3>
+            <div className="py-2">
+              <a
+                href="https://github.com/nitsud22/Predicting-College-Outcomes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl text-green-800 dark:text-blue-800 hover:underline"
+              >
+                Github Repository
+              </a>
+            </div>
+
+            <iframe
+              className="hidden md:block w-full h-[100vh] "
+              src="/Logistic_Regression_Implementation_CSE_5160.pdf"
+            ></iframe>
+          </div>
+          <div className="py-2"></div>
+          <div>
+            <h3 className="font-semibold md:text-3xl text-2xl"> Results</h3>
+            <img src={results} className=" py-10 "></img>
+          </div>
         </div>
 
         {/* Right column: On this page sidebar */}
@@ -259,6 +306,15 @@ function CollegeOutcome() {
                   className="block text-lg text-gray-500 transition-colors hover:text-black data-[active=true]:font-semibold data-[active=true]:text-green-900"
                 >
                   Implementation
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#results"
+                  className="block text-lg text-gray-500 transition-colors hover:text-black data-[active=true]:font-semibold data-[active=true]:text-green-900"
+                >
+                  Results
                 </a>
               </li>
             </ul>
