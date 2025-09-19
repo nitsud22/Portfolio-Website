@@ -22,7 +22,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="w-full ">
+    <div className="w-full -mt-14 ">
       <Introduction />
 
       <div className="w-full dark:bg-black">
@@ -53,12 +53,14 @@ function Projects() {
               <TrainingCards />
             </section>
           </main>
-          {/* 3. Render the component and pass the items */}
-          <aside className="hidden lg:block pt-16 ">
+
+          <aside className="hidden lg:block pt-18">
             <ScrollSpySidebar items={navItems} />
           </aside>
         </div>
-        <Footer />
+        <div className="pt-10">
+          <Footer />
+        </div>
       </div>
     </div>
   );

@@ -43,12 +43,10 @@ export function NavigationBar() {
 
   return (
     <div
-      className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
-        isPortfolioPage
-          ? scrolled
-            ? "bg-white" // Scrolled state
-            : "bg-transparent" // Top of the page (0,0) state
-          : "bg-white sticky" // Other pages
+      className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
+        !isPortfolioPage || scrolled
+          ? "bg-white text-black"
+          : "bg-transparent text-white"
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between h-12 md:h-14 ">

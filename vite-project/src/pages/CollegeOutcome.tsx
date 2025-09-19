@@ -7,7 +7,6 @@ import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 import datasample from "../assets/dataframe_sample.png";
 import logreg from "../assets/linvslog.jpg";
 import results from "../assets/LogregOutput.png";
-import stochasc from "../assets/StochAsc.png";
 
 // Navigation structure for the scroll-spy sidebar
 const navItems = [
@@ -73,8 +72,8 @@ function CollegeOutcome() {
             <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
               Overview
             </h2>
-            <div id="context" className="mt-8">
-              <h3 className="text-xl font-semibold md:text-2xl">Context</h3>
+            <div id="about" className="mt-8">
+              <h3 className="text-xl font-semibold md:text-2xl">About</h3>
               <p className="mt-2 text-base md:text-lg">
                 As part of my Machine Learning course at California State
                 University, San Bernardino, for our final project we had the
@@ -152,7 +151,6 @@ function CollegeOutcome() {
               className="w-full rounded-lg py-2"
             />
             <div id="about" className="mt-4">
-              <h3 className="text-xl font-semibold md:text-2xl">About</h3>
               <p className="mt-2 text-base md:text-lg">
                 The dataset used to train the model was obtained from the UCI
                 Machine Learning Repository. The data was sourced from a higher
@@ -267,16 +265,16 @@ function CollegeOutcome() {
                 This project was one of the more challenging projects I have had
                 to do, especially since I was only a 3rd Year in University when
                 I took the course. Every aspect from data wrangling to
-                translating the math to code was something I had to spend time
-                understanding. It definitely made me gain some grit and a sense
-                of awe for the people the people who pushed the limits of
-                computer science. Thank you for reading!
+                translating the math to code was something I had to spend a
+                decent chunk of time understanding. It definitely made me gain
+                some grit and a sense of awe of the people who pushed the limits
+                of computer science. Thank you for reading!
               </p>
             </div>
           </section>
         </main>
 
-        <aside className="hidden lg:block">
+        <aside className="hidden lg:block w-[25vh]">
           <ScrollSpySidebar items={navItems} />
         </aside>
       </div>

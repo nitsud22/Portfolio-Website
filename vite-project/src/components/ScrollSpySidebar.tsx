@@ -95,7 +95,7 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
                 <li key={item.id}>
                   <a
                     {...linkProps}
-                    className="block text-lg text-gray-500 transition-colors hover:text-black dark:text-gray-400 dark:hover:text-white data-[active=true]:font-medium data-[active=true]:text-green-900 dark:data-[active=true]:text-green-400"
+                    className="block text-lg text-gray-500 transition-colors hover:text-green-900 dark:text-gray-400 dark:hover:text-white data-[active=true]:font-medium data-[active=true]:text-green-900 dark:data-[active=true]:text-green-400"
                   >
                     {item.title}
                   </a>

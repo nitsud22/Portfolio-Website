@@ -1,4 +1,7 @@
 import crawldash from "@/assets/crawl-dash.png";
+import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
+
+const navItems = [{ id: "overview", title: "Overview", level: 1 as const }];
 
 function CrawlDashboard() {
   return (
@@ -16,8 +19,16 @@ function CrawlDashboard() {
             alt="Linear vs Logistic Regression"
             className="py-2 "
           />
+          <section id="overview" className="scroll-m-[10vh]">
+            <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
+              Overview
+            </h2>
+          </section>
         </main>
-        <div className="w-[35vh]"></div>
+
+        <aside className="hidden lg:block w-[25vh]">
+          <ScrollSpySidebar items={navItems} />
+        </aside>
       </div>
     </div>
   );
