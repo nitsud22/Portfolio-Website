@@ -3,13 +3,13 @@ import katex from "katex";
 import "katex/dist/katex.min.css";
 
 import { Footer } from "@/components/Footer";
-import { ScrollSpySidebar } from "@/components/ScrollSpySidebar"; // 1. Import the reusable component
+import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 import datasample from "../assets/dataframe_sample.png";
 import logreg from "../assets/linvslog.jpg";
-import stochasc from "../assets/StochAsc.png";
 import results from "../assets/LogregOutput.png";
+import stochasc from "../assets/StochAsc.png";
 
-// 2. Define the navigation structure in a data array
+// Navigation structure for the scroll-spy sidebar
 const navItems = [
   { id: "overview", title: "Overview", level: 1 as const },
   { id: "dataset", title: "Dataset", level: 1 as const },
@@ -27,7 +27,7 @@ function CollegeOutcome() {
   useEffect(() => {
     document.title = "Predicting College Outcomes";
 
-    // --- KaTeX Rendering ---
+    // --- KaTeX Rendering for LaTeX formulas ---
     if (formulaContainerRef.current) {
       const latexString = " \\frac{1}{1+e^{-\\theta^{T}x}}";
       katex.render(latexString, formulaContainerRef.current, {
@@ -51,33 +51,31 @@ function CollegeOutcome() {
         "\\sum_{i=0}^{m}y^{(i)}\\log{h}_{\\theta}(x^{(i)}) + (1-y^{(i)})\\log{(1-h_{\\theta}(x^{(i)}))}";
       katex.render(latexString, loglikeref.current, { throwOnError: false });
     }
-    // 3. Old scroll-spy logic has been removed from this hook.
   }, []);
 
   return (
-    <div className="px-4 md:px-0 max-w-5xl mx-auto pt-4">
+    <div className="mx-auto max-w-5xl px-4 pt-4 md:px-0">
       <div className="py-4">
-        <h1 className="text-3xl sm:text-4xl text-left">
+        <h1 className="text-3xl text-left sm:text-4xl">
           Predicting College Outcomes Using Logistic Regression: A C++
           Implementation
         </h1>
       </div>
-      <div className="flex flex-col lg:flex-row gap-10">
+      <div className="flex flex-col gap-10 lg:flex-row">
         <main className="w-full text-left">
           <img
             src={logreg}
             alt="Linear vs Logistic Regression"
-            className="py-2 "
+            className="py-2"
           />
 
-          {/* 4. Sections now have IDs that match the navItems array */}
           <section id="overview" className="scroll-m-[10vh]">
-            <h2 className="mt-10 text-2xl md:text-3xl font-semibold tracking-tight">
+            <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
               Overview
             </h2>
             <div id="context" className="mt-8">
-              <h3 className="text-xl md:text-2xl font-semibold">Context</h3>
-              <p className="text-base md:text-lg mt-2">
+              <h3 className="text-xl font-semibold md:text-2xl">Context</h3>
+              <p className="mt-2 text-base md:text-lg">
                 As part of my Machine Learning course at California State
                 University, San Bernardino, for our final project we had the
                 option of comparing different Machine Learning models or a code
@@ -86,8 +84,8 @@ function CollegeOutcome() {
               </p>
             </div>
             <div id="goal" className="mt-8">
-              <h3 className="text-xl md:text-2xl font-semibold">Goal</h3>
-              <p className="text-base md:text-lg mt-2">
+              <h3 className="text-xl font-semibold md:text-2xl">Goal</h3>
+              <p className="mt-2 text-base md:text-lg">
                 Use Logsitic Regression to predict whether a student would
                 Dropout or Graduate. This could be especially useful for
                 providing students who are predicted to Dropout with the tools
@@ -97,10 +95,10 @@ function CollegeOutcome() {
           </section>
 
           <div className="py-4">
-            <h3 className="text-xl md:text-2xl font-semibold">
+            <h3 className="text-xl font-semibold md:text-2xl">
               Logistic Regression
             </h3>
-            <p className="text-base md:text-lg mt-2 pb-4">
+            <p className="mt-2 pb-4 text-base md:text-lg">
               Logistic Regression is a machine learning model used for binary
               classification. The model uses a set of predictors (either
               continuous or discrete) to estimate the probability of a given
@@ -109,7 +107,7 @@ function CollegeOutcome() {
               real-valued number to a value between 0 and 1, making it ideal for
               predicting probabilities of binary outcomes.
             </p>
-            <p className="text-base md:text-lg pb-4">
+            <p className="pb-4 text-base md:text-lg">
               To ensure the model's predictions are accurate, the weights
               (parameters) of this linear combination must be fitted to the
               training data. This is done by maximizing the log-likelihood
@@ -117,20 +115,20 @@ function CollegeOutcome() {
               with the actual outcomes. The maximization process is done through
               Stochastic Gradient Ascent.
             </p>
-            <p className="text-base md:text-lg pb-4">
+            <p className="pb-4 text-base md:text-lg">
               Once the weights are optimized, the model is capable of outputting
               the probability of a specific outcome given a new set of inputs.
             </p>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-y-8 md:gap-x-15 text-center text-2xl">
+            <div className="flex flex-col items-center justify-center gap-y-8 text-center text-2xl md:flex-row md:gap-x-15">
               <div className="flex flex-col gap-5">
-                <h2 className="font-semibold text-xl">
+                <h2 className="text-xl font-semibold">
                   Hypothesis Function<sub>1</sub>
                 </h2>
                 <div ref={hypothesisfuncRef}></div>
               </div>
               <div> o </div>
               <div className="flex flex-col gap-5">
-                <h2 className="font-semibold text-xl">
+                <h2 className="text-xl font-semibold">
                   Sigmoid Function<sub>2</sub>
                 </h2>
                 <div ref={sigmoidfuncref}></div>
@@ -138,7 +136,7 @@ function CollegeOutcome() {
 
               <div> = </div>
               <div className="flex flex-col gap-2">
-                <h2 className="font-semibold text-xl">
+                <h2 className="text-xl font-semibold">
                   Logistic Function<sub>3</sub>
                 </h2>
                 <div ref={formulaContainerRef}></div>
@@ -146,16 +144,16 @@ function CollegeOutcome() {
             </div>
           </div>
 
-          <section id="dataset" className="scroll-m-[10vh] mt-8">
-            <h2 className="text-2xl md:text-3xl font-semibold">Dataset</h2>
+          <section id="dataset" className="mt-8 scroll-m-[10vh]">
+            <h2 className="text-2xl font-semibold md:text-3xl">Dataset</h2>
             <img
               src={datasample}
               alt="datasample"
-              className="py-2 w-full rounded-lg"
+              className="w-full rounded-lg py-2"
             />
             <div id="about" className="mt-4">
-              <h3 className="font-semibold text-xl md:text-2xl">About</h3>
-              <p className="text-base md:text-lg mt-2">
+              <h3 className="text-xl font-semibold md:text-2xl">About</h3>
+              <p className="mt-2 text-base md:text-lg">
                 The dataset used to train the model was obtained from the UCI
                 Machine Learning Repository. The data was sourced from a higher
                 education institution in Portugal, containing 4426 records, 36
@@ -165,8 +163,8 @@ function CollegeOutcome() {
               </p>
             </div>
             <div id="wrangling" className="mt-8">
-              <h3 className="font-semibold text-xl md:text-2xl">Wrangling</h3>
-              <p className="text-base md:text-lg mt-2">
+              <h3 className="text-xl font-semibold md:text-2xl">Wrangling</h3>
+              <p className="mt-2 text-base md:text-lg">
                 The data was already pre-cleaned so little work additional work
                 was needed. I did use python to drop target values classified as
                 "Enrolled", as well as mapped "Graduate" to '1' and "Dropout" to
@@ -178,8 +176,8 @@ function CollegeOutcome() {
             </div>
           </section>
 
-          <section id="implementation" className="scroll-m-[10vh] mt-8">
-            <h3 className="font-semibold text-2xl md:text-3xl">
+          <section id="implementation" className="mt-8 scroll-m-[10vh]">
+            <h3 className="text-2xl font-semibold md:text-3xl">
               Implementation
             </h3>
             <div className="py-2">
@@ -187,7 +185,7 @@ function CollegeOutcome() {
                 href="https://github.com/nitsud22/Predicting-College-Outcomes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg md:text-xl text-green-800 dark:text-blue-800 hover:underline"
+                className="text-lg text-green-800 hover:underline dark:text-blue-800 md:text-xl"
               >
                 Github Repository
               </a>
@@ -196,78 +194,89 @@ function CollegeOutcome() {
               href="/Logistic_Regression_Implementation_CSE_5160.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="md:hidden text-lg text-green-800 dark:text-blue-800 hover:underline"
+              className="text-lg text-green-800 hover:underline dark:text-blue-800 md:hidden"
             >
               View Research Paper
             </a>
             <iframe
-              className="hidden md:block w-full h-[100vh] mt-4"
+              className="mt-4 hidden h-[100vh] w-full md:block"
               src="/Logistic_Regression_Implementation_CSE_5160.pdf"
               title="Logistic Regression PDF"
             ></iframe>
           </section>
 
-          <section id="results" className="scroll-m-[10vh] mt-8">
-            <h2 className="font-semibold text-2xl md:text-3xl">Results</h2>
-            <img src={results} className="py-6 w-full" alt="Model Results" />
-            <h3 className="font-semibold text-xl md:text-2xl">Accuracy</h3>
+          <section id="results" className="mt-8 scroll-m-[10vh]">
+            <h2 className="text-2xl font-semibold md:text-3xl">Results</h2>
+            <img src={results} className="w-full py-6" alt="Model Results" />
+            <h3 className="text-xl font-semibold md:text-2xl">Accuracy</h3>
             <p className="py-4">
-              {" "}
               Out of all the model's predictions how many of them were correct
               predictions.
             </p>
             <p className="pb-4"> Accuracy: 91.1%</p>
 
-            <h3 className="font-semibold text-xl md:text-2xl">Precision</h3>
+            <h3 className="text-xl font-semibold md:text-2xl">Precision</h3>
             <p className="py-4">
-              {" "}
               How often did the model correctly predict if a student would
               'Graduate' out of all the 'Graduate' predicitions
             </p>
             <p className="pb-4"> Precision: 96.3%</p>
 
-            <h3 className="font-semibold text-xl md:text-2xl">Recall</h3>
+            <h3 className="text-xl font-semibold md:text-2xl">Recall</h3>
             <p className="py-4">
-              {" "}
               How often did the model correctly predict if a student would
               'Graduate' out of all the students in data set who did 'Graduate'.
             </p>
             <p className="pb-4"> Recall: 80.2%</p>
-            <h3 className="font-semibold text-xl md:text-2xl">
-              Are These Numbers Good?
-            </h3>
+            <h3 className="text-xl font-semibold md:text-2xl">Meaning</h3>
             <p className="py-4">
-              It depends entirely on the use case. For our scenario since we our
-              model does really good at predicting 'Graduate' we can focus on
-              the other side
+              The model is very cautious when predicting if a student will
+              Graduate in comparison to the amount of students who actually
+              graduate, being shown through the Recall being only 80%. However,
+              the caution allows the model to be highly precise when it does
+              predict "Graduate". Overall this means the model is more willing
+              to predict "Dropout" and be incorrect about it than predict
+              "Graduate" and be incorrect. This is perfect for our scenario,
+              when it comes to provding support and tools for student success.
+              It is better to support a student who is going to graduate but is
+              predicted to "Dropout" than it is to potentially not give support
+              to a student who is going dropout, but is predicted to "Graduate".
             </p>
           </section>
 
-          <section id="reflection" className="scroll-m-[10vh] mt-8">
-            <h3 className="font-semibold text-2xl md:text-3xl">Reflection</h3>
-            <div className="text-base md:text-lg mt-2">
+          <section id="reflection" className="mt-8 scroll-m-[10vh]">
+            <h3 className="text-2xl font-semibold md:text-3xl">Reflection</h3>
+            <div className="mt-2 text-base md:text-lg">
               <p>
                 After revisiting this project for this article, I came across a
                 few issues that needed fixing from my original attempt.
               </p>
-              <h4 className="font-semibold mt-4">What Did Not Work:</h4>
-              <ul className="list-decimal list-inside text-base md:text-lg pl-5 md:pl-10 space-y-1">
+              <h4 className="mt-4 font-semibold">What Did Not Work:</h4>
+              <ul className="list-inside list-decimal space-y-1 pl-5 text-base md:pl-10 md:text-lg">
                 <li>Did not use python to wrangle the data.</li>
                 <li>IOStream code was very strictly coded</li>
                 <li>Accuracy, Precision, Recall were calculated incorrectly</li>
               </ul>
-              <h4 className="font-semibold mt-4">What Did Work:</h4>
-              <ul className="list-decimal list-inside text-base md:text-lg pl-5 md:pl-10 space-y-1">
+              <h4 className="mt-4 font-semibold">What Did Work:</h4>
+              <ul className="list-inside list-decimal space-y-1 pl-5 text-base md:pl-10 md:text-lg">
                 <li>
                   Code implementation of Logistic Regression worked as intended
                 </li>
               </ul>
+              <p className="mt-2">
+                This project was one of the more challenging projects I have had
+                to do, especially since I was only a 3rd Year in University when
+                I took the course. Every aspect from data wrangling to
+                translating the math to code was something I had to spend time
+                understanding. It definitely made me gain some grit and a sense
+                of awe for the people the people who pushed the limits of
+                computer science. Thank you for reading!
+              </p>
             </div>
           </section>
         </main>
 
-        {/* 5. Render the reusable sidebar component */}
-        <aside className="hidden lg:block  ">
+        <aside className="hidden lg:block">
           <ScrollSpySidebar items={navItems} />
         </aside>
       </div>
