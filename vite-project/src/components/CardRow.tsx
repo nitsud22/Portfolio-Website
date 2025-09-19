@@ -35,10 +35,9 @@ export function Cards() {
           to={card.path}
           key={index}
           className="w-full"
-          // Add the onClick handler here
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+          }
         >
           <div
             className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"

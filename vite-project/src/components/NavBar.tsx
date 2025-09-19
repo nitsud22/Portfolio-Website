@@ -58,7 +58,12 @@ export function NavigationBar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 {/* Add the onClick handler here */}
-                <NavLink to="/" onClick={() => window.scrollTo(0, 0)}>
+                <NavLink
+                  to="/"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
+                  }
+                >
                   <h2
                     className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
                       isPortfolioPage

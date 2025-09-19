@@ -208,8 +208,39 @@ function CollegeOutcome() {
           </section>
 
           <section id="results" className="scroll-m-[10vh] mt-8">
-            <h3 className="font-semibold text-2xl md:text-3xl">Results</h3>
+            <h2 className="font-semibold text-2xl md:text-3xl">Results</h2>
             <img src={results} className="py-6 w-full" alt="Model Results" />
+            <h3 className="font-semibold text-xl md:text-2xl">Accuracy</h3>
+            <p className="py-4">
+              {" "}
+              Out of all the model's predictions how many of them were correct
+              predictions.
+            </p>
+            <p className="pb-4"> Accuracy: 91.1%</p>
+
+            <h3 className="font-semibold text-xl md:text-2xl">Precision</h3>
+            <p className="py-4">
+              {" "}
+              How often did the model correctly predict if a student would
+              'Graduate' out of all the 'Graduate' predicitions
+            </p>
+            <p className="pb-4"> Precision: 96.3%</p>
+
+            <h3 className="font-semibold text-xl md:text-2xl">Recall</h3>
+            <p className="py-4">
+              {" "}
+              How often did the model correctly predict if a student would
+              'Graduate' out of all the students in data set who did 'Graduate'.
+            </p>
+            <p className="pb-4"> Recall: 80.2%</p>
+            <h3 className="font-semibold text-xl md:text-2xl">
+              Are These Numbers Good?
+            </h3>
+            <p className="py-4">
+              It depends entirely on the use case. For our scenario since we our
+              model does really good at predicting 'Graduate' we can focus on
+              the other side
+            </p>
           </section>
 
           <section id="reflection" className="scroll-m-[10vh] mt-8">

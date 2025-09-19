@@ -76,8 +76,8 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
 
   return (
     // This container is sticky and will stay in view on larger screens
-    <div className="hidden lg:block self-start whitespace-nowrap list-outside text-left sticky top-12 ">
-      <h2 className="scroll-m-20 text-2xl font-semibold transition-colors first:mt-0 pb-2 ">
+    <div className="hidden lg:block self-start whitespace-nowrap list-outside text-left sticky top-14 ">
+      <h2 className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 ">
         {title}
       </h2>
       <nav>
