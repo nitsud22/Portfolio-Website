@@ -11,10 +11,11 @@ export function Cards() {
       title: "Predicting College Student Outcomes with Logistic Regression",
       description: (
         <>
-          A C++ implementation of Logistic Regression. The algorithm was given
-          data pertaining to college students to predict each student's outcome,
-          Graduate or Dropout. The model was able to predict whether a student
-          would graduate or dropout with a accuracy of 91%
+          Implemented Logistic Regression to predict if students would
+          'Graduate' or 'Dropout'. The data to train the model was obtained from
+          the UCI Machine Learning Respository and Wrangled using Python. The
+          machine learning model was coded from scratch using C++. The model
+          performed with a 91% accuracy.
         </>
       ),
       path: "/college-outcomes",
@@ -22,8 +23,17 @@ export function Cards() {
     {
       id: "crawl-monitoring-dashboard",
       image: dash,
-      title: "Crawl Monitoring Dashboard",
-      description: "...",
+      title: "Web-Crawler  Monitoring Dashboard",
+      description: (
+        <>
+          {" "}
+          Worked with a team of UCR Data Science Fellows to create an end-to-end
+          solution for our coporate partner CrawlBee. Our solution was a
+          real-time Web Crawler health monitoring dashboard that displayed key
+          metrics. Used a custom API to feed into a MySQL Database which was
+          then connected to a Grafana front-end.
+        </>
+      ),
       path: "/crawl-dashboard",
     },
   ];
