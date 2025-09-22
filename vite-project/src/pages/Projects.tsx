@@ -22,7 +22,7 @@ function Projects() {
   }, []);
 
   return (
-    <div className="w-full -mt-14 ">
+    <div className="w-full -mt-16 ">
       <Introduction />
 
       <div className="w-full dark:bg-black">
@@ -33,28 +33,28 @@ function Projects() {
           <main className="w-full text-left">
             {/* All sections and h2 tags inside here will now be left-aligned */}
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="mt-10 md:text-3xl text-xl font-semibold py-5">
-                Projects
+              <h2 className="mt-10 md:text-2xl text-xl font-semibold py-5">
+                PROJECTS
               </h2>
               <Cards />
             </section>
 
             <section id="research" className="scroll-m-[10vh]">
-              <h2 className="mt-10 md:text-3xl text-xl font-semibold py-5">
-                Research
+              <h2 className="mt-10 md:text-2xl text-xl font-semibold py-5">
+                RESEARCH
               </h2>
               <ResearchCards />
             </section>
 
             <section id="training" className="scroll-m-[10vh]">
-              <h2 className="mt-10 lg:text-3xl text-xl font-semibold py-5">
-                Training
+              <h2 className="mt-10 lg:text-2xl text-xl font-semibold py-5">
+                TRAINING
               </h2>
               <TrainingCards />
             </section>
           </main>
 
-          <aside className="hidden lg:block pt-18 ml-auto ">
+          <aside className="hidden lg:block pt-16 ml-auto ">
             <ScrollSpySidebar items={navItems} />
           </aside>
         </div>

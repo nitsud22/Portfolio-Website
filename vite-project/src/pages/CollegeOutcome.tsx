@@ -12,7 +12,7 @@ import results from "../assets/LogregOutput.png";
 const navItems = [
   { id: "overview", title: "Overview", level: 1 as const },
   { id: "dataset", title: "Dataset", level: 1 as const },
-  { id: "implementation", title: "Implementation", level: 1 as const },
+  { id: "implementation", title: "Code", level: 1 as const },
   { id: "results", title: "Results", level: 1 as const },
   { id: "reflection", title: "Reflection", level: 1 as const },
 ];
