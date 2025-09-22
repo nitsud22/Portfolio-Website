@@ -29,7 +29,7 @@ export function Cards() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10 ">
+    <div className="w-full flex flex-col sgap-4 md:gap-6 lg:gap-10 ">
       {cardData.map((card, index) => (
         <NavLink
           to={card.path}
@@ -40,7 +40,7 @@ export function Cards() {
           }
         >
           <div
-            className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
+            className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden w-full"
             id={card.id}
             data-observe-section
           >

@@ -274,7 +274,7 @@ function CollegeOutcome() {
           </section>
         </main>
 
-        <aside className="hidden lg:block w-[25vh]">
+        <aside className="hidden lg:block ">
           <ScrollSpySidebar items={navItems} />
         </aside>
       </div>

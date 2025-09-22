@@ -17,7 +17,7 @@ interface ScrollSpySidebarProps {
 
 export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
   items,
-  title = "On This Page",
+  title = "ON THIS PAGE",
   topOffset = 0.35, // Corresponds to 35% from the top of the viewport
 }) => {
   const [activeId, setActiveId] = useState<string>("");
@@ -76,8 +76,8 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
 
   return (
     // This container is sticky and will stay in view on larger screens
-    <div className="hidden lg:block self-start whitespace-nowrap list-outside text-left sticky top-14 ">
-      <h2 className="scroll-m-20 text-xl font-semibold transition-colors first:mt-0 pb-2 ">
+    <div className="hidden lg:block self-start  ml-auto whitespace-nowrap list-outside text-left sticky top-14 ">
+      <h2 className="scroll-m-20  transition-colors first:mt-0 pb-2 ml-auto text-base font-semibold text-gray-500 tracking-tight  ">
         {title}
       </h2>
       <nav>
@@ -95,7 +95,7 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
                 <li key={item.id}>
                   <a
                     {...linkProps}
-                    className="block text-lg text-gray-500 transition-colors hover:text-green-900 dark:text-gray-400 dark:hover:text-white data-[active=true]:font-medium data-[active=true]:text-green-900 dark:data-[active=true]:text-green-400"
+                    className="block text-base text-gray-500 transition-colors hover:text-green-900 dark:text-gray-400 dark:hover:text-white  data-[active=true]:text-green-900 dark:data-[active=true]:text-green-400"
                   >
                     {item.title}
                   </a>

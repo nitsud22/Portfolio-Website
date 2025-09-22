@@ -54,7 +54,7 @@ function Projects() {
             </section>
           </main>
 
-          <aside className="hidden lg:block pt-18">
+          <aside className="hidden lg:block pt-18 ml-auto ">
             <ScrollSpySidebar items={navItems} />
           </aside>
         </div>
