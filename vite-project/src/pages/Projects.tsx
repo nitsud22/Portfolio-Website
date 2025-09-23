@@ -4,19 +4,41 @@ import { Cards } from "@/components/CardRow";
 import { ResearchCards } from "@/components/ResearchCards";
 import { TrainingCards } from "@/components/TrainingCards";
 import { Footer } from "@/components/Footer";
-import { ScrollSpySidebar } from "@/components/ScrollSpySidebar"; // 1. Import the new component
+import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 
-// 2. Define your navigation structure in an array
 const navItems = [
   { id: "projects", title: "Projects", level: 1 as const },
-
   { id: "research", title: "Research", level: 1 as const },
-
   { id: "training", title: "Training", level: 1 as const },
 ];
 
 function Projects() {
-  // The old useEffect for scroll spying is no longer needed here!
+  // --- START: New useEffect for scroll position ---
+  useEffect(() => {
+    // 1. Check if a saved scroll position exists
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      // 2. If it exists, scroll to that position
+      window.scrollTo(0, parseInt(savedScrollPosition, 10));
+      // 3. Remove it so it doesn't interfere with normal scrolling
+      sessionStorage.removeItem("scrollPosition");
+    }
+
+    // 4. This function will run when the component unmounts (user navigates away)
+    const handleBeforeUnload = () => {
+      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // 5. Cleanup function to save position when navigating within the app
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+    };
+  }, []);
+  // --- END: New useEffect for scroll position ---
+
   useEffect(() => {
     document.title = "Dustin Santoso";
   }, []);
@@ -31,7 +53,6 @@ function Projects() {
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-10">
           <main className="w-full text-left">
-            {/* All sections and h2 tags inside here will now be left-aligned */}
             <section id="projects" className="scroll-m-[10vh]">
               <h2 className="mt-10 md:text-2xl text-xl font-semibold py-5">
                 PROJECTS

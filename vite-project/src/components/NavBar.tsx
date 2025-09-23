@@ -89,7 +89,7 @@ export function NavigationBar() {
                   href="/Santoso_Dustin_Resume.pdf" // Assumes resume.pdf is in your /public folder
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer" // Security best practice for new tabs
-                  className={`text-2xl font-semibold tracking-tight
+                  className={`text-xl font-semibold tracking-tight
       transition-colors duration-300
       ${
         isPortfolioPage
@@ -119,7 +119,7 @@ export function NavigationBar() {
                         : isActive
                         ? "text-black" // active on non-portfolio
                         : "text-gray-500 hover:text-black" // inactive on non-portfolio
-                    } text-2xl font-semibold tracking-tight transition-colors duration-300`
+                    } text-xl font-semibold tracking-tight transition-colors duration-300`
                   }
                 >
                   ABOUT ME

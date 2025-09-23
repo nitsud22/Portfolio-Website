@@ -41,14 +41,7 @@ export function Cards() {
   return (
     <div className="w-full flex flex-col sgap-4 md:gap-6 lg:gap-10 ">
       {cardData.map((card, index) => (
-        <NavLink
-          to={card.path}
-          key={index}
-          className="w-full"
-          onClick={() =>
-            window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-          }
-        >
+        <NavLink to={card.path} key={index} className="w-full">
           <div
             className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden w-full"
             id={card.id}

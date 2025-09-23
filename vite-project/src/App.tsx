@@ -6,12 +6,14 @@ import AboutMe from "./pages/AboutMe";
 import Resume from "./pages/Resume";
 import CollegeOutcome from "./pages/CollegeOutcome";
 import CrawlDashboard from "./pages/CrawlDashboard";
+import ScrollToTop from "./components/scrolltotop";
 
 function App() {
   return (
     <Router>
       <div className="w-full ">
         <NavigationBar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Projects />} />
           <Route path="/aboutme" element={<AboutMe />} />

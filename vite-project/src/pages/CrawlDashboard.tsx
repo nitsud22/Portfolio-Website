@@ -1,10 +1,12 @@
 import crawldash from "@/assets/crawl-dash.png";
 import crawler from "@/assets/CrawlER.png";
+import poster from "@/assets/Team_5_Poster.jpg";
 import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 
 const navItems = [
   { id: "overview", title: "Overview", level: 1 as const },
   { id: "database", title: "Database", level: 1 as const },
+  { id: "result", title: "Result", level: 1 as const },
 ];
 
 function CrawlDashboard() {
@@ -36,7 +38,8 @@ function CrawlDashboard() {
                 data modeling. In addition our cohort was split into teams that
                 would work with a mentor on a data science project. My team was
                 partnered with the start-up CrawlBee, a real-estate data seller
-                to develop a web-crawler health monitoring dashboard.
+                which used web-crawlers to grab the information from sites like
+                zillow.
               </p>
               <div className="py-2"></div>
               <h3 className="text-xl font-semibold md:text-2xl">Goal</h3>
@@ -49,9 +52,9 @@ function CrawlDashboard() {
               <h3 className="text-xl font-semibold md:text-2xl">Team</h3>
               <p className="mt-2 text-base md:text-lg ">
                 My team consisted of 4 members including myself. Our work was
-                distributed in sections as follows: Data Loading (API), Database
-                Management (MySQL), and Front-end (Grafana). I was in charge of
-                of the Database management as well as some aspects of
+                distributed in sections as follows: API Development & Testing,
+                Database Management (MySQL), and Front-end (Grafana). I was in
+                charge of of the Database management as well as some aspects of
                 leadership, although it was more of a equal team.
               </p>
             </div>
@@ -66,6 +69,58 @@ function CrawlDashboard() {
               className="py-2 "
             />
             <div></div>
+            <p className="mt-2">
+              {" "}
+              MySQL was chosen as the Database Management System due to
+              straightforward nature of the data that would be ingested. We were
+              given samples of the data which contained a lot of information
+              pertaining to their Web-Crawlers, such as Crawl_ID, what node was
+              used to host these crawlers and more. Thus we as a team chose to
+              include the information that would be best for analyzing the
+              health of these Web-Crawlers. I was in charge of designing the
+              database from scratch, ensuring that all relationships made
+              logical sense and were easy to query.
+            </p>
+            <p className="mt-2">
+              {" "}
+              An Amazon EC2 Server was used to host the database on. Which is
+              where the database ingested temporary data and connected to our
+              Grafana front end.
+            </p>
+          </section>
+          <section id="result" className="scroll-m-[10vh]">
+            <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
+              Result
+            </h2>
+            <div className="py-2">
+              <a
+                href="https://github.com/cullm001/CrawlSense"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-green-800 hover:underline dark:text-blue-800 md:text-xl"
+              >
+                Github Repository
+              </a>
+            </div>
+            <img src={poster} alt="poster" className="py-2 " />
+            <p className="mt-2">
+              {" "}
+              The poster was presented to guests at the 2024 UCR Data Science
+              Symposium to friends and family, as well as working professionals
+              and professors.
+            </p>
+          </section>
+          <section id="result" className="scroll-m-[10vh]">
+            <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
+              Reflection
+            </h2>
+
+            <p className="mt-2">
+              {" "}
+              The poster was presented to guests at the 2024 UCR Data Science
+              Symposium to friends and family, as well as working professionals
+              and professors.
+            </p>
           </section>
         </main>
 
