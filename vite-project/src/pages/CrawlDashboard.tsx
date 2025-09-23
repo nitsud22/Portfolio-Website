@@ -1,12 +1,14 @@
 import crawldash from "@/assets/crawl-dash.png";
 import crawler from "@/assets/CrawlER.png";
 import poster from "@/assets/Team_5_Poster.jpg";
+import { Footer } from "@/components/Footer";
 import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 
 const navItems = [
   { id: "overview", title: "Overview", level: 1 as const },
   { id: "database", title: "Database", level: 1 as const },
   { id: "result", title: "Result", level: 1 as const },
+  { id: "reflection", title: "Reflection", level: 1 as const },
 ];
 
 function CrawlDashboard() {
@@ -38,15 +40,16 @@ function CrawlDashboard() {
                 data modeling. In addition our cohort was split into teams that
                 would work with a mentor on a data science project. My team was
                 partnered with the start-up CrawlBee, a real-estate data seller
-                which used web-crawlers to grab the information from sites like
-                zillow.
+                which used web-crawlers to scrape the information from sites
+                like Zillow.
               </p>
               <div className="py-2"></div>
               <h3 className="text-xl font-semibold md:text-2xl">Goal</h3>
               <p className="mt-2 text-base md:text-lg ">
                 {" "}
-                Develop a health-monitoring dashboard solution for web-crawlers,
-                allowing easy monitoring of key metrics.{" "}
+                Develop a Health-Monitoring Dashboard solution for the
+                web-crawlers CrawlBee uses to scrape data. Ensuring easy
+                monitoring of key metrics.{" "}
               </p>
               <div className="py-2"></div>
               <h3 className="text-xl font-semibold md:text-2xl">Team</h3>
@@ -102,6 +105,11 @@ function CrawlDashboard() {
                 Github Repository
               </a>
             </div>
+            <img
+              src={crawldash}
+              alt="Linear vs Logistic Regression"
+              className="py-2 "
+            />
             <img src={poster} alt="poster" className="py-2 " />
             <p className="mt-2">
               {" "}
@@ -110,16 +118,22 @@ function CrawlDashboard() {
               and professors.
             </p>
           </section>
-          <section id="result" className="scroll-m-[10vh]">
+          <section id="reflection" className="scroll-m-[10vh]">
             <h2 className="mt-10 text-2xl font-semibold tracking-tight md:text-3xl">
               Reflection
             </h2>
 
             <p className="mt-2">
               {" "}
-              The poster was presented to guests at the 2024 UCR Data Science
-              Symposium to friends and family, as well as working professionals
-              and professors.
+              I learned a lot, not only technically but also soft-skill wise. I
+              had an idea of what it would look like to work with a real client,
+              however actually being put in the position really shook things up.
+              Constant and clear communication was key as well as living up to
+              the standarsds placed upon me. Our partners would tell us what
+              they wanted and needed, and I had to do it. Even if I did not know
+              how or what to do, I had to figure it out because the trust was
+              place upon me to deliver a product that would satisfy the client.
+              Thank you for reading!
             </p>
           </section>
         </main>
@@ -127,6 +141,9 @@ function CrawlDashboard() {
         <aside className="hidden lg:block ">
           <ScrollSpySidebar items={navItems} />
         </aside>
+      </div>
+      <div className="pt-10">
+        <Footer />
       </div>
     </div>
   );

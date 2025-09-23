@@ -53,7 +53,7 @@ function CollegeOutcome() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-4 md:px-0">
+    <div className="mx-auto max-w-5xl px-4 md:px-0">
       <div className="py-4">
         <h1 className="text-3xl text-left sm:text-4xl">
           Predicting College Outcomes Using Logistic Regression: A C++
@@ -76,7 +76,7 @@ function CollegeOutcome() {
               <h3 className="text-xl font-semibold md:text-2xl">About</h3>
               <p className="mt-2 text-base md:text-lg">
                 As part of my Machine Learning course at California State
-                University, San Bernardino, for our final project we had the
+                University, San Bernardino, for our final project, we had the
                 option of comparing different Machine Learning models or a code
                 implementation of a Machine Learning algorithm. I chose to do a
                 C++ implementation of Logistic Regression.
@@ -85,7 +85,7 @@ function CollegeOutcome() {
             <div id="goal" className="mt-8">
               <h3 className="text-xl font-semibold md:text-2xl">Goal</h3>
               <p className="mt-2 text-base md:text-lg">
-                Use Logsitic Regression to predict whether a student would
+                Use Logistic Regression to predict whether a student will
                 Dropout or Graduate. This could be especially useful for
                 providing students who are predicted to Dropout with the tools
                 and support necessary to succeed.
@@ -154,7 +154,7 @@ function CollegeOutcome() {
               <p className="mt-2 text-base md:text-lg">
                 The dataset used to train the model was obtained from the UCI
                 Machine Learning Repository. The data was sourced from a higher
-                education institution in Portugal, containing 4426 records, 36
+                education institution in Portugal, containing 4,426 records, 36
                 attributes, and 3 outputs. Information was collected from
                 students enrolled in undergraduate degrees ranging from
                 Education to Technology.
@@ -163,12 +163,12 @@ function CollegeOutcome() {
             <div id="wrangling" className="mt-8">
               <h3 className="text-xl font-semibold md:text-2xl">Wrangling</h3>
               <p className="mt-2 text-base md:text-lg">
-                The data was already pre-cleaned so little work additional work
-                was needed. I did use python to drop target values classified as
-                "Enrolled", as well as mapped "Graduate" to '1' and "Dropout" to
-                '0'. I made use of libraries such as pandas for dropping missing
-                & null records, Seaborn for visualizations, Sci-Kit Learn for
-                data splitting, and more. I ended up using a 70 / 30
+                The data was already pre-cleaned, so little additional work was
+                needed. I used Python to drop target values classified as
+                "Enrolled" and mapped "Graduate" to '1' and "Dropout" to '0'. I
+                made use of libraries such as Pandas for dropping missing and
+                null records, Seaborn for visualizations, and Scikit-learn for
+                data splitting, among others. I ended up using a 70/30
                 training-testing split.
               </p>
             </div>
@@ -185,7 +185,7 @@ function CollegeOutcome() {
                 rel="noopener noreferrer"
                 className="text-lg text-green-800 hover:underline dark:text-blue-800 md:text-xl"
               >
-                Github Repository
+                GitHub Repository
               </a>
             </div>
             <a
@@ -208,37 +208,37 @@ function CollegeOutcome() {
             <img src={results} className="w-full py-6" alt="Model Results" />
             <h3 className="text-xl font-semibold md:text-2xl">Accuracy</h3>
             <p className="py-4">
-              Out of all the model's predictions how many of them were correct
-              predictions.
+              Out of all the model's predictions, this measures how many were
+              correct.
             </p>
             <p className="pb-4"> Accuracy: 91.1%</p>
 
             <h3 className="text-xl font-semibold md:text-2xl">Precision</h3>
             <p className="py-4">
-              How often did the model correctly predict if a student would
-              'Graduate' out of all the 'Graduate' predicitions
+              How often the model correctly predicted 'Graduate' out of all
+              'Graduate' predictions.
             </p>
             <p className="pb-4"> Precision: 96.3%</p>
 
             <h3 className="text-xl font-semibold md:text-2xl">Recall</h3>
             <p className="py-4">
-              How often did the model correctly predict if a student would
-              'Graduate' out of all the students in data set who did 'Graduate'.
+              How often the model correctly predicted 'Graduate' out of all the
+              students in the dataset who did 'Graduate'.
             </p>
             <p className="pb-4"> Recall: 80.2%</p>
             <h3 className="text-xl font-semibold md:text-2xl">Meaning</h3>
             <p className="py-4">
               The model is very cautious when predicting if a student will
-              Graduate in comparison to the amount of students who actually
-              graduate, being shown through the Recall being only 80%. However,
-              the caution allows the model to be highly precise when it does
-              predict "Graduate". Overall this means the model is more willing
-              to predict "Dropout" and be incorrect about it than predict
-              "Graduate" and be incorrect. This is perfect for our scenario,
-              when it comes to provding support and tools for student success.
-              It is better to support a student who is going to graduate but is
-              predicted to "Dropout" than it is to potentially not give support
-              to a student who is going dropout, but is predicted to "Graduate".
+              graduate in comparison to the number of students who actually
+              graduate, which is shown by the recall score of only 80%. However,
+              this caution allows the model to be highly precise when it does
+              predict "Graduate." Overall, this means the model is more willing
+              to incorrectly predict "Dropout" than to incorrectly predict
+              "Graduate." This is perfect for our scenario when it comes to
+              providing support and tools for student success. It is better to
+              support a student who is going to graduate but is predicted to
+              "Dropout" than it is to potentially withhold support from a
+              student who is going to drop out but is predicted to "Graduate."
             </p>
           </section>
 
@@ -251,24 +251,27 @@ function CollegeOutcome() {
               </p>
               <h4 className="mt-4 font-semibold">What Did Not Work:</h4>
               <ul className="list-inside list-decimal space-y-1 pl-5 text-base md:pl-10 md:text-lg">
-                <li>Did not use python to wrangle the data.</li>
-                <li>IOStream code was very strictly coded</li>
-                <li>Accuracy, Precision, Recall were calculated incorrectly</li>
+                <li>Did not use Python to wrangle the data.</li>
+                <li>The IOStream code was very rigidly coded.</li>
+                <li>
+                  Accuracy, Precision, and Recall were calculated incorrectly.
+                </li>
               </ul>
               <h4 className="mt-4 font-semibold">What Did Work:</h4>
               <ul className="list-inside list-decimal space-y-1 pl-5 text-base md:pl-10 md:text-lg">
                 <li>
-                  Code implementation of Logistic Regression worked as intended
+                  The code implementation of Logistic Regression worked as
+                  intended.
                 </li>
               </ul>
               <p className="mt-2">
                 This project was one of the more challenging projects I have had
-                to do, especially since I was only a 3rd Year in University when
-                I took the course. Every aspect from data wrangling to
+                to do, especially since I was only a third-year in university
+                when I took the course. Every aspect from data wrangling to
                 translating the math to code was something I had to spend a
                 decent chunk of time understanding. It definitely made me gain
-                some grit and a sense of awe of the people who pushed the limits
-                of computer science. Thank you for reading!
+                some grit and a sense of awe for the people who pushed the
+                limits of computer science. Thank you for reading!
               </p>
             </div>
           </section>
