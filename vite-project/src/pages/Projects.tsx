@@ -5,11 +5,6 @@ import { Cards } from "@/components/CardRow";
 import { TrainingCards } from "@/components/TrainingCards";
 import { Footer } from "@/components/Footer";
 
-const navItems = [
-  { id: "projects", title: "Projects", level: 1 as const },
-  { id: "training", title: "Training", level: 1 as const },
-];
-
 function Projects() {
   // --- START: New useEffect for scroll position ---
   useEffect(() => {

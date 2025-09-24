@@ -7,15 +7,6 @@ import datasample from "../assets/dataframe_sample.png";
 import logreg from "../assets/linvslog.jpg";
 import results from "../assets/LogregOutput.png";
 
-// Navigation structure for the scroll-spy sidebar
-const navItems = [
-  { id: "overview", title: "Overview", level: 1 as const },
-  { id: "dataset", title: "Dataset", level: 1 as const },
-  { id: "implementation", title: "Implementation", level: 1 as const },
-  { id: "results", title: "Results", level: 1 as const },
-  { id: "reflection", title: "Reflection", level: 1 as const },
-];
-
 function CollegeOutcome() {
   const formulaContainerRef = useRef(null);
   const hypothesisfuncRef = useRef(null);

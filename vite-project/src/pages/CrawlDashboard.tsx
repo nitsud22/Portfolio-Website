@@ -3,14 +3,6 @@ import crawler from "@/assets/CrawlER.png";
 import poster from "@/assets/Team_5_Poster.jpg";
 import { Footer } from "@/components/Footer";
 
-// Navigation structure for the scroll-spy sidebar
-const navItems = [
-  { id: "overview", title: "Overview", level: 1 as const },
-  { id: "database", title: "Database", level: 1 as const },
-  { id: "result", title: "Result", level: 1 as const },
-  { id: "reflection", title: "Reflection", level: 1 as const },
-];
-
 function CrawlDashboard() {
   return (
     // This max-width container is a great practice for readability.
