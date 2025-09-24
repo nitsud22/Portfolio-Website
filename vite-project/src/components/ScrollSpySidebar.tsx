@@ -76,7 +76,7 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
 
   return (
     // This container is sticky and will stay in view on larger screens
-    <div className="hidden lg:block self-start  ml-auto whitespace-nowrap list-outside text-left sticky top-16 ">
+    <div className="hidden lg:block self-start  ml-auto whitespace-nowrap list-outside text-left sticky top-13 ">
       <h2 className="scroll-m-20  transition-colors first:mt-0 pb-2 ml-auto text-lg font-semibold text-gray-500 tracking-tight  ">
         {title}
       </h2>
@@ -95,7 +95,7 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
                 <li key={item.id}>
                   <a
                     {...linkProps}
-                    className="block text-lg text-gray-500 transition-colors hover:text-green-900 dark:text-gray-400 dark:hover:text-white  data-[active=true]:text-green-900 dark:data-[active=true]:text-green-400"
+                    className="block pl-2 text-gray-500 transition-colors duration-200 hover:text-orange-500 dark:text-gray-400 dark:hover:text-orange-500 data-[active=true]:text-orange-500"
                   >
                     {item.title}
                   </a>
@@ -109,7 +109,7 @@ export const ScrollSpySidebar: FC<ScrollSpySidebarProps> = ({
                 <li key={item.id}>
                   <a
                     {...linkProps}
-                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 dark:text-gray-400 dark:before:bg-gray-700 dark:hover:text-white dark:hover:before:bg-gray-400 data-[active=true]:text-green-900 data-[active=true]:before:bg-green-900 dark:data-[active=true]:text-green-400 dark:data-[active=true]:before:bg-green-400"
+                    className="relative block pl-6 text-gray-500 transition-colors duration-200 before:absolute before:left-0 before:top-1/2 before:h-4 before:w-0.5 before:-translate-y-1/2 before:bg-gray-200 before:transition-colors before:duration-200 hover:text-gray-900 hover:before:bg-gray-900 dark:text-gray-400 dark:before:bg-gray-700 dark:hover:text-white dark:hover:before:bg-gray-400 data-[active=true]:text-orange-500 data-[active=true]:before:bg-orange-500 dark:data-[active=true]:text-orange-500 dark:data-[active=true]:before:bg-orange-500"
                   >
                     {item.title}
                   </a>

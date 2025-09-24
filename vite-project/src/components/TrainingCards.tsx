@@ -1,6 +1,6 @@
 import ochin from "../assets/Ochin.webp";
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function TrainingCards() {
   const cardData = [
@@ -9,38 +9,47 @@ export function TrainingCards() {
       id: "ochin-training",
       title:
         "HCAI - Health Information And Electronic Records Analyst Training Program",
-      description: <></>,
-      path: "/page-one",
+      description: (
+        <>
+          Currently receiving hands on training with EPIC, SQL, Tablaeu, and
+          Crystal Reports. As well as gaining foundational knowledge of
+          healthcare IT systems, Security, and Compliance. Will have completed
+          1552 hours of training, obtained the CAHIMS certification, and
+          completed an internship by the end of the program.
+        </>
+      ),
+      path: "",
     },
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-4 md:gap-6 lg:gap-10">
+    <div className="w-full flex flex-col sgap-4 md:gap-6 lg:gap-10 ">
       {cardData.map((card, index) => (
-        <Link to={card.path} key={index} className="w-full">
+        <NavLink to={card.path} key={index} className="w-full">
           <div
-            className="group scroll-mt-[30vh] flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden"
-            data-observe-section
+            className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden w-full"
             id={card.id}
+            data-observe-section
           >
             {/* Image */}
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square h-64  object-cover"
+              className="md:w-1/3 md:aspect-square h-64 object-cover transition-all duration-300 "
             />
 
             {/* Text Content */}
-            <div className="flex flex-col md:text-left md:pl-3 p-4 md:p-0 w-full">
-              <h3 className="md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white">
+            <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
+              {/* Note: An <a> tag inside a NavLink/Link is not standard. The NavLink itself acts as the anchor tag. */}
+              <span className="md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-gray-500 transition-colors duration-300">
                 {card.title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 hidden md:block">
+              </span>
+              <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">
                 {card.description}
               </p>
             </div>
           </div>
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

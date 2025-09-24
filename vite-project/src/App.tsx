@@ -7,6 +7,7 @@ import Resume from "./pages/Resume";
 import CollegeOutcome from "./pages/CollegeOutcome";
 import CrawlDashboard from "./pages/CrawlDashboard";
 import ScrollToTop from "./components/scrolltotop";
+import ResearchCCSE from "./pages/ResearchCCSE";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/college-outcomes" element={<CollegeOutcome />} />
           <Route path="/crawl-dashboard" element={<CrawlDashboard />} />
+          <Route path="/tdm-ccse" element={<ResearchCCSE />} />
         </Routes>
       </div>
     </Router>

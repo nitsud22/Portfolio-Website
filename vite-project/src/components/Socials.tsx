@@ -8,7 +8,7 @@ export function SocialLinks() {
         href="https://github.com/nitsud22"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-green-900"
+        className="transition-colors duration-300 hover:text-orange-500"
       >
         <FaGithub />
       </a>
@@ -16,13 +16,13 @@ export function SocialLinks() {
         href="https://linkedin.com/in/dustinsantoso"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-green-900"
+        className="transition-colors duration-300 hover:text-orange-500"
       >
         <FaLinkedin />
       </a>
       <a
         href="mailto:dustin.santoso025@gmail.com"
-        className="hover:text-green-900"
+        className="transition-colors duration-300 hover:text-orange-500"
       >
         <SiGmail />
       </a>
