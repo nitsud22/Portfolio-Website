@@ -4,7 +4,6 @@ import { Cards } from "@/components/CardRow";
 
 import { TrainingCards } from "@/components/TrainingCards";
 import { Footer } from "@/components/Footer";
-import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 
 const navItems = [
   { id: "projects", title: "Projects", level: 1 as const },
@@ -66,10 +65,6 @@ function Projects() {
               <TrainingCards />
             </section>
           </main>
-
-          <aside className="hidden lg:block pt-16 w-1/4">
-            <ScrollSpySidebar items={navItems} />
-          </aside>
         </div>
         <div className="pt-10">
           <Footer />

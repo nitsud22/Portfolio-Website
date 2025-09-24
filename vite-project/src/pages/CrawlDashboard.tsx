@@ -2,7 +2,6 @@ import crawldash from "@/assets/crawl-dash.png";
 import crawler from "@/assets/CrawlER.png";
 import poster from "@/assets/Team_5_Poster.jpg";
 import { Footer } from "@/components/Footer";
-import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 
 // Navigation structure for the scroll-spy sidebar
 const navItems = [
@@ -114,7 +113,7 @@ function CrawlDashboard() {
                 href="https://github.com/cullm001/CrawlSense"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-green-800 hover:underline dark:text-blue-800"
+                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-black hover:underline dark:text-blue-800"
               >
                 Github Repository
               </a>
@@ -151,11 +150,6 @@ function CrawlDashboard() {
             </div>
           </section>
         </main>
-
-        {/* REFACTORED: Sidebar now has a flexible fractional width for large screens. */}
-        <aside className="hidden lg:block w-1/4">
-          <ScrollSpySidebar items={navItems} />
-        </aside>
       </div>
       <div className="pt-10">
         <Footer />

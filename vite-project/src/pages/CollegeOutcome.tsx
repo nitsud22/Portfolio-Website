@@ -3,7 +3,6 @@ import katex from "katex";
 import "katex/dist/katex.min.css";
 
 import { Footer } from "@/components/Footer";
-import { ScrollSpySidebar } from "@/components/ScrollSpySidebar";
 import datasample from "../assets/dataframe_sample.png";
 import logreg from "../assets/linvslog.jpg";
 import results from "../assets/LogregOutput.png";
@@ -64,7 +63,7 @@ function CollegeOutcome() {
       </div>
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* REFACTORED: Main content width is now a flexible fraction of its parent, not a rigid viewport width. */}
-        <main className="w-full text-left">
+        <main className="w-full text-left mx-auto">
           <img
             src={logreg}
             alt="Linear vs Logistic Regression"
@@ -202,7 +201,7 @@ function CollegeOutcome() {
                 href="https://github.com/nitsud22/Predicting-College-Outcomes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-green-800 hover:underline dark:text-blue-800"
+                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-black hover:underline dark:text-blue-800"
               >
                 GitHub Repository
               </a>
@@ -315,11 +314,6 @@ function CollegeOutcome() {
             </div>
           </section>
         </main>
-
-        {/* REFACTORED: Sidebar now has a flexible fractional width for large screens. */}
-        <aside className="hidden lg:block w-1/4">
-          <ScrollSpySidebar items={navItems} />
-        </aside>
       </div>
       <div className="pt-10">
         <Footer />
