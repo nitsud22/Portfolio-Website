@@ -9,7 +9,7 @@ export function ResearchCards() {
       id: "rhetoric-detection",
       title: "A multi-modal approach to rhetorical polarization detection",
       description: <></>,
-      path: "/page-one",
+      path: "/tdm-ccse",
     },
   ];
 

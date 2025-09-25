@@ -80,7 +80,7 @@ export function NavigationBar() {
         </div>
 
         {/* Right side navigation */}
-        <div className="flex-1 flex justify-end items-center w-25[vw]">
+        <div className="flex-1 flex justify-end items-center w-full">
           {/* Desktop Navigation (Text Links) */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex gap-5">
