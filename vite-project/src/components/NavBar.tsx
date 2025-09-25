@@ -86,7 +86,7 @@ export function NavigationBar() {
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
                 <a
-                  href="/Santoso_Dustin_Resume.pdf" // Assumes resume.pdf is in your /public folder
+                  href="/dustin_santoso_resume_EMR.pdf" // Assumes resume.pdf is in your /public folder
                   target="_blank" // Opens the link in a new tab
                   rel="noopener noreferrer" // Security best practice for new tabs
                   className={`text-xl font-semibold tracking-tight
@@ -94,9 +94,9 @@ export function NavigationBar() {
       ${
         isPortfolioPage
           ? scrolled
-            ? "text-gray-500 hover:text-black" // scrolled on portfolio
-            : "text-gray-200 hover:text-white" // transparent on portfolio
-          : "text-gray-500 hover:text-black" // any other page
+            ? "text-gray-500 " // scrolled on portfolio
+            : "text-white" // transparent on portfolio
+          : "text-gray-500 " // any other page
       }
     `}
                 >
@@ -112,13 +112,13 @@ export function NavigationBar() {
                         ? scrolled
                           ? isActive
                             ? "text-black " // active + scrolled
-                            : "text-gray-500 hover:text-black" // inactive + scrolled
+                            : "text-gray-500 " // inactive + scrolled
                           : isActive
                           ? "text-white" // active + transparent
-                          : "text-gray-200 hover:text-white" // inactive + transparent
+                          : "text-white " // inactive + transparent
                         : isActive
                         ? "text-black" // active on non-portfolio
-                        : "text-gray-500 hover:text-black" // inactive on non-portfolio
+                        : "text-gray-500 " // inactive on non-portfolio
                     } text-xl font-semibold tracking-tight transition-colors duration-300`
                   }
                 >

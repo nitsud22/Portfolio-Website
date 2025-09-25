@@ -6,8 +6,14 @@ export function Introduction() {
   return (
     <div className="relative w-full lg:pb-20 md:pb-10 pb-5">
       {/* Background Image */}
+<<<<<<< Updated upstream
       <div className="relative 2xl:h-[45vh] xl:h-[60vh] md:h-[35vh] h-[25vh] overflow-hidden bg-green-800">
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/10 to-transparent" />
+=======
+      <div className="relative 2xl:h-[45vh] xl:h-[60vh] md:h-[35vh] h-[25vh] overflow-hidden bg-orange-500">
+        {/* The gradient now only covers the top half */}
+        <div className="absolute top-0 left-0 right-0 h-full  bg-gradient-to-t from-black/20 to-transparent" />
+>>>>>>> Stashed changes
       </div>
       {/* Wrapper for max-width content */}
       <div className="absolute md:-bottom-5 -bottom-12 left-0 right-0 z-10">
