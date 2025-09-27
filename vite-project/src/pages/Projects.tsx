@@ -33,7 +33,7 @@ function Projects() {
   // --- END: New useEffect for scroll position ---
 
   useEffect(() => {
-    document.title = "Dustin Santoso";
+    document.title = "Home";
   }, []);
 
   return (

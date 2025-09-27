@@ -16,7 +16,6 @@ function CollegeOutcome() {
   useEffect(() => {
     document.title = "Predicting College Outcomes";
 
-    // --- KaTeX Rendering for LaTeX formulas (no changes needed here) ---
     if (formulaContainerRef.current) {
       const latexString = " \\frac{1}{1+e^{-\\theta^{T}x}}";
       katex.render(latexString, formulaContainerRef.current, {
@@ -43,17 +42,14 @@ function CollegeOutcome() {
   }, []);
 
   return (
-    // This max-width container is a great practice for readability.
     <div className="mx-auto max-w-5xl px-4 md:px-0">
       <div className="py-4">
-        {/* REFACTORED: H1 now uses clamp() for fluid font sizing instead of stepped breakpoints. */}
         <h1 className="text-[clamp(1.875rem,5vw,2.25rem)] font-bold text-left">
           Predicting College Outcomes Using Logistic Regression: A C++
           Implementation
         </h1>
       </div>
       <div className="flex flex-col gap-10 lg:flex-row">
-        {/* REFACTORED: Main content width is now a flexible fraction of its parent, not a rigid viewport width. */}
         <main className="md:w-3/4 w-full text-left ">
           <img
             src={logreg}

@@ -1,9 +1,14 @@
 import crawldash from "@/assets/crawl-dash.png";
 import crawler from "@/assets/CrawlER.png";
 import poster from "@/assets/Team_5_Poster.jpg";
+import { useEffect } from "react";
 import { Footer } from "@/components/Footer";
 
 function CrawlDashboard() {
+  useEffect(() => {
+    document.title = "Crawl Dashboard";
+  }, []);
+
   return (
     // This max-width container is a great practice for readability.
     <div className="mx-auto max-w-5xl px-4 md:px-0">

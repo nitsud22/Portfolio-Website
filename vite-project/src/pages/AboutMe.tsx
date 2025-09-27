@@ -9,7 +9,7 @@ function AboutMe() {
   return (
     <div className="flex flex-col px-4 lg:px-0 max-w-5xl mx-auto">
       {/* Main Content Section */}
-      <div className="flex flex-col w-full lg:flex-row items-center mt-8 h-[calc(92vh-4rem)] md:gap-x-10 gap-4">
+      <div className="flex flex-col w-full lg:flex-row items-center mt-2 md:mt-0 h-[calc(90vh-4rem)] md:gap-x-10 gap-4">
         {/* Image Section */}
         <div className="order-1 lg:order-2 overflow-hidden lg:w-1/3 w-full">
           <img
