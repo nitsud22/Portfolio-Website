@@ -23,7 +23,7 @@ export function Cards() {
     {
       id: "crawl-monitoring-dashboard",
       image: dash,
-      title: "Web-Crawler  Monitoring Dashboard",
+      title: "Web-Crawler Health Monitoring Dashboard",
       description: (
         <>
           {" "}
@@ -56,8 +56,7 @@ export function Cards() {
 
             {/* Text Content */}
             <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              {/* Note: An <a> tag inside a NavLink/Link is not standard. The NavLink itself acts as the anchor tag. */}
-              <span className="md:text-2xl text-md font-semibold mb-2 text-gray-900 dark:text-white group-hover:text-gray-500 transition-colors duration-300">
+              <span className="md:text-2xl text-md font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
                 {card.title}
               </span>
               <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">

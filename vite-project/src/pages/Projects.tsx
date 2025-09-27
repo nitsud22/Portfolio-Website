@@ -45,9 +45,9 @@ function Projects() {
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-7">
-          <main className="w-4/5 text-left">
+          <main className="lg:w-3/4 w-full text-left">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="mt-10 md:text-2xl text-xl font-semibold py-5">
+              <h2 className="lg:mt-10 mt-15 md:text-2xl text-xl font-semibold py-5">
                 PROJECTS
               </h2>
               <Cards />
