@@ -11,7 +11,7 @@ function AboutMe() {
       {/* Main Content Section */}
       <div className="flex flex-col w-full lg:flex-row items-center mt-2 md:mt-0 h-[calc(90vh-4rem)] md:gap-x-10 gap-4">
         {/* Image Section */}
-        <div className="order-1 lg:order-2 overflow-hidden lg:w-1/3 w-full">
+        <div className="order-1 lg:order-2 overflow-hidden lg:w-2/5 w-full">
           <img
             src={winter}
             alt="Dustin Santoso"
@@ -20,7 +20,7 @@ function AboutMe() {
         </div>
 
         {/* Text Section */}
-        <div className="order-2 lg:order-1 lg:w-3/4 text-left">
+        <div className="order-2 lg:order-1 lg:w-3/5 text-left">
           <h2 className="text-3xl font-semibold">About Me</h2>
           <p className=" text-gray-700 mt-2">
             Hi, I'm Dustin! Currently, I am an HCAI Health Information &

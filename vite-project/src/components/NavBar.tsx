@@ -11,9 +11,13 @@ import { useEffect, useState } from "react";
 
 export function NavigationBar() {
   const [isOpen] = useState(false);
-
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
+
+  // NEW: Add this useEffect to scroll to top on any page navigation
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,13 +59,8 @@ export function NavigationBar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                {/* Add the onClick handler here */}
-                <NavLink
-                  to="/"
-                  onClick={() =>
-                    window.scrollTo({ top: 0, left: 0, behavior: "instant" })
-                  }
-                >
+                {/* REMOVED the onClick handler from here */}
+                <NavLink to="/">
                   <h2
                     className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
                       isPortfolioPage
@@ -86,19 +85,19 @@ export function NavigationBar() {
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
                 <a
-                  href="/dustin_santoso_resume_EMR.pdf" // Assumes resume.pdf is in your /public folder
-                  target="_blank" // Opens the link in a new tab
-                  rel="noopener noreferrer" // Security best practice for new tabs
+                  href="/dustin_santoso_resume_EMR.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`text-xl font-semibold tracking-tight
-      transition-colors duration-300
-      ${
-        isPortfolioPage
-          ? scrolled
-            ? "text-gray-500 " // scrolled on portfolio
-            : "text-white" // transparent on portfolio
-          : "text-gray-500 " // any other page
-      }
-    `}
+   transition-colors duration-300
+   ${
+     isPortfolioPage
+       ? scrolled
+         ? "text-gray-500 " // scrolled on portfolio
+         : "text-white" // transparent on portfolio
+       : "text-gray-500 " // any other page
+   }
+  `}
                 >
                   RESUME
                 </a>
@@ -130,11 +129,10 @@ export function NavigationBar() {
 
           {/* Mobile Navigation (Icons) */}
           <div className="flex items-center gap-5 md:hidden">
-            {/* Use a standard <a> tag for linking to a file */}
             <a
-              href="/Santoso_Dustin_Resume.pdf" // Assumes resume.pdf is in your /public folder
-              target="_blank" // Opens the link in a new tab
-              rel="noopener noreferrer" // Security best practice for new tabs
+              href="/Santoso_Dustin_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${
                 isPortfolioPage
                   ? scrolled
