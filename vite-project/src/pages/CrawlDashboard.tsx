@@ -16,7 +16,7 @@ function CrawlDashboard() {
       </div>
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* REFACTORED: Main content width is now a flexible fraction of its parent, not a rigid viewport width. */}
-        <main className="w-full text-left">
+        <main className="w-4/5 text-left">
           <img
             src={crawldash}
             alt="Webcrawler Dashboard"
