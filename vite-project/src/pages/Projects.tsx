@@ -2,8 +2,13 @@ import { Introduction } from "@/components/Introduction";
 import { Cards } from "@/components/CardRow";
 import { TrainingCards } from "@/components/TrainingCards";
 import { Footer } from "@/components/Footer";
+import { useEffect } from "react";
 
 function Projects() {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
+
   return (
     <div className="w-full -mt-16 ">
       <Introduction />
