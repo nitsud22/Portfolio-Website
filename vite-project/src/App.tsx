@@ -13,7 +13,6 @@ import CustomScrollManager from "./components/CustomScrollManager";
 import CollegeOutcome from "./pages/CollegeOutcome";
 import CrawlDashboard from "./pages/CrawlDashboard";
 import ResearchCCSE from "./pages/ResearchCCSE";
-import TestPage from "./pages/TestPage";
 import "./App.css";
 
 // This layout component remains the same. It wraps every page.
@@ -33,7 +32,6 @@ const AppLayout = () => (
 const routes = createRoutesFromElements(
   <Route element={<AppLayout />}>
     <Route index element={<Projects />} />
-    <Route path="/test" element={<TestPage />} />
     <Route path="/aboutme" element={<AboutMe />} />
     <Route path="/resume" element={<Resume />} />
     <Route path="/college-outcomes" element={<CollegeOutcome />} />

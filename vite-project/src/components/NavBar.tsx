@@ -14,8 +14,6 @@ export function NavigationBar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
-  // THE PROBLEMATIC useEffect HAS BEEN REMOVED FROM HERE
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
@@ -54,7 +52,7 @@ export function NavigationBar() {
                 <NavLink
                   to="/"
                   onClick={() => {
-                    window.scrollTo(0, 0);
+                    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
                   }}
                 >
                   <h2
