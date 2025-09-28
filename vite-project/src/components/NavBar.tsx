@@ -14,23 +14,16 @@ export function NavigationBar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
-  // NEW: Add this useEffect to scroll to top on any page navigation
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+  // THE PROBLEMATIC useEffect HAS BEEN REMOVED FROM HERE
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
-
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener when the component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Body lock for mobile menu
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -42,7 +35,6 @@ export function NavigationBar() {
     };
   }, [isOpen]);
 
-  // Determine if we’re on portfolio page
   const isPortfolioPage = location.pathname === "/";
 
   return (
@@ -59,8 +51,12 @@ export function NavigationBar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                {/* REMOVED the onClick handler from here */}
-                <NavLink to="/">
+                <NavLink
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   <h2
                     className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
                       isPortfolioPage

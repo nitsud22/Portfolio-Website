@@ -121,4 +121,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* --- ADD THIS RULE --- */
+  /* This fixes the scroll restoration issue. */
+  #root {
+    height: auto !important;
+  }
 }
