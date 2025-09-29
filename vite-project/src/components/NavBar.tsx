@@ -124,7 +124,7 @@ export function NavigationBar() {
           {/* Mobile Navigation (Icons) */}
           <div className="flex items-center gap-5 md:hidden">
             <a
-              href="/Santoso_Dustin_Resume.pdf"
+              href="/dustin_santoso_resume_EMR.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className={`${

@@ -14,9 +14,14 @@ function CrawlDashboard() {
     <div className="mx-auto max-w-5xl px-4 md:px-0">
       <div className="py-4">
         {/* REFACTORED: H1 now uses clamp() for fluid font sizing instead of stepped breakpoints. */}
-        <h1 className="text-[clamp(1.875rem,5vw,2.25rem)] font-bold text-left">
-          A Full-Stack Visualization Dashboard for Real-Time Webcrawler Health
-          and Performance Monitoring
+        <h1 className="text-[clamp(1.5rem,4vw,1.875rem)] text-left">
+          <span className="md:hidden">
+            Web-Crawler Health Monitoring Dashboard
+          </span>
+          <span className="hidden md:inline">
+            A Full-Stack Visualization Dashboard for Real-Time Webcrawler Health
+            and Performance Monitoring
+          </span>
         </h1>
       </div>
       <div className="flex flex-col gap-10 lg:flex-row">
@@ -110,7 +115,7 @@ function CrawlDashboard() {
                 href="https://github.com/cullm001/CrawlSense"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-black hover:underline dark:text-blue-800"
+                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-black underline hover:underline dark:text-blue-800"
               >
                 Github Repository
               </a>

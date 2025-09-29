@@ -20,14 +20,14 @@ function Projects() {
         <div className="flex flex-col lg:flex-row gap-7">
           <main className="lg:w-3/4 w-full text-left">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="lg:mt-10 mt-15 md:text-2xl text-xl font-semibold py-5">
+              <h2 className="lg:mt-10 mt-15 tracking-tight md:text-2xl text-xl font-semibold py-5">
                 PROJECTS
               </h2>
               <Cards />
             </section>
 
             <section id="training" className="scroll-m-[10vh]">
-              <h2 className="mt-10 lg:text-2xl text-xl font-semibold py-5">
+              <h2 className=" md:text-2xl tracking-tight text-xl font-semibold py-5">
                 TRAINING
               </h2>
               <TrainingCards />

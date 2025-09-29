@@ -42,11 +42,12 @@ function CollegeOutcome() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 md:px-0">
+    // This max-width container is a great practice for readability.
+    <div className="mx-auto max-w-5xl px-4 lg:px-0">
       <div className="py-4">
-        <h1 className="text-[clamp(1.875rem,5vw,2.25rem)] font-bold text-left">
-          Predicting College Outcomes Using Logistic Regression: A C++
-          Implementation
+        <h1 className="text-[clamp(1.5rem,4vw,1.875rem)] text-left">
+          Predicting College Outcomes Using Logistic Regression
+          <span className="hidden sm:inline">: A C++ Implementation</span>
         </h1>
       </div>
       <div className="flex flex-col gap-10 lg:flex-row">
@@ -67,11 +68,11 @@ function CollegeOutcome() {
                 About
               </h3>
               <p className="text-[clamp(1rem,1.5vw,1.125rem)]">
-                As part of my Machine Learning course at California State
-                University, San Bernardino, for our final project, we had the
-                option of comparing different Machine Learning models or a code
-                implementation of a Machine Learning algorithm. I chose to do a
-                C++ implementation of Logistic Regression.
+                For my final project in my Machine Learning course at CSUSB, I
+                had the option of comparing different Machine Learning models
+                using libraries such as Sci-Kit Learn or a code implementation
+                of a Machine Learning algorithm. I chose to do a C++
+                implementation of Logistic Regression.
               </p>
             </div>
             <div id="goal" className="mt-8 space-y-2">
@@ -188,7 +189,7 @@ function CollegeOutcome() {
                 href="https://github.com/nitsud22/Predicting-College-Outcomes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-black hover:underline dark:text-blue-800"
+                className="text-[clamp(1.125rem,2.5vw,1.25rem)] underline text-black hover:underline dark:text-blue-800"
               >
                 GitHub Repository
               </a>
@@ -197,7 +198,7 @@ function CollegeOutcome() {
               href="/Logistic_Regression_Implementation_CSE_5160.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[clamp(1.125rem,2.5vw,1.25rem)] text-green-800 hover:underline dark:text-blue-800 md:hidden"
+              className="text-[clamp(1.125rem,2.5vw,1.25rem)] underline hover:underline dark:text-blue-800 md:hidden"
             >
               View Research Paper
             </a>

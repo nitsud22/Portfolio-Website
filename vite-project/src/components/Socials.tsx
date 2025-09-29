@@ -3,7 +3,7 @@ import { SiGmail } from "react-icons/si";
 
 export function SocialLinks() {
   return (
-    <div className="flex space-x-4 text-xl text-gray-700">
+    <div className="flex space-x-4 md:text-xl text-lg text-gray-700">
       <a
         href="https://github.com/nitsud22"
         target="_blank"

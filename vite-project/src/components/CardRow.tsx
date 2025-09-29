@@ -8,7 +8,7 @@ export function Cards() {
     {
       id: "college-outcomes-prediction",
       image: asa,
-      title: "Predicting College Student Outcomes with Logistic Regression",
+      title: "Predicting College Student Outcomes Using Logistic Regression",
       description: (
         <>
           Implemented Logistic Regression to predict if students would
@@ -51,12 +51,12 @@ export function Cards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square h-64 object-cover transition-all duration-300 "
+              className="md:w-1/3 md:aspect-square aspect-auto h-60 md:h-64 object-cover transition-all duration-300 "
             />
 
             {/* Text Content */}
             <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              <span className="md:text-2xl text-md font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
+              <span className="md:text-2xl text-xl font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
                 {card.title}
               </span>
               <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">
