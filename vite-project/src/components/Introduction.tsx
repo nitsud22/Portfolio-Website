@@ -7,7 +7,7 @@ export function Introduction() {
     <div className="relative w-full lg:pb-20 md:pb-10 pb-5">
       {/* Background Image */}
       <div className="relative 2xl:h-[45vh] xl:h-[60vh] md:h-[35vh] h-[35vh] overflow-hidden bg-orange-500">
-        <div className="absolute inset-0 h-1/4 bg-gradient-to-b from-black/10 via-black/5 to-transparent" />
+        <div className="absolute inset-0 h-18 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
       </div>
       {/* Wrapper for max-width content */}
       <div className="absolute lg:-bottom-5 -bottom-12 left-0 right-0 z-10">

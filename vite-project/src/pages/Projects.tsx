@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
-    document.title = "Home";
+    document.title = "Portfolio";
   }, []);
 
   return (
