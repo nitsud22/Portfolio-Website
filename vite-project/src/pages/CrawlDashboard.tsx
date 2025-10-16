@@ -12,21 +12,21 @@ function CrawlDashboard() {
   return (
     // This max-width container is a great practice for readability.
     <div className="mx-auto max-w-5xl px-4 md:px-0">
-      <div className="py-4">
-        {/* REFACTORED: H1 now uses clamp() for fluid font sizing instead of stepped breakpoints. */}
-        <h1 className="text-[clamp(1.5rem,4vw,1.875rem)] text-left">
-          <span className="md:hidden">
-            Web-Crawler Health Monitoring Dashboard
-          </span>
-          <span className="hidden md:inline">
-            A Full-Stack Visualization Dashboard for Real-Time Webcrawler Health
-            and Performance Monitoring
-          </span>
-        </h1>
-      </div>
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* REFACTORED: Main content width is now a flexible fraction of its parent, not a rigid viewport width. */}
         <main className="md:w-3/4 w-full text-left">
+          <div className="py-4">
+            {/* REFACTORED: H1 now uses clamp() for fluid font sizing instead of stepped breakpoints. */}
+            <h1 className="text-[clamp(1.5rem,4vw,1.75rem)] text-left font-semibold">
+              <span className="md:hidden">
+                Web-Crawler Health Monitoring Dashboard
+              </span>
+              <span className="hidden md:inline">
+                A Full-Stack Visualization Dashboard for Real-Time Webcrawler
+                Health and Performance Monitoring
+              </span>
+            </h1>
+          </div>
           <img
             src={crawldash}
             alt="Webcrawler Dashboard"

@@ -44,14 +44,14 @@ function CollegeOutcome() {
   return (
     // This max-width container is a great practice for readability.
     <div className="mx-auto max-w-5xl px-4 lg:px-0">
-      <div className="py-4">
-        <h1 className="text-[clamp(1.5rem,4vw,1.875rem)] text-left">
-          Predicting College Outcomes Using Logistic Regression
-          <span className="hidden sm:inline">: A C++ Implementation</span>
-        </h1>
-      </div>
       <div className="flex flex-col gap-10 lg:flex-row">
         <main className="md:w-3/4 w-full text-left ">
+          <div className="py-4">
+            <h1 className="text-[clamp(1.5rem,4vw,1.75rem)] text-left font-semibold">
+              Predicting College Outcomes Using Logistic Regression
+              <span className="hidden sm:inline">: A C++ Implementation</span>
+            </h1>
+          </div>
           <img
             src={logreg}
             alt="Linear vs Logistic Regression"

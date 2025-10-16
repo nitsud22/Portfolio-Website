@@ -18,16 +18,16 @@ function Projects() {
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row lg:justify-end gap-7">
-          <main className="md:w-3/4 w-full text-left">
+          <main className="lg:w-3/4 w-full text-left">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="lg:mt-10 mt-15 tracking-tight md:text-2xl text-xl font-semibold py-5">
+              <h2 className="mt-15 lg:mt-0 tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
                 PROJECTS
               </h2>
               <Cards />
             </section>
 
             <section id="training" className="scroll-m-[10vh]">
-              <h2 className=" md:text-2xl tracking-tight text-xl font-semibold py-5">
+              <h2 className=" md:text-2xl tracking-tight text-xl font-semibold py-5 text-gray-500">
                 TRAINING
               </h2>
               <TrainingCards />

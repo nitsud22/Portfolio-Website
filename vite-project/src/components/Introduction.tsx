@@ -6,14 +6,14 @@ export function Introduction() {
   return (
     <div className="relative w-full lg:pb-20 md:pb-10 pb-5">
       {/* Background Image */}
-      <div className="relative 2xl:h-[45vh] xl:h-[60vh] md:h-[35vh] h-[35vh] overflow-hidden bg-green-800">
+      <div className="relative 2xl:h-[45vh] xl:h-[60vh] md:h-[35vh] h-[30vh] overflow-hidden bg-green-800">
         <div className="absolute inset-0 h-18 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
       </div>
       {/* Wrapper for max-width content */}
       <div className="absolute lg:-bottom-5 -bottom-12 left-0 right-0 z-10">
-        <div className="max-w-5xl mx-auto flex flex-col items-start px-8 ">
+        <div className="max-w-5xl mx-auto flex flex-col items-start">
           {/* Profile Picture */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center px-4 lg:px-8">
             <img
               src={jungeun}
               alt="Profile"
