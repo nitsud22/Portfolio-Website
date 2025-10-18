@@ -13,7 +13,7 @@ export function Introduction() {
       <div className="absolute lg:-bottom-5 -bottom-12 left-0 right-0 z-10">
         <div className="max-w-5xl mx-auto flex flex-col items-start">
           {/* Profile Picture */}
-          <div className="flex flex-col items-center px-4 lg:px-8">
+          <div className="flex flex-col items-center px-4 lg:px-0 ">
             <img
               src={jungeun}
               alt="Profile"
