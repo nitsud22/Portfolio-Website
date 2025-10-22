@@ -20,7 +20,7 @@ function Projects() {
         <div className="flex flex-col lg:flex-row lg:justify-end gap-7">
           <main className="lg:w-3/4 w-full text-left">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="mt-15 lg:mt-0 tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
+              <h2 className="mt-15 tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
                 PROJECTS
               </h2>
               <Cards />
