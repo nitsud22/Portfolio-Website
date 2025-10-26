@@ -51,15 +51,15 @@ export function Cards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square aspect-auto h-60 md:h-64 object-cover transition-all duration-300 "
+              className="md:w-1/3 md:aspect-square aspect-auto h-60 md:h-50 object-cover transition-all duration-300 "
             />
 
             {/* Text Content */}
             <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              <span className="md:text-2xl text-xl font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
+              <span className=" text-xl font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
                 {card.title}
               </span>
-              <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">
+              <p className="text-gray-700 text-xs dark:text-gray-300 hidden md:block">
                 {card.description}
               </p>
             </div>

@@ -11,16 +11,18 @@ function Projects() {
 
   return (
     <div className="w-full -mt-16 ">
-      <Introduction />
+      <div className="relative z-10">
+        <Introduction />
+      </div>
 
       <div className="w-full dark:bg-black">
         <div className="max-w-5xl mx-auto "></div>
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row lg:justify-end gap-7">
-          <main className="lg:w-3/4 w-full text-left">
+          <main className="lg:w-2/3 w-full text-left relative pt-20 lg:pt-0 ">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className="mt-15 tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
+              <h2 className=" tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
                 PROJECTS
               </h2>
               <Cards />
