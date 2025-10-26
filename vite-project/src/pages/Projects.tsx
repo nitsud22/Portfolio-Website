@@ -20,7 +20,7 @@ function Projects() {
       </div>
       <div className=" max-w-5xl mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row lg:justify-end gap-7">
-          <main className="lg:w-2/3 w-full text-left relative pt-20 lg:pt-0 ">
+          <main className="lg:w-2/3 w-full text-left relative pt-10 md:pt-30 lg:pt-0 ">
             <section id="projects" className="scroll-m-[10vh]">
               <h2 className=" tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
                 PROJECTS

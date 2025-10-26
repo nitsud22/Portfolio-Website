@@ -23,11 +23,11 @@ export function TrainingCards() {
   ];
 
   return (
-    <div className="w-full flex flex-col sgap-4 md:gap-6 lg:gap-10 ">
+    <div className="w-full flex flex-col gap-4 md:gap-6 lg:gap-10 ">
       {cardData.map((card, index) => (
         <NavLink to={card.path} key={index} className="w-full">
           <div
-            className="group flex flex-col md:flex-row bg-white dark:bg-neutral-900 overflow-hidden w-full"
+            className="group flex flex-row overflow-hidde bg-white dark:border-neutral-800 dark:bg-neutral-900"
             id={card.id}
             data-observe-section
           >
@@ -35,14 +35,16 @@ export function TrainingCards() {
             <img
               src={card.image}
               alt={card.title}
-              className="md:w-1/3 md:aspect-square aspect-auto h-60 md:h-64 object-cover transition-all duration-300 "
+              className="w-1/3 aspect-square object-cover"
             />
 
-            <div className="flex flex-col text-left md:pl-3 py-4 md:p-0 w-full">
-              <span className="md:text-2xl text-xl font-semibold mb-2 text-black dark:text-white transition-colors duration-300">
+            {/* Text Content */}
+            <div className="flex w-2/3 flex-col pl-2 text-left ">
+              <span className="text-lg font-semibold text-black dark:text-white md:mb-2 md:text-xl">
                 {card.title}
               </span>
-              <p className="text-gray-700 text-sm dark:text-gray-300 hidden md:block">
+              {/* Description is now hidden on mobile */}
+              <p className="hidden text-sm text-gray-700 dark:text-gray-300 md:block">
                 {card.description}
               </p>
             </div>
