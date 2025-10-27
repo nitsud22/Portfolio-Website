@@ -22,14 +22,14 @@ function Projects() {
         <div className="flex flex-col lg:flex-row lg:justify-end gap-7">
           <main className="lg:w-2/3 w-full text-left relative pt-10 md:pt-30 lg:pt-0 ">
             <section id="projects" className="scroll-m-[10vh]">
-              <h2 className=" tracking-tight md:text-2xl text-xl font-semibold py-5 text-gray-500">
+              <h2 className=" tracking-tight md:text-2xl text-xl font-semibold mt-4 md:mt-0 py-2 md:py-5 text-gray-500">
                 PROJECTS
               </h2>
               <Cards />
             </section>
 
             <section id="training" className="scroll-m-[10vh]">
-              <h2 className=" md:text-2xl tracking-tight text-xl font-semibold py-5 text-gray-500">
+              <h2 className=" md:text-2xl tracking-tight text-xl font-semibold mt-4 md:mt-0 py-2 md:py-5 text-gray-500">
                 TRAINING
               </h2>
               <TrainingCards />
