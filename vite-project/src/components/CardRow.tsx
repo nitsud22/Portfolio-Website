@@ -13,7 +13,7 @@ export function Cards() {
           Implemented Logistic Regression to predict if students would
           'Graduate' or 'Dropout'. The data to train the model was obtained from
           the UCI Machine Learning Respository and Wrangled using Python. The
-          machine learning model was coded from scratch using C++. The model
+          machine learning model was coded from scratch using C++.
         </>
       ),
       path: "/college-outcomes",
@@ -28,7 +28,7 @@ export function Cards() {
           Worked with a team of UCR Data Science Fellows to create an end-to-end
           solution for our coporate partner CrawlBee. Our solution was a
           real-time Web Crawler health monitoring dashboard that displayed key
-          metrics. Used a custom API to feed into a MySQL Database which was
+          metrics.
         </>
       ),
       path: "/crawl-dashboard",
