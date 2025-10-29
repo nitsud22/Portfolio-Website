@@ -12,15 +12,6 @@ import { useEffect, useState } from "react";
 export function NavigationBar() {
   const [isOpen] = useState(false);
   const location = useLocation();
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -37,11 +28,17 @@ export function NavigationBar() {
 
   return (
     <div
-      className={`sticky top-0 z-50 w-full transition-colors duration-300 ${
-        !isPortfolioPage || scrolled
-          ? "bg-white text-black"
-          : "bg-transparent text-white"
-      }`}
+      // --- START: MODIFIED CODE ---
+      className={`
+        ${!isPortfolioPage ? "sticky top-0" : ""} 
+        z-50 w-full
+        ${
+          !isPortfolioPage
+            ? "bg-white text-black " // Other pages
+            : "bg-green-800 text-white" // Portfolio page (no scroll logic)
+        }
+      `}
+      // --- END: MODIFIED CODE ---
     >
       <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between h-12 md:h-14">
         {/* Left side navigation */}
@@ -56,12 +53,9 @@ export function NavigationBar() {
                   }}
                 >
                   <h2
+                    // --- MODIFIED: Removed all scroll logic ---
                     className={`md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap ${
-                      isPortfolioPage
-                        ? scrolled
-                          ? "text-black"
-                          : "text-white"
-                        : "text-black"
+                      !isPortfolioPage ? "text-black" : "text-white"
                     }`}
                   >
                     DUSTIN SANTOSO
@@ -82,16 +76,15 @@ export function NavigationBar() {
                   href="/dustin_santoso_resume_EMR.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
+                  // --- MODIFIED: Simplified logic, removed 'scrolled' ---
                   className={`text-xl font-semibold tracking-tight
-   transition-colors duration-300
-   ${
-     isPortfolioPage
-       ? scrolled
-         ? "text-gray-500 " // scrolled on portfolio
-         : "text-white" // transparent on portfolio
-       : "text-gray-500 " // any other page
-   }
-  `}
+                    
+                    ${
+                      isPortfolioPage
+                        ? "text-gray-200 " // Portfolio page (inactive)
+                        : "text-gray-500 " // Other pages (inactive)
+                    }
+                  `}
                 >
                   RESUME
                 </a>
@@ -99,20 +92,17 @@ export function NavigationBar() {
               <NavigationMenuItem>
                 <NavLink
                   to="/aboutme"
+                  // --- MODIFIED: Simplified logic, removed 'scrolled' ---
                   className={({ isActive }) =>
                     `${
                       isPortfolioPage
-                        ? scrolled
-                          ? isActive
-                            ? "text-black " // active + scrolled
-                            : "text-gray-500 " // inactive + scrolled
-                          : isActive
-                          ? "text-white" // active + transparent
-                          : "text-white " // inactive + transparent
+                        ? isActive
+                          ? "text-white" // Portfolio page (active)
+                          : "text-gray-200 " // Portfolio page (inactive)
                         : isActive
-                        ? "text-black" // active on non-portfolio
-                        : "text-gray-500 " // inactive on non-portfolio
-                    } text-xl font-semibold tracking-tight transition-colors duration-300`
+                        ? "text-black" // Other pages (active)
+                        : "text-gray-500 " // Other pages (inactive)
+                    } text-xl font-semibold tracking-tight `
                   }
                 >
                   ABOUT ME
@@ -127,33 +117,29 @@ export function NavigationBar() {
               href="/dustin_santoso_resume_EMR.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              // --- MODIFIED: Simplified logic, removed 'scrolled' ---
               className={`${
                 isPortfolioPage
-                  ? scrolled
-                    ? "text-gray-500 hover:text-black" // inactive + scrolled
-                    : "text-gray-200 hover:text-white" // inactive + transparent
-                  : "text-gray-500 hover:text-black" // inactive on non-portfolio
-              } transition-colors duration-300`}
+                  ? "text-gray-200 " // Portfolio page (inactive)
+                  : "text-gray-500 " // Other pages (inactive)
+              } `}
             >
               <FaFileAlt className="text-lg" />
             </a>
 
             <NavLink
               to="/aboutme"
+              // --- MODIFIED: Simplified logic, removed 'scrolled' ---
               className={({ isActive }) =>
                 `${
                   isPortfolioPage
-                    ? scrolled
-                      ? isActive
-                        ? "text-black"
-                        : "text-gray-500 hover:text-black"
-                      : isActive
-                      ? "text-white"
-                      : "text-gray-200 hover:text-white"
+                    ? isActive
+                      ? "text-white" // Portfolio page (active)
+                      : "text-gray-200 " // Portfolio page (inactive)
                     : isActive
-                    ? "text-black"
-                    : "text-gray-500 hover:text-black"
-                } transition-colors duration-300`
+                    ? "text-black" // Other pages (active)
+                    : "text-gray-500 " // Other pages (inactive)
+                } `
               }
             >
               <FaUser className="text-lg" />

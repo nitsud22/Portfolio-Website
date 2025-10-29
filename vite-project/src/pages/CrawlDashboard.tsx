@@ -14,7 +14,7 @@ function CrawlDashboard() {
     <div className="mx-auto max-w-5xl px-4 md:px-0">
       <div className="flex flex-col gap-10 lg:flex-row">
         {/* REFACTORED: Main content width is now a flexible fraction of its parent, not a rigid viewport width. */}
-        <main className="md:w-3/4 w-full text-left">
+        <main className="md:w-2/3 mx-auto w-full text-left">
           <div className="py-4">
             {/* REFACTORED: H1 now uses clamp() for fluid font sizing instead of stepped breakpoints. */}
             <h1 className="text-[clamp(1.5rem,4vw,1.75rem)] text-left font-semibold">

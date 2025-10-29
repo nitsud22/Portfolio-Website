@@ -20,7 +20,7 @@ function Projects() {
 
   return (
     // 1. Added "flex flex-col min-h-screen" to the root container
-    <div className="w-full -mt-16 flex flex-col min-h-screen">
+    <div className="w-full flex flex-col min-h-screen">
       {/* 2. Created a new wrapper with "flex-grow" for all content ABOVE the footer */}
       <div className="flex-grow">
         <div className="relative z-10">
@@ -86,7 +86,11 @@ function Projects() {
                     activeTab === "projects" ? "block" : "lg:hidden"
                   }`}
                 >
-                  <h2 className=" tracking-tight md:text-2xl text-xl font-semibold mt-0 py-2  text-gray-500"></h2>
+                  {/* --- START: ADDED HEADER --- */}
+                  <h2 className="lg:hidden tracking-tight md:text-xl text-lg font-semibold mt-0 py-2 text-gray-900 dark:text-gray-100">
+                    Projects
+                  </h2>
+                  {/* --- END: ADDED HEADER --- */}
                   <Cards />
                 </section>
 
@@ -96,7 +100,11 @@ function Projects() {
                     activeTab === "training" ? "block" : "lg:hidden"
                   }`}
                 >
-                  <h2 className=" md:text-2xl tracking-tight text-xl font-semibold mt-0 py-2  text-gray-500"></h2>
+                  {/* --- START: ADDED HEADER --- */}
+                  <h2 className="lg:hidden md:text-2xl tracking-tight md:text-xl text-lg font-semibold mt-0 py-2 text-gray-900 dark:text-gray-100">
+                    Training
+                  </h2>
+                  {/* --- END: ADDED HEADER --- */}
                   <TrainingCards />
                 </section>
                 <section
@@ -105,14 +113,21 @@ function Projects() {
                     activeTab === "certifications" ? "block" : "lg:hidden"
                   }`}
                 >
-                  <h2 className=" tracking-tight text-xl font-semibold mt-0 py-2  text-gray-500">
-                    {" "}
+                  {/* --- START: ADDED HEADER --- */}
+                  <h2 className="lg:hidden tracking-tight md:text-xl text-lg font-semibold mt-0 py-2 text-gray-900 dark:text-gray-100">
+                    Certifications
+                  </h2>
+                  {/* --- END: ADDED HEADER --- */}
+
+                  {/* --- START: MODIFIED CONTENT --- */}
+                  <p className="text-lg font-semibold text-gray-700 dark:text-white md:mb-2 md:text-xl">
                     Currently working towards:
-                    <ul className="list-disc list-inside">
+                    <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 ">
                       <li> CAHIMS Certification</li>
                       <li>EpicCare Ambulatory Proficient Self Study</li>
                     </ul>
-                  </h2>
+                  </p>
+                  {/* --- END: MODIFIED CONTENT --- */}
                 </section>
               </main>
             </div>
