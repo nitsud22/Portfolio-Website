@@ -35,12 +35,12 @@ export function TrainingCards() {
             <img
               src={card.image}
               alt={card.title}
-              className="w-1/3 aspect-square object-cover"
+              className="w-1/4 md:w-1/3 aspect-square object-cover"
             />
 
             {/* Text Content */}
             <div className="flex w-2/3 flex-col pl-2 text-left ">
-              <span className="text-lg font-semibold text-black dark:text-white md:mb-2 md:text-xl">
+              <span className="text-normal font-semibold text-black dark:text-white md:mb-2 md:text-xl">
                 {card.title}
               </span>
               {/* Description is now hidden on mobile */}

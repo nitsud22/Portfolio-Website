@@ -4,7 +4,7 @@ import { SocialLinks } from "./Socials";
 export function Introduction() {
   return (
     <div className="relative w-full z-10">
-      <div className="relative lg:h-[40vh] md:h-[35vh] h-[20vh] bg-green-800">
+      <div className="relative lg:h-[40vh] md:h-[35vh] h-[15vh] bg-green-800">
         <div className="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-black/20 via-black/10 to-transparent" />
 
         <div className="relative h-full max-w-5xl mx-auto">

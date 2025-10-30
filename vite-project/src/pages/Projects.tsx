@@ -88,7 +88,7 @@ function Projects() {
                 >
                   {/* --- START: ADDED HEADER --- */}
                   <h2 className="lg:hidden tracking-tight md:text-xl text-lg font-semibold mt-0 py-2 text-gray-900 dark:text-gray-100">
-                    Projects
+                    PROJECTS
                   </h2>
                   {/* --- END: ADDED HEADER --- */}
                   <Cards />
@@ -102,15 +102,15 @@ function Projects() {
                 >
                   {/* --- START: ADDED HEADER --- */}
                   <h2 className="lg:hidden md:text-2xl tracking-tight md:text-xl text-lg font-semibold mt-0 py-2 text-gray-900 dark:text-gray-100">
-                    Training
+                    TRAININGS
                   </h2>
                   {/* --- END: ADDED HEADER --- */}
                   <TrainingCards />
                 </section>
                 <section
                   id="certifications"
-                  className={`scroll-m-[10vh] ${
-                    activeTab === "certifications" ? "block" : "lg:hidden"
+                  className={`scroll-m-[10vh] hidden ${
+                    activeTab === "certifications" ? "lg:block" : "lg:hidden"
                   }`}
                 >
                   {/* --- START: ADDED HEADER --- */}
@@ -120,7 +120,7 @@ function Projects() {
                   {/* --- END: ADDED HEADER --- */}
 
                   {/* --- START: MODIFIED CONTENT --- */}
-                  <p className="text-lg font-semibold text-gray-700 dark:text-white md:mb-2 md:text-xl">
+                  <p className="text-normal font-semibold text-gray-700 dark:text-white md:mb-2 md:text-xl">
                     Currently working towards:
                     <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 ">
                       <li> CAHIMS Certification</li>
