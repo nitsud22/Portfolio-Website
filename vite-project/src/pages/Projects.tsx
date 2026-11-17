@@ -1,22 +1,13 @@
 import { Introduction } from "@/components/Introduction";
 import { Cards } from "@/components/CardRow";
-import { TrainingCards } from "@/components/TrainingCards";
+
 import { Footer } from "@/components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
     document.title = "Portfolio";
   }, []);
-
-  const [activeTab, setActiveTab] = useState("projects");
-
-  // --- Tab Style Definitions ---
-  const tabBaseStyle =
-    "py-1 px-6 text-lg font-medium focus:outline-none rounded-t-lg transition-colors duration-150";
-  const activeTabStyle = "bg-white dark:bg-black text-green-800";
-  const inactiveTabStyle =
-    "bg-gray-200 dark:bg-gray-700 text-gray-500 cursor-pointer dark:hover:bg-gray-600";
 
   return (
     // 1. Added "flex flex-col min-h-screen" to the root container
@@ -48,19 +39,12 @@ function Projects() {
                            md:pt-30  md:pb-8
                            lg:pt-0"
               >
-                <section
-                  id="projects"
-                  className={`scroll-m-[10vh] ${
-                    activeTab === "projects" ? "block" : "lg:hidden"
-                  }`}
-                >
-                  {/* --- START: ADDED HEADER --- */}
-                  <h2 className=" md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap py-4 text-gray-900 dark:text-gray-100">
-                    Projects
-                  </h2>
-                  {/* --- END: ADDED HEADER --- */}
-                  <Cards />
-                </section>
+                {/* --- START: ADDED HEADER --- */}
+                <h2 className=" md:text-2xl text-xl font-semibold tracking-tight transition-colors whitespace-nowrap py-4 text-gray-900 dark:text-gray-100">
+                  Projects
+                </h2>
+                {/* --- END: ADDED HEADER --- */}
+                <Cards />
               </main>
             </div>
             {/* 3. The Footer was REMOVED from here */}
