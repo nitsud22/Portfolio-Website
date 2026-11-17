@@ -34,13 +34,13 @@ export function NavigationBar() {
         z-50 w-full
         ${
           !isPortfolioPage
-            ? "bg-white text-black " // Other pages
-            : "bg-green-800 text-white" // Portfolio page (no scroll logic)
+            ? "bg-[#FAF9F6] text-black " // Other pages
+            : "bg-[#1F3B69] text-white" // Portfolio page (no scroll logic)
         }
       `}
       // --- END: MODIFIED CODE ---
     >
-      <div className="max-w-5xl mx-auto px-4 lg:px-0 flex justify-between h-12 md:h-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14 md:h-16">
         {/* Left side navigation */}
         <div className="flex flex-1 items-center">
           <NavigationMenu>
@@ -81,32 +81,13 @@ export function NavigationBar() {
                     
                     ${
                       isPortfolioPage
-                        ? "text-gray-200 " // Portfolio page (inactive)
-                        : "text-gray-500 " // Other pages (inactive)
+                        ? "text-white" // Portfolio page (inactive)
+                        : "text-black " // Other pages (inactive)
                     }
                   `}
                 >
                   RESUME
                 </a>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavLink
-                  to="/aboutme"
-                  // --- MODIFIED: Simplified logic, removed 'scrolled' ---
-                  className={({ isActive }) =>
-                    `${
-                      isPortfolioPage
-                        ? isActive
-                          ? "text-white" // Portfolio page (active)
-                          : "text-gray-200 " // Portfolio page (inactive)
-                        : isActive
-                        ? "text-black" // Other pages (active)
-                        : "text-gray-500 " // Other pages (inactive)
-                    } text-xl font-semibold tracking-tight `
-                  }
-                >
-                  ABOUT ME
-                </NavLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -120,8 +101,8 @@ export function NavigationBar() {
               // --- MODIFIED: Simplified logic, removed 'scrolled' ---
               className={`${
                 isPortfolioPage
-                  ? "text-gray-200 " // Portfolio page (inactive)
-                  : "text-gray-500 " // Other pages (inactive)
+                  ? "text-white " // Portfolio page (inactive)
+                  : "text-black " // Other pages (inactive)
               } `}
             >
               <FaFileAlt className="text-lg" />
@@ -137,8 +118,8 @@ export function NavigationBar() {
                       ? "text-white" // Portfolio page (active)
                       : "text-gray-200 " // Portfolio page (inactive)
                     : isActive
-                    ? "text-black" // Other pages (active)
-                    : "text-gray-500 " // Other pages (inactive)
+                      ? "text-black" // Other pages (active)
+                      : "text-gray-500 " // Other pages (inactive)
                 } `
               }
             >

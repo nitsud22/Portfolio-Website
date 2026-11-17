@@ -1,5 +1,5 @@
 import asa from "../assets/log.jpg";
-import dash from "../assets/Crawlbee.png";
+import dash from "../assets/crawlbee_logo.png";
 import { NavLink } from "react-router-dom";
 
 export function Cards() {
@@ -21,6 +21,7 @@ export function Cards() {
     {
       id: "crawl-monitoring-dashboard",
       image: dash,
+      imageClassName: "w-1/4 md:w-1/4  aspect-square object-contain",
       title: "Web-Crawler Health Monitoring Dashboard",
       description: (
         <>
@@ -40,7 +41,7 @@ export function Cards() {
       {cardData.map((card, index) => (
         <NavLink to={card.path} key={index} className="w-full">
           <div
-            className="group flex flex-row overflow-hidde bg-white dark:border-neutral-800 dark:bg-neutral-900"
+            className="group flex flex-row overflow-hidden bg-transparent dark:border-neutral-800 dark:bg-neutral-900"
             id={card.id}
             data-observe-section
           >
@@ -48,7 +49,10 @@ export function Cards() {
             <img
               src={card.image}
               alt={card.title}
-              className="w-1/4 md:w-1/3 aspect-square object-cover"
+              className={
+                card.imageClassName ??
+                "w-1/4 md:w-1/4 aspect-square object-cover"
+              }
             />
 
             {/* Text Content */}
