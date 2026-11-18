@@ -1,5 +1,6 @@
 import asa from "../assets/log.jpg";
 import dash from "../assets/crawlbee_logo.png";
+import ccse from "../assets/CCSE.png";
 import { NavLink } from "react-router-dom";
 
 export function Cards() {
@@ -10,10 +11,10 @@ export function Cards() {
       title: "Predicting College Student Outcomes Using Logistic Regression",
       description: (
         <>
-          Implemented Logistic Regression to predict if students would
-          'Graduate' or 'Dropout'. The data to train the model was obtained from
-          the UCI Machine Learning Respository and Wrangled using Python. The
-          machine learning model was coded from scratch using C++.
+          Implemented Logistic Regression from scracth in C++ to predict if
+          students would 'Graduate' or 'Dropout'. The data to train the model
+          was obtained from the UCI Machine Learning Respository and Wrangled
+          using Python.
         </>
       ),
       path: "/college-outcomes",
@@ -22,17 +23,24 @@ export function Cards() {
       id: "crawl-monitoring-dashboard",
       image: dash,
       imageClassName: "w-1/4 md:w-1/4  aspect-square object-contain",
-      title: "Web-Crawler Health Monitoring Dashboard",
+      title: "Web Crawler Health Monitoring Dashboard",
       description: (
         <>
           {" "}
-          Worked with a team of UCR Data Science Fellows to create an end-to-end
-          solution for our coporate partner CrawlBee. Our solution was a
-          real-time Web Crawler health monitoring dashboard that displayed key
-          metrics.
+          Worked with a team of UCR Data Science Fellows to create a real-time
+          Web Crawler health monitoring dashboard for the industry partner
+          CrawlBee.
         </>
       ),
       path: "/crawl-dashboard",
+    },
+    {
+      id: "political-sentiment-detection",
+      image: ccse,
+      title:
+        "Multimodal Approch To Political Sentiment Classification\n(Article In Progress)",
+      description: <> </>,
+      path: "/",
     },
   ];
 

@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 
 function CrawlDashboard() {
   useEffect(() => {
-    document.title = "Crawl Dashboard";
+    document.title = "Web Crawler Dashboard";
   }, []);
 
   return (
@@ -122,11 +122,7 @@ function CrawlDashboard() {
                   Github Repository
                 </a>
               </div>
-              <img
-                src={crawldash}
-                alt="Webcrawler Dashboard"
-                className="w-full rounded-lg py-2"
-              />
+
               <img
                 src={poster}
                 alt="poster"

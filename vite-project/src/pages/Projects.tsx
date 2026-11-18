@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 function Projects() {
   useEffect(() => {
-    document.title = "Portfolio";
+    document.title = "Portfolio | Dustin Santoso";
   }, []);
 
   return (

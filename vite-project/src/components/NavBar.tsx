@@ -1,4 +1,4 @@
-import { FaFileAlt, FaUser } from "react-icons/fa";
+import { FaFileAlt } from "react-icons/fa";
 
 import {
   NavigationMenu,
@@ -73,7 +73,7 @@ export function NavigationBar() {
             <NavigationMenuList className="flex gap-5">
               <NavigationMenuItem>
                 <a
-                  href="/dustin_santoso_resume_EMR.pdf"
+                  href="/santoso_dustin_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   // --- MODIFIED: Simplified logic, removed 'scrolled' ---
@@ -95,7 +95,7 @@ export function NavigationBar() {
           {/* Mobile Navigation (Icons) */}
           <div className="flex items-center gap-5 md:hidden">
             <a
-              href="/dustin_santoso_resume_EMR.pdf"
+              href="/santoso_dustin_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               // --- MODIFIED: Simplified logic, removed 'scrolled' ---
@@ -107,24 +107,6 @@ export function NavigationBar() {
             >
               <FaFileAlt className="text-lg" />
             </a>
-
-            <NavLink
-              to="/aboutme"
-              // --- MODIFIED: Simplified logic, removed 'scrolled' ---
-              className={({ isActive }) =>
-                `${
-                  isPortfolioPage
-                    ? isActive
-                      ? "text-white" // Portfolio page (active)
-                      : "text-gray-200 " // Portfolio page (inactive)
-                    : isActive
-                      ? "text-black" // Other pages (active)
-                      : "text-gray-500 " // Other pages (inactive)
-                } `
-              }
-            >
-              <FaUser className="text-lg" />
-            </NavLink>
           </div>
         </div>
       </div>
